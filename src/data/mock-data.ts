@@ -24,8 +24,8 @@ export const transactions: Transaction[] = Array.from({ length: 50 }, (_, i) => 
     id, timestamp: new Date(Date.UTC(2026, 8, 16, 5, 45 - i * 2)).toISOString(), amount,
     rawProbability: score / 100, riskScore: score, riskBand: getRiskBand(score), decision: getDecision(score),
     model: i % 7 === 0 ? "XGBoost" : "LightGBM + SMOTE", status: score >= 80 ? (i % 3 === 0 ? "Investigating" : "Open") : i % 4 === 0 ? "Resolved" : "Open",
-    label: score >= 80 && i % 6 !== 0 ? "Fraud" : "Legitimate", type: ["Card Purchase", "Transfer", "Cash Withdrawal", "Online Payment"][i % 4],
-    category: ["Retail", "Travel", "Electronics", "Services", "Grocery"][i % 5], features: makeFeatures(i + 1),
+    label: score >= 80 && i % 6 !== 0 ? "Fraud" : "Legitimate", type: ["Card Purchase", "Transfer", "Cash Withdrawal", "Online Payment"][i % 4] ?? "Card Purchase",
+    category: ["Retail", "Travel", "Electronics", "Services", "Grocery"][i % 5] ?? "Retail", features: makeFeatures(i + 1),
     shapPositive: positive.map((x, n) => ({ ...x, contribution: Number((x.contribution * (0.72 + (i % 5) * .08)).toFixed(2)), value: n === 1 ? Number((-7.551 + i * .03).toFixed(3)) : x.value })),
     shapNegative: negative.map(x => x.feature === "Amount" ? { ...x, value: amount } : x), anomalyScore: Number((0.18 + score / 145).toFixed(3)), notes: [],
   };
