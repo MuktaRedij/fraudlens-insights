@@ -18,7 +18,7 @@ function makeFeatures(seed: number) {
 }
 export const transactions: Transaction[] = Array.from({ length: 50 }, (_, i) => {
   const score = scores[i % scores.length] ?? 50;
-  const id = `DEMO-TX-${String(1050 - i).padStart(4, "0")}`;
+  const id = `DEMO-TX-${String(2000 - i).padStart(4, "0")}`;
   const amount = Number(((i * 83.47) % 1490 + 12.5).toFixed(2));
   return {
     id, timestamp: new Date(Date.UTC(2026, 8, 16, 5, 45 - i * 2)).toISOString(), amount,

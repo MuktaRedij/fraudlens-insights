@@ -13,7 +13,13 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AlertsRouteImport } from './routes/alerts'
 import { Route as AnalyzeRouteImport } from './routes/analyze'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DriftRouteImport } from './routes/drift'
+import { Route as ExplainabilityRouteImport } from './routes/explainability'
+import { Route as ModelsRouteImport } from './routes/models'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as TransactionsRouteImport } from './routes/transactions'
+import { Route as TransactionsIndexRouteImport } from './routes/transactions.index'
 import { Route as TransactionsIdRouteImport } from './routes/transactions.$id'
 
 const IndexRoute = IndexRouteImport.update({
@@ -36,10 +42,40 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DriftRoute = DriftRouteImport.update({
+  id: '/drift',
+  path: '/drift',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExplainabilityRoute = ExplainabilityRouteImport.update({
+  id: '/explainability',
+  path: '/explainability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelsRoute = ModelsRouteImport.update({
+  id: '/models',
+  path: '/models',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TransactionsRoute = TransactionsRouteImport.update({
   id: '/transactions',
   path: '/transactions',
   getParentRoute: () => rootRouteImport,
+} as any)
+const TransactionsIndexRoute = TransactionsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => TransactionsRoute,
 } as any)
 const TransactionsIdRoute = TransactionsIdRouteImport.update({
   id: '/$id',
@@ -52,16 +88,27 @@ export interface FileRoutesByFullPath {
   '/alerts': typeof AlertsRoute
   '/analyze': typeof AnalyzeRoute
   '/dashboard': typeof DashboardRoute
+  '/drift': typeof DriftRoute
+  '/explainability': typeof ExplainabilityRoute
+  '/models': typeof ModelsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
+  '/transactions/': typeof TransactionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/alerts': typeof AlertsRoute
   '/analyze': typeof AnalyzeRoute
   '/dashboard': typeof DashboardRoute
-  '/transactions': typeof TransactionsRouteWithChildren
+  '/drift': typeof DriftRoute
+  '/explainability': typeof ExplainabilityRoute
+  '/models': typeof ModelsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
   '/transactions/$id': typeof TransactionsIdRoute
+  '/transactions': typeof TransactionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -69,8 +116,14 @@ export interface FileRoutesById {
   '/alerts': typeof AlertsRoute
   '/analyze': typeof AnalyzeRoute
   '/dashboard': typeof DashboardRoute
+  '/drift': typeof DriftRoute
+  '/explainability': typeof ExplainabilityRoute
+  '/models': typeof ModelsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
+  '/transactions/': typeof TransactionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -79,24 +132,41 @@ export interface FileRouteTypes {
     | '/alerts'
     | '/analyze'
     | '/dashboard'
+    | '/drift'
+    | '/explainability'
+    | '/models'
+    | '/research'
+    | '/settings'
     | '/transactions'
     | '/transactions/$id'
+    | '/transactions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/alerts'
     | '/analyze'
     | '/dashboard'
-    | '/transactions'
+    | '/drift'
+    | '/explainability'
+    | '/models'
+    | '/research'
+    | '/settings'
     | '/transactions/$id'
+    | '/transactions'
   id:
     | '__root__'
     | '/'
     | '/alerts'
     | '/analyze'
     | '/dashboard'
+    | '/drift'
+    | '/explainability'
+    | '/models'
+    | '/research'
+    | '/settings'
     | '/transactions'
     | '/transactions/$id'
+    | '/transactions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -104,6 +174,11 @@ export interface RootRouteChildren {
   AlertsRoute: typeof AlertsRoute
   AnalyzeRoute: typeof AnalyzeRoute
   DashboardRoute: typeof DashboardRoute
+  DriftRoute: typeof DriftRoute
+  ExplainabilityRoute: typeof ExplainabilityRoute
+  ModelsRoute: typeof ModelsRoute
+  ResearchRoute: typeof ResearchRoute
+  SettingsRoute: typeof SettingsRoute
   TransactionsRoute: typeof TransactionsRouteWithChildren
 }
 
@@ -137,12 +212,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/drift': {
+      id: '/drift'
+      path: '/drift'
+      fullPath: '/drift'
+      preLoaderRoute: typeof DriftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explainability': {
+      id: '/explainability'
+      path: '/explainability'
+      fullPath: '/explainability'
+      preLoaderRoute: typeof ExplainabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/models': {
+      id: '/models'
+      path: '/models'
+      fullPath: '/models'
+      preLoaderRoute: typeof ModelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/transactions': {
       id: '/transactions'
       path: '/transactions'
       fullPath: '/transactions'
       preLoaderRoute: typeof TransactionsRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/transactions/': {
+      id: '/transactions/'
+      path: '/'
+      fullPath: '/transactions/'
+      preLoaderRoute: typeof TransactionsIndexRouteImport
+      parentRoute: typeof TransactionsRoute
     }
     '/transactions/$id': {
       id: '/transactions/$id'
@@ -156,10 +273,12 @@ declare module '@tanstack/react-router' {
 
 interface TransactionsRouteChildren {
   TransactionsIdRoute: typeof TransactionsIdRoute
+  TransactionsIndexRoute: typeof TransactionsIndexRoute
 }
 
 const TransactionsRouteChildren: TransactionsRouteChildren = {
   TransactionsIdRoute: TransactionsIdRoute,
+  TransactionsIndexRoute: TransactionsIndexRoute,
 }
 
 const TransactionsRouteWithChildren = TransactionsRoute._addFileChildren(
@@ -171,6 +290,11 @@ const rootRouteChildren: RootRouteChildren = {
   AlertsRoute: AlertsRoute,
   AnalyzeRoute: AnalyzeRoute,
   DashboardRoute: DashboardRoute,
+  DriftRoute: DriftRoute,
+  ExplainabilityRoute: ExplainabilityRoute,
+  ModelsRoute: ModelsRoute,
+  ResearchRoute: ResearchRoute,
+  SettingsRoute: SettingsRoute,
   TransactionsRoute: TransactionsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
