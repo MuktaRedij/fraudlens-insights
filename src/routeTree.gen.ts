@@ -18,7 +18,7 @@ import { Route as ExplainabilityRouteImport } from './routes/explainability'
 import { Route as ModelsRouteImport } from './routes/models'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as SettingsRouteImport } from './routes/settings'
-import { Route as TransactionsRouteImport } from './routes/transactions'
+import { Route as TransactionsIndexRouteImport } from './routes/transactions.index'
 import { Route as TransactionsIdRouteImport } from './routes/transactions.$id'
 
 const IndexRoute = IndexRouteImport.update({
@@ -66,15 +66,15 @@ const SettingsRoute = SettingsRouteImport.update({
   path: '/settings',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TransactionsRoute = TransactionsRouteImport.update({
-  id: '/transactions',
-  path: '/transactions',
+const TransactionsIndexRoute = TransactionsIndexRouteImport.update({
+  id: '/transactions/',
+  path: '/transactions/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TransactionsIdRoute = TransactionsIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => TransactionsRoute,
+  id: '/transactions/$id',
+  path: '/transactions/$id',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -87,8 +87,8 @@ export interface FileRoutesByFullPath {
   '/models': typeof ModelsRoute
   '/research': typeof ResearchRoute
   '/settings': typeof SettingsRoute
-  '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
+  '/transactions/': typeof TransactionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -100,8 +100,8 @@ export interface FileRoutesByTo {
   '/models': typeof ModelsRoute
   '/research': typeof ResearchRoute
   '/settings': typeof SettingsRoute
-  '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
+  '/transactions': typeof TransactionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -114,8 +114,8 @@ export interface FileRoutesById {
   '/models': typeof ModelsRoute
   '/research': typeof ResearchRoute
   '/settings': typeof SettingsRoute
-  '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
+  '/transactions/': typeof TransactionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -129,8 +129,8 @@ export interface FileRouteTypes {
     | '/models'
     | '/research'
     | '/settings'
-    | '/transactions'
     | '/transactions/$id'
+    | '/transactions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -142,8 +142,8 @@ export interface FileRouteTypes {
     | '/models'
     | '/research'
     | '/settings'
-    | '/transactions'
     | '/transactions/$id'
+    | '/transactions'
   id:
     | '__root__'
     | '/'
@@ -155,8 +155,8 @@ export interface FileRouteTypes {
     | '/models'
     | '/research'
     | '/settings'
-    | '/transactions'
     | '/transactions/$id'
+    | '/transactions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -169,7 +169,8 @@ export interface RootRouteChildren {
   ModelsRoute: typeof ModelsRoute
   ResearchRoute: typeof ResearchRoute
   SettingsRoute: typeof SettingsRoute
-  TransactionsRoute: typeof TransactionsRouteWithChildren
+  TransactionsIdRoute: typeof TransactionsIdRoute
+  TransactionsIndexRoute: typeof TransactionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -237,34 +238,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/transactions': {
-      id: '/transactions'
+    '/transactions/': {
+      id: '/transactions/'
       path: '/transactions'
-      fullPath: '/transactions'
-      preLoaderRoute: typeof TransactionsRouteImport
+      fullPath: '/transactions/'
+      preLoaderRoute: typeof TransactionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/transactions/$id': {
       id: '/transactions/$id'
-      path: '/$id'
+      path: '/transactions/$id'
       fullPath: '/transactions/$id'
       preLoaderRoute: typeof TransactionsIdRouteImport
-      parentRoute: typeof TransactionsRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface TransactionsRouteChildren {
-  TransactionsIdRoute: typeof TransactionsIdRoute
-}
-
-const TransactionsRouteChildren: TransactionsRouteChildren = {
-  TransactionsIdRoute: TransactionsIdRoute,
-}
-
-const TransactionsRouteWithChildren = TransactionsRoute._addFileChildren(
-  TransactionsRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -276,7 +265,8 @@ const rootRouteChildren: RootRouteChildren = {
   ModelsRoute: ModelsRoute,
   ResearchRoute: ResearchRoute,
   SettingsRoute: SettingsRoute,
-  TransactionsRoute: TransactionsRouteWithChildren,
+  TransactionsIdRoute: TransactionsIdRoute,
+  TransactionsIndexRoute: TransactionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
