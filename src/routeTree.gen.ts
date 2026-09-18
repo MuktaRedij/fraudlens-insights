@@ -13,6 +13,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AlertsRouteImport } from './routes/alerts'
 import { Route as AnalyzeRouteImport } from './routes/analyze'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DriftRouteImport } from './routes/drift'
+import { Route as ExplainabilityRouteImport } from './routes/explainability'
+import { Route as ModelsRouteImport } from './routes/models'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as TransactionsRouteImport } from './routes/transactions'
 import { Route as TransactionsIdRouteImport } from './routes/transactions.$id'
 
@@ -36,6 +41,31 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DriftRoute = DriftRouteImport.update({
+  id: '/drift',
+  path: '/drift',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExplainabilityRoute = ExplainabilityRouteImport.update({
+  id: '/explainability',
+  path: '/explainability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModelsRoute = ModelsRouteImport.update({
+  id: '/models',
+  path: '/models',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TransactionsRoute = TransactionsRouteImport.update({
   id: '/transactions',
   path: '/transactions',
@@ -52,6 +82,11 @@ export interface FileRoutesByFullPath {
   '/alerts': typeof AlertsRoute
   '/analyze': typeof AnalyzeRoute
   '/dashboard': typeof DashboardRoute
+  '/drift': typeof DriftRoute
+  '/explainability': typeof ExplainabilityRoute
+  '/models': typeof ModelsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
 }
@@ -60,6 +95,11 @@ export interface FileRoutesByTo {
   '/alerts': typeof AlertsRoute
   '/analyze': typeof AnalyzeRoute
   '/dashboard': typeof DashboardRoute
+  '/drift': typeof DriftRoute
+  '/explainability': typeof ExplainabilityRoute
+  '/models': typeof ModelsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
 }
@@ -69,6 +109,11 @@ export interface FileRoutesById {
   '/alerts': typeof AlertsRoute
   '/analyze': typeof AnalyzeRoute
   '/dashboard': typeof DashboardRoute
+  '/drift': typeof DriftRoute
+  '/explainability': typeof ExplainabilityRoute
+  '/models': typeof ModelsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRouteWithChildren
   '/transactions/$id': typeof TransactionsIdRoute
 }
@@ -79,6 +124,11 @@ export interface FileRouteTypes {
     | '/alerts'
     | '/analyze'
     | '/dashboard'
+    | '/drift'
+    | '/explainability'
+    | '/models'
+    | '/research'
+    | '/settings'
     | '/transactions'
     | '/transactions/$id'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +137,11 @@ export interface FileRouteTypes {
     | '/alerts'
     | '/analyze'
     | '/dashboard'
+    | '/drift'
+    | '/explainability'
+    | '/models'
+    | '/research'
+    | '/settings'
     | '/transactions'
     | '/transactions/$id'
   id:
@@ -95,6 +150,11 @@ export interface FileRouteTypes {
     | '/alerts'
     | '/analyze'
     | '/dashboard'
+    | '/drift'
+    | '/explainability'
+    | '/models'
+    | '/research'
+    | '/settings'
     | '/transactions'
     | '/transactions/$id'
   fileRoutesById: FileRoutesById
@@ -104,6 +164,11 @@ export interface RootRouteChildren {
   AlertsRoute: typeof AlertsRoute
   AnalyzeRoute: typeof AnalyzeRoute
   DashboardRoute: typeof DashboardRoute
+  DriftRoute: typeof DriftRoute
+  ExplainabilityRoute: typeof ExplainabilityRoute
+  ModelsRoute: typeof ModelsRoute
+  ResearchRoute: typeof ResearchRoute
+  SettingsRoute: typeof SettingsRoute
   TransactionsRoute: typeof TransactionsRouteWithChildren
 }
 
@@ -135,6 +200,41 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drift': {
+      id: '/drift'
+      path: '/drift'
+      fullPath: '/drift'
+      preLoaderRoute: typeof DriftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explainability': {
+      id: '/explainability'
+      path: '/explainability'
+      fullPath: '/explainability'
+      preLoaderRoute: typeof ExplainabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/models': {
+      id: '/models'
+      path: '/models'
+      fullPath: '/models'
+      preLoaderRoute: typeof ModelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/transactions': {
@@ -171,6 +271,11 @@ const rootRouteChildren: RootRouteChildren = {
   AlertsRoute: AlertsRoute,
   AnalyzeRoute: AnalyzeRoute,
   DashboardRoute: DashboardRoute,
+  DriftRoute: DriftRoute,
+  ExplainabilityRoute: ExplainabilityRoute,
+  ModelsRoute: ModelsRoute,
+  ResearchRoute: ResearchRoute,
+  SettingsRoute: SettingsRoute,
   TransactionsRoute: TransactionsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
