@@ -1,8 +1,8 @@
 # FraudLens roadmap
-- [ ] Foundation, mock data, and service boundary
-- [ ] Shared application shell and global interactions
-- [ ] Dashboard and transaction analysis
-- [ ] Transactions and alerts workflows
-- [ ] Model intelligence and explainability
-- [ ] Drift, research, and settings
+- [x] Foundation, mock data, and service boundary
+- [x] Shared application shell and global interactions
+- [x] Dashboard and transaction analysis
+- [x] Transactions and alerts workflows
+- [x] Model intelligence and explainability
+- [x] Drift, research, and settings
 - [ ] Responsive and interaction verification
