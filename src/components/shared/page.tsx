@@ -11,7 +11,7 @@ export function PageHeader({ title, description, eyebrow, actions }: { title: st
 }
 
 export function Panel({ title, description, action, children, className }: { title?: string; description?: string; action?: ReactNode; children: ReactNode; className?: string }) {
-  return <section className={cn("rounded-lg border border-border bg-card shadow-panel", className)}>
+  return <section className={cn("min-w-0 rounded-lg border border-border bg-card shadow-panel", className)}>
     {(title || action) && <div className="flex items-start justify-between gap-4 border-b border-border/70 px-5 py-4"><div>{title && <h2 className="text-sm font-semibold text-card-foreground">{title}</h2>}{description && <p className="mt-1 text-xs text-muted-foreground">{description}</p>}</div>{action}</div>}
     <div className="p-5">{children}</div>
   </section>;
