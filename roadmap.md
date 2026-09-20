@@ -5,4 +5,4 @@
 - [x] Transactions and alerts workflows
 - [x] Model intelligence and explainability
 - [x] Drift, research, and settings
-- [ ] Responsive and interaction verification
+- [x] Responsive and interaction verification
