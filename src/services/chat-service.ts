@@ -357,7 +357,9 @@ function buildResponse(request: ChatRequest): ChatResponse {
     case "research": return researchAnswer();
     case "alerts": return alertsAnswer(request.context);
     case "metrics": return metricsAnswer();
-    case "nextSteps": return nextStepsAnswer(tx, request.context);
+    case "nextSteps":
+      if (!tx && request.context.route === "/alerts") return alertsAnswer(request.context);
+      return nextStepsAnswer(tx, request.context);
     case "feedback": return feedbackAnswer();
     case "capabilities": return capabilitiesAnswer(request.context);
     default: return unknownAnswer(request.context);
