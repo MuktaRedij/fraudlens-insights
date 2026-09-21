@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AppShell } from "@/components/layout/app-shell";
+import { AiAssistant } from "@/components/assistant/ai-assistant";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -123,6 +124,6 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
-    <QueryClientProvider client={queryClient}><TooltipProvider><AppShell><Outlet /></AppShell><Toaster richColors position="bottom-right"/></TooltipProvider></QueryClientProvider>
+    <QueryClientProvider client={queryClient}><TooltipProvider><AppShell><Outlet /></AppShell><AiAssistant /><Toaster richColors position="bottom-right"/></TooltipProvider></QueryClientProvider>
   );
 }
