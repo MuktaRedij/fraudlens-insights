@@ -127,7 +127,7 @@ function shapExplanation(tx?: Transaction): ChatResponse {
   }
   return {
     message: base.join("\n"),
-    relatedTransactionIds: tx ? [tx.id] : undefined,
+    ...(tx ? { relatedTransactionIds: [tx.id] } : {}),
     actions: [{ label: "Open Explanation", to: "/explainability" }],
     suggestedActions: ["Which model is being used?", "Explain this transaction in simple terms."],
   };
@@ -243,7 +243,7 @@ function riskVsProbabilityAnswer(tx?: Transaction): ChatResponse {
     "**Decision policy (demonstration):** 0–53 Monitor/Allow · 54–87 Review · 88–93 High Risk · 94–100 Critical. Decision thresholds are policy thresholds selected using validation data.",
   ];
   if (tx) lines.push("", `On ${tx.id}: probability ${formatPercent(tx.rawProbability, 1)} → score ${tx.riskScore} → band ${getRiskBand(tx.riskScore)} → decision ${tx.decision}.`);
-  return { message: lines.join("\n"), relatedTransactionIds: tx ? [tx.id] : undefined, suggestedActions: ["Which model is being used?", "What does the SHAP explanation mean?"] };
+  return { message: lines.join("\n"), ...(tx ? { relatedTransactionIds: [tx.id] } : {}), suggestedActions: ["Which model is being used?", "What does the SHAP explanation mean?"] };
 }
 
 function imbalanceAnswer(): ChatResponse {
