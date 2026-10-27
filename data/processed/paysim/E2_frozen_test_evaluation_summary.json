@@ -1,0 +1,110 @@
+{
+  "step": "18C",
+  "dataset": "PaySim",
+  "base_model": "Official E2 LightGBM",
+  "calibration": "Isotonic",
+  "test_rows": 66620,
+  "test_fraud": 826,
+  "raw_e2_average_precision": 0.6936978081193467,
+  "calibrated_average_precision": 0.6696230126420127,
+  "raw_e2_roc_auc": 0.9747561009449038,
+  "calibrated_roc_auc": 0.9736541031546037,
+  "validation_derived_thresholds": [
+    23,
+    45,
+    65
+  ],
+  "thresholds_selected_without_test_data": true,
+  "risk_band_monotonicity": true,
+  "threshold_results": [
+    {
+      "risk_threshold": 23,
+      "validation_precision": 0.6363636363636364,
+      "validation_recall": 0.6262254901960784,
+      "test_precision": 0.5781741867785939,
+      "test_recall": 0.6670702179176755,
+      "test_f1": 0.6194491287240023,
+      "test_f2": 0.6471693680996007,
+      "true_positives": 551,
+      "false_positives": 402,
+      "true_negatives": 65392,
+      "false_negatives": 275,
+      "flagged_transactions": 953,
+      "flagged_fraction": 0.01430501350945662,
+      "fraud_capture": 0.6670702179176755,
+      "false_positive_rate": 0.006109979633401222
+    },
+    {
+      "risk_threshold": 45,
+      "validation_precision": 0.821505376344086,
+      "validation_recall": 0.4681372549019608,
+      "test_precision": 0.7414721723518851,
+      "test_recall": 0.5,
+      "test_f1": 0.5972523499638467,
+      "test_f2": 0.5348355348355348,
+      "true_positives": 413,
+      "false_positives": 144,
+      "true_negatives": 65650,
+      "false_negatives": 413,
+      "flagged_transactions": 557,
+      "flagged_fraction": 0.008360852596817773,
+      "fraud_capture": 0.5,
+      "false_positive_rate": 0.0021886494209198406
+    },
+    {
+      "risk_threshold": 65,
+      "validation_precision": 0.951219512195122,
+      "validation_recall": 0.3345588235294117,
+      "test_precision": 0.9897260273972602,
+      "test_recall": 0.3498789346246973,
+      "test_f1": 0.516994633273703,
+      "test_f2": 0.4018353726362625,
+      "true_positives": 289,
+      "false_positives": 3,
+      "true_negatives": 65791,
+      "false_negatives": 537,
+      "flagged_transactions": 292,
+      "flagged_fraction": 0.004383068147703392,
+      "fraud_capture": 0.3498789346246973,
+      "false_positive_rate": 4.559686293583001e-05
+    }
+  ],
+  "test_risk_band_results": [
+    {
+      "risk_band": "Low",
+      "transactions": 65123,
+      "fraud_count": 194,
+      "fraud_rate": 0.002978978241174393,
+      "fraction_of_all_test_fraud": 0.23486682808716708
+    },
+    {
+      "risk_band": "Moderate",
+      "transactions": 620,
+      "fraud_count": 106,
+      "fraud_rate": 0.17096774193548386,
+      "fraction_of_all_test_fraud": 0.12832929782082325
+    },
+    {
+      "risk_band": "Medium",
+      "transactions": 418,
+      "fraud_count": 129,
+      "fraud_rate": 0.30861244019138756,
+      "fraction_of_all_test_fraud": 0.15617433414043583
+    },
+    {
+      "risk_band": "High",
+      "transactions": 189,
+      "fraud_count": 129,
+      "fraud_rate": 0.6825396825396826,
+      "fraction_of_all_test_fraud": 0.15617433414043583
+    },
+    {
+      "risk_band": "Critical",
+      "transactions": 270,
+      "fraud_count": 268,
+      "fraud_rate": 0.9925925925925926,
+      "fraction_of_all_test_fraud": 0.324455205811138
+    }
+  ],
+  "methodology_note": "All decision thresholds were frozen from validation before evaluating the untouched PaySim test set."
+}

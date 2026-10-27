@@ -1,0 +1,4 @@
+dataset,total_transactions,fraud_transactions,fraud_rate_percent,split_strategy,primary_supervised_model,anomaly_model,calibration,explainability
+PaySim,6362620,8213,0.129083,Chronological,LightGBM,Isolation Forest,Isotonic,SHAP
+IEEE-CIS,193540,5689,2.9394,Chronological,LightGBM,Not primary,Platt,SHAP
+Credit Card Fraud,284807,492,0.172749,Chronological,SMOTE LightGBM,Not primary,Platt,SHAP

@@ -1,0 +1,4 @@
+dataset,review_threshold,review_precision,review_recall,high_risk_threshold,high_risk_precision,high_risk_recall,critical_threshold,critical_precision,critical_recall
+PaySim,23,0.578174,0.66707,45,0.741472,0.5,65,0.989726,0.349879
+IEEE-CIS,11,0.6122,0.5204,31,0.8945,0.3825,80,0.9756,0.2082
+Credit Card Fraud,54,0.419355,0.75,88,0.764706,0.75,94,0.847826,0.75

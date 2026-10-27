@@ -1,0 +1,12 @@
+feature,decision,reason
+step,USE,Transaction timestamp/order information available at scoring time
+type,USE,Transaction type available at transaction time
+amount,USE,Transaction amount available at transaction time
+nameOrig,TRANSFORM,Do not use raw identifier; use historical behavioral features
+nameDest,TRANSFORM,Do not use raw identifier; use historical behavioral/relationship features
+oldbalanceOrg,AUDIT/CONDITIONAL,Potentially available but must verify simulator semantics and leakage risk
+newbalanceOrig,AUDIT/CONDITIONAL,Represents post-transaction state; requires careful availability assessment
+oldbalanceDest,AUDIT/CONDITIONAL,Potentially available but must verify simulator semantics
+newbalanceDest,AUDIT/CONDITIONAL,Represents post-transaction state; requires careful availability assessment
+isFraud,EXCLUDE,Target label
+isFlaggedFraud,EXCLUDE PRIMARY,Existing fraud rule; using it risks reproducing an existing detection mechanism

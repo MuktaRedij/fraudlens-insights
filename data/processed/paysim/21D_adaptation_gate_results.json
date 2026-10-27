@@ -1,0 +1,33 @@
+{
+  "static_model": {
+    "phase_2_AP": 0.774646,
+    "phase_3_AP": 0.686327
+  },
+  "naive_adaptation": {
+    "phase_2_AP": 0.4203,
+    "phase_3_AP": 0.345132
+  },
+  "recency_weighted_adaptation": {
+    "phase_2_AP": 0.415491,
+    "phase_3_AP": 0.181747
+  },
+  "drift_monitoring": {
+    "method": "Population Stability Index",
+    "numeric_features": 16,
+    "categorical_features": 1,
+    "low_threshold": 0.1,
+    "moderate_threshold": 0.25,
+    "interpretation": "PSI thresholds are heuristic monitoring thresholds."
+  },
+  "governance_rule": {
+    "step_1": "Monitor feature and fraud-rate distribution drift.",
+    "step_2": "Trigger adaptation only when meaningful drift is detected.",
+    "step_3": "Train an adaptation candidate using information available at the adaptation time.",
+    "step_4": "Evaluate the candidate on temporally subsequent validation data.",
+    "step_5": "Deploy the candidate only if predefined forward-performance gates are satisfied.",
+    "step_6": "Otherwise retain the stronger frozen detector."
+  },
+  "current_experiment_decision": "REJECT ADAPTATION CANDIDATES",
+  "reason": "Both naive retraining and fixed recency weighting degraded future fraud-detection performance.",
+  "safety_principle": "Adaptation must never automatically replace a stronger validated detector."
+}

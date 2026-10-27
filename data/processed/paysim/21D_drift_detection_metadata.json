@@ -1,0 +1,17 @@
+{
+  "step": "21D",
+  "title": "Drift Detection + Adaptation Gate",
+  "dataset": "PaySim",
+  "drift_measure": "Population Stability Index",
+  "numeric_psi": "Quantile bins derived from reference training population",
+  "categorical_psi": "Category-frequency PSI using union of reference/current categories",
+  "psi_thresholds": {
+    "low": "< 0.10",
+    "moderate": "0.10 to < 0.25",
+    "high": ">= 0.25"
+  },
+  "important_note": "PSI thresholds are heuristic monitoring thresholds and are not statistical significance tests.",
+  "adaptation_policy": "Conditional adaptation with forward-validation gate",
+  "test_isolation": "Final PaySim test set was not used.",
+  "created_at": "2026-09-12T07:24:59.205448+00:00"
+}

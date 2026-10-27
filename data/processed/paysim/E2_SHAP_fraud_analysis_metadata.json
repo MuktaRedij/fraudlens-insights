@@ -1,0 +1,25 @@
+{
+  "analysis": "fraud_specific_shap",
+  "source": "validation",
+  "fraud_transactions": 816,
+  "test_data_used": false,
+  "features": [
+    "amount",
+    "log_amount",
+    "type",
+    "step",
+    "step_normalized",
+    "hour_sin",
+    "hour_cos",
+    "dest_prior_tx_count",
+    "dest_prior_total_amount",
+    "dest_prior_avg_amount",
+    "dest_prior_max_amount",
+    "dest_time_since_previous_tx",
+    "is_new_destination",
+    "dest_is_cold_start",
+    "amount_vs_dest_avg",
+    "amount_vs_dest_max",
+    "amount_log_deviation"
+  ]
+}

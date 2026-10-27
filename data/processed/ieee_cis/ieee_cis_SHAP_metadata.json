@@ -1,0 +1,14 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "model": "IEEE-E1 Transaction-only LightGBM",
+  "model_trees": 834,
+  "feature_count": 399,
+  "categorical_features": 14,
+  "validation_rows": 29031,
+  "validation_fraud": 1046,
+  "shap_sample_rows": 11046,
+  "shap_sample_fraud": 1046,
+  "shap_sample_legitimate": 10000,
+  "random_state": 42,
+  "shap_version": "0.52.0"
+}

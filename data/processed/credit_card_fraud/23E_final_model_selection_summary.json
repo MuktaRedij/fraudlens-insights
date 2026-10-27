@@ -1,0 +1,70 @@
+{
+  "experiment": "23E Final Supervised Model Comparison",
+  "dataset": "Credit Card Fraud",
+  "selection_protocol": {
+    "primary_metric": "Average Precision",
+    "secondary_metrics": [
+      "ROC-AUC",
+      "Brier score",
+      "LogLoss"
+    ],
+    "selection_split": "Chronological validation",
+    "test_role": "Untouched final generalization evaluation",
+    "test_used_for_selection": false
+  },
+  "models_compared": [
+    "Logistic Regression",
+    "LightGBM Unweighted",
+    "LightGBM Class-Weighted",
+    "LightGBM SMOTE",
+    "XGBoost"
+  ],
+  "primary_candidates": [
+    "LightGBM SMOTE",
+    "XGBoost"
+  ],
+  "validation_evidence": {
+    "LightGBM_SMOTE_AP": 0.8621501007679522,
+    "XGBoost_AP": 0.853855,
+    "statement": "LightGBM SMOTE has the higher validation AP among the two primary candidates."
+  },
+  "important_results": {
+    "LightGBM_SMOTE": {
+      "validation_AP": 0.86215,
+      "test_AP": 0.758784,
+      "test_ROC_AUC": 0.976314,
+      "test_Brier": 0.001858
+    },
+    "XGBoost": {
+      "validation_AP": 0.853855,
+      "test_AP": 0.764778,
+      "test_ROC_AUC": 0.971735,
+      "test_Brier": 0.000478
+    }
+  },
+  "calibration": {
+    "LightGBM": "Platt",
+    "XGBoost": "Isotonic",
+    "interpretation": "Calibration is treated as a probability representation layer rather than as an improvement in ranking performance."
+  },
+  "xgboost_calibrated_test": {
+    "AP": 0.754546,
+    "ROC_AUC": 0.967313,
+    "Brier": 0.000382,
+    "LogLoss": 0.002687
+  },
+  "research_conclusion": [
+    "Both LightGBM SMOTE and XGBoost provide strong chronological fraud-detection performance.",
+    "LightGBM SMOTE has higher validation AP, which is the pre-established primary model-selection metric.",
+    "XGBoost has a slightly higher AP on the untouched test set, but this test result is not used to retroactively select the model.",
+    "XGBoost isotonic calibration improves probability quality on the untouched test set according to Brier score and LogLoss, while reducing AP and ROC-AUC relative to raw XGBoost probabilities.",
+    "Therefore detection/ranking and probability calibration remain separate system layers.",
+    "Operational thresholds are validation-derived and frozen before test evaluation."
+  ],
+  "artifacts": {
+    "supervised_comparison": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23E_final_supervised_model_comparison.csv",
+    "calibration_comparison": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23E_final_calibration_comparison.csv",
+    "operational_comparison": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23E_final_operational_comparison.csv",
+    "summary": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23E_final_model_selection_summary.json"
+  }
+}

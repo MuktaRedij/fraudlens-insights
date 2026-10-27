@@ -1,0 +1,30 @@
+[
+  {
+    "finding": "Fraud prevalence varies substantially",
+    "evidence": "IEEE-CIS has the highest fraud prevalence, while PaySim and Credit Card Fraud are substantially more imbalanced."
+  },
+  {
+    "finding": "Temporal validation is important",
+    "evidence": "All three datasets use chronological train/validation/test separation, reducing future-information leakage."
+  },
+  {
+    "finding": "Model performance is dataset-dependent",
+    "evidence": "Frozen test AP differs across datasets, demonstrating that fraud detection performance cannot be assumed to transfer unchanged across domains."
+  },
+  {
+    "finding": "Imbalance handling should be empirically evaluated",
+    "evidence": "Class weighting degraded performance in both IEEE-CIS and Credit Card Fraud experiments, while SMOTE was beneficial for the Credit Card Fraud validation experiment."
+  },
+  {
+    "finding": "Calibration is a separate system layer",
+    "evidence": "Platt calibration substantially improved probability quality for Credit Card Fraud while preserving ranking metrics."
+  },
+  {
+    "finding": "Explainability is implemented at multiple levels",
+    "evidence": "Global SHAP, fraud-specific SHAP, and transaction-level explanations are available for the evaluated datasets."
+  },
+  {
+    "finding": "Anomaly detection is complementary rather than automatically superior",
+    "evidence": "Isolation Forest on PaySim produced weak standalone performance and did not improve the frozen LightGBM ranking during fusion."
+  }
+]

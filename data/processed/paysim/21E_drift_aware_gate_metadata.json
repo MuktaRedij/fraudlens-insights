@@ -1,0 +1,13 @@
+{
+  "step": "21E",
+  "title": "Drift-Aware Adaptation Gate",
+  "drift_metric": "PSI",
+  "adaptation_gate": "Forward AP must exceed current detector.",
+  "temporal_features_excluded_from_primary_trigger": [
+    "step",
+    "step_normalized"
+  ],
+  "reason": "These features directly encode temporal position and therefore naturally change across chronological windows.",
+  "test_isolation": true,
+  "created_at": "2026-09-12T07:25:57.921985+00:00"
+}

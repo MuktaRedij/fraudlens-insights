@@ -1,0 +1,7 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "model": "IEEE-E1 Transaction-only LightGBM",
+  "fraud_explanation_rows": 1046,
+  "feature_count": 399,
+  "interpretation": "SHAP values quantify model contribution, not causality."
+}

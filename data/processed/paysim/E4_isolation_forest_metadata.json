@@ -1,0 +1,24 @@
+{
+  "model": "IsolationForest",
+  "n_estimators": 200,
+  "max_samples": "auto",
+  "contamination": "auto",
+  "random_state": 42,
+  "training_rows": 300000,
+  "training_population": "legitimate_only_train_period",
+  "n_features": 12,
+  "feature_source": [
+    "log_amount",
+    "step_normalized",
+    "dest_prior_tx_count",
+    "dest_prior_total_amount",
+    "dest_prior_avg_amount",
+    "dest_prior_max_amount",
+    "dest_time_since_previous_tx",
+    "is_new_destination",
+    "dest_is_cold_start",
+    "amount_vs_dest_avg",
+    "amount_vs_dest_max",
+    "amount_log_deviation"
+  ]
+}

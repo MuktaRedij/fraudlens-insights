@@ -1,0 +1,34 @@
+{
+  "step": "22B",
+  "pipeline": "SMOTE LightGBM -> logit(raw_probability) -> Platt calibration -> risk scoring -> SHAP explanation",
+  "model_artifact": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/20F_smote_lightgbm.txt",
+  "calibrator_artifact": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/20H_platt_calibrator.joblib",
+  "validation_dataset": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/credit_card_validation_features.parquet",
+  "model_feature_count": 37,
+  "model_tree_count": 131,
+  "selected_transaction_count": 5,
+  "selected_fraud_count": 3,
+  "selected_legitimate_count": 2,
+  "calibration_input": "logit(raw_probability)",
+  "risk_score_formula": "round(calibrated_probability * 100)",
+  "risk_bands": {
+    "Low": "0-19",
+    "Moderate": "20-39",
+    "Medium": "40-59",
+    "High": "60-79",
+    "Critical": "80-100"
+  },
+  "operational_thresholds": {
+    "REVIEW": 54,
+    "HIGH_RISK_REVIEW": 88,
+    "BLOCK_ESCALATE": 94
+  },
+  "shap_library_version": "0.52.0",
+  "generated_at_utc": "2026-09-12T07:36:14.432487+00:00",
+  "notes": [
+    "Frozen artifacts were used; no retraining occurred.",
+    "The Platt calibrator receives logit(raw_probability).",
+    "SHAP represents model contribution, not causality.",
+    "PCA/anonymized variables V1-V28 are not semantically interpreted."
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "experiment": "23D_XGBoost_Risk_Scoring",
+  "dataset": "Credit Card Fraud",
+  "model": "STEP 23A frozen XGBoost",
+  "calibration": "STEP 23B-FIX frozen Isotonic calibration",
+  "risk_score": {
+    "range": "0-100",
+    "formula": "round(calibrated_probability * 100)"
+  },
+  "risk_bands": {
+    "Low": "0-19",
+    "Moderate": "20-39",
+    "Medium": "40-59",
+    "High": "60-79",
+    "Critical": "80-100"
+  },
+  "threshold_selection": {
+    "selection_dataset": "validation",
+    "test_used_for_selection": false,
+    "target_precisions": {
+      "REVIEW": 0.5,
+      "HIGH_RISK": 0.8,
+      "CRITICAL": 0.95
+    },
+    "selected_thresholds": {
+      "REVIEW": 4,
+      "HIGH_RISK": 8,
+      "CRITICAL": 39
+    },
+    "selection_rule": "Lowest integer risk-score threshold meeting the target validation precision."
+  },
+  "validation": {
+    "rows": 42721,
+    "fraud": 56,
+    "fraud_rate": 0.001310830738980829
+  },
+  "test": {
+    "rows": 42722,
+    "fraud": 52,
+    "fraud_rate": 0.0012171714807359207
+  },
+  "test_model_metrics": {
+    "raw_xgboost": {
+      "average_precision": 0.7647776520826938,
+      "roc_auc": 0.971735231021615,
+      "brier": 0.0004781835210462384,
+      "logloss": 0.0033446375592658313
+    },
+    "xgboost_isotonic": {
+      "average_precision": 0.754545899718902,
+      "roc_auc": 0.9673128751960485,
+      "brier": 0.00038217677540372346,
+      "logloss": 0.002686648605837445
+    }
+  },
+  "operational_test_results": [
+    {
+      "decision": "REVIEW",
+      "frozen_validation_threshold": 4,
+      "threshold": 4,
+      "precision": 0.5064935064935064,
+      "recall": 0.75,
+      "f1": 0.6046511627906976,
+      "f2": 0.6842105263157895,
+      "true_positive": 39,
+      "false_positive": 38,
+      "true_negative": 42632,
+      "false_negative": 13,
+      "flagged_transactions": 77,
+      "flagged_rate": 0.0018023500772435747,
+      "false_positive_rate": 0.000890555425357394
+    },
+    {
+      "decision": "HIGH_RISK",
+      "frozen_validation_threshold": 8,
+      "threshold": 8,
+      "precision": 0.7222222222222222,
+      "recall": 0.75,
+      "f1": 0.7358490566037735,
+      "f2": 0.7442748091603053,
+      "true_positive": 39,
+      "false_positive": 15,
+      "true_negative": 42655,
+      "false_negative": 13,
+      "flagged_transactions": 54,
+      "flagged_rate": 0.001263985768456533,
+      "false_positive_rate": 0.0003515350363252871
+    },
+    {
+      "decision": "CRITICAL",
+      "frozen_validation_threshold": 39,
+      "threshold": 39,
+      "precision": 0.9736842105263158,
+      "recall": 0.7115384615384616,
+      "f1": 0.8222222222222222,
+      "f2": 0.7520325203252033,
+      "true_positive": 37,
+      "false_positive": 1,
+      "true_negative": 42669,
+      "false_negative": 15,
+      "flagged_transactions": 38,
+      "flagged_rate": 0.0008894714666916343,
+      "false_positive_rate": 2.3435669088352474e-05
+    }
+  ],
+  "methodology": [
+    "XGBoost detector remained frozen.",
+    "Isotonic calibrator remained frozen.",
+    "Operational thresholds were selected using validation only.",
+    "Frozen validation thresholds were applied to the untouched test set.",
+    "Test labels were used only for final evaluation.",
+    "No threshold was selected based on test performance."
+  ],
+  "artifacts": {
+    "validation_risk_scores": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_validation_risk_scores.parquet",
+    "test_risk_scores": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_test_risk_scores.parquet",
+    "threshold_analysis": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_threshold_analysis.csv",
+    "risk_band_analysis": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_risk_band_analysis.csv",
+    "frozen_test_evaluation": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_frozen_test_evaluation.csv",
+    "operational_comparison": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_operational_comparison.csv",
+    "summary": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/23D_xgboost_risk_scoring_summary.json"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "target": "isFraud",
+  "identifier_exclusions": [
+    "TransactionID"
+  ],
+  "identity_merge": true,
+  "identity_column_normalization": "replace '-' with '_'",
+  "temporal_column": "TransactionDT",
+  "engineered_temporal_features": [
+    "time_days",
+    "day_index",
+    "hour",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "engineered_amount_features": [
+    "log_transaction_amt"
+  ],
+  "missingness_features": [
+    "missing_feature_count",
+    "missing_feature_fraction"
+  ],
+  "split_strategy": "chronological 70/15/15",
+  "split_summary": [
+    {
+      "split": "train",
+      "rows": 135478,
+      "fraud": 3490,
+      "fraud_rate": 0.02576064010392831,
+      "min_TransactionDT": 86400,
+      "max_TransactionDT": 2733380
+    },
+    {
+      "split": "validation",
+      "rows": 29031,
+      "fraud": 1046,
+      "fraud_rate": 0.03603045020839792,
+      "min_TransactionDT": 2733401,
+      "max_TransactionDT": 3510141
+    },
+    {
+      "split": "internal_test",
+      "rows": 29031,
+      "fraud": 1153,
+      "fraud_rate": 0.039716165478281835,
+      "min_TransactionDT": 3510175,
+      "max_TransactionDT": 4358367
+    }
+  ],
+  "competition_test_labels_available": false,
+  "competition_test_used_for_evaluation": false,
+  "competition_test_used_for_selection": false,
+  "leakage_policy": "No future labeled transactions are used to construct training or validation features. TransactionID is excluded as a predictive feature."
+}

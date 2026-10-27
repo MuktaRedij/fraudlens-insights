@@ -1,0 +1,11 @@
+{
+  "step": "21A",
+  "title": "Cross-Dataset Final Comparison",
+  "datasets": [
+    "PaySim",
+    "IEEE-CIS",
+    "Credit Card Fraud"
+  ],
+  "purpose": "Compare final frozen fraud-detection experiments across independent datasets without retraining or test-set tuning.",
+  "created_at": "2026-09-12T07:09:21.430394+00:00"
+}

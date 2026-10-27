@@ -1,0 +1,11 @@
+split,risk_band,transaction_count,fraud_count,fraud_rate,fraud_capture
+validation,Low,42667,10,0.0002343731689596175,0.17857142857142858
+validation,Moderate,8,2,0.25,0.03571428571428571
+validation,Medium,3,2,0.6666666666666666,0.03571428571428571
+validation,High,43,42,0.9767441860465116,0.75
+validation,Critical,0,0,0.0,0.0
+test,Low,42670,13,0.0003046636981485821,0.25
+test,Moderate,6,0,0.0,0.0
+test,Medium,6,0,0.0,0.0
+test,High,40,39,0.975,0.75
+test,Critical,0,0,0.0,0.0

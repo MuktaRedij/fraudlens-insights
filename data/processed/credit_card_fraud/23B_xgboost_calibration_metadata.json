@@ -1,0 +1,62 @@
+{
+  "experiment": "23B_XGBoost_OOF_Calibration",
+  "dataset": "Credit Card Fraud",
+  "calibration_input": "raw_probability",
+  "n_folds": 5,
+  "oof_rows": 159492,
+  "oof_fraud": 280,
+  "oof_metrics": {
+    "brier": 0.0005476365076996062,
+    "logloss": 0.0039673492157718685,
+    "average_precision": 0.8160682640381682,
+    "roc_auc": 0.9689151212579096
+  },
+  "validation_results": [
+    {
+      "method": "Uncalibrated",
+      "brier": 0.00033611252705706635,
+      "logloss": 0.00212096154376244,
+      "average_precision": 0.853854728236104,
+      "roc_auc": 0.9857636738042221,
+      "mean_probability": 0.001296346541494131,
+      "median_probability": 2.4168859908968443e-06,
+      "p95_probability": 0.00012017624248983338,
+      "p99_probability": 0.0012370948679745197,
+      "max_probability": 0.9999997615814209
+    },
+    {
+      "method": "Platt",
+      "brier": 0.0003424311671629019,
+      "logloss": 0.0026652736320542407,
+      "average_precision": 0.853854728236104,
+      "roc_auc": 0.9857636738042221,
+      "mean_probability": 0.0013662449359688883,
+      "median_probability": 0.0004420441101241847,
+      "p95_probability": 0.0004425466300405343,
+      "p99_probability": 0.0004473413845293939,
+      "max_probability": 0.8731129196200685
+    },
+    {
+      "method": "Isotonic",
+      "brier": 0.00032682278396040364,
+      "logloss": 0.0019762586175781876,
+      "average_precision": 0.8466815054642928,
+      "roc_auc": 0.9825927910130419,
+      "mean_probability": 0.0013433567340547165,
+      "median_probability": 0.00010304816471218647,
+      "p95_probability": 0.0005036091992613732,
+      "p99_probability": 0.005870841487279843,
+      "max_probability": 1.0
+    }
+  ],
+  "selected_method": "Isotonic",
+  "platt_coefficient": [
+    [
+      9.652451706601864
+    ]
+  ],
+  "platt_intercept": [
+    -7.723682071239764
+  ],
+  "note": "Calibration was fitted exclusively on chronological OOF predictions from training data. The validation set was used only for calibration comparison. The chronological test set was untouched."
+}

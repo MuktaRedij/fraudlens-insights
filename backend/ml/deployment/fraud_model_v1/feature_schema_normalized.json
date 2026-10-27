@@ -1,0 +1,117 @@
+{
+  "model_version": "fraud_model_v1",
+  "generated_at": "2026-09-25T07:25:00.473717+00:00",
+  "feature_count": 22,
+  "features": [
+    {
+      "name": "TransactionDT",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "TransactionAmt",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "transaction_hour",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "transaction_day",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "transaction_week",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "transaction_day_of_week",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "hour_sin",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "hour_cos",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "amount_log1p",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "time_since_previous_transaction",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "has_previous_transaction",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_prev_count",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_prev_amount_mean",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_prev_amount_std",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_prev_amount_deviation",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_time_since_previous",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "addr1_prev_count",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "email_prev_count",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_addr1_prev_count",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_has_history",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_amount_history_available",
+      "required": true,
+      "type": "numeric"
+    },
+    {
+      "name": "card1_time_history_available",
+      "required": true,
+      "type": "numeric"
+    }
+  ]
+}

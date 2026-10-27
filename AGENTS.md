@@ -1,10 +1,10 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+# FraudLens Insights — Agent Instructions
+
+## Overview
+This repository contains the **FraudLens** financial fraud analytics and detection platform.
+
+## Key Invariants
+- **Frozen ML Artifacts**: `backend/ml/deployment/fraud_model_v1/` is immutable. Never retrain, modify, or regenerate model weights, calibration artifacts, or checksums.
+- **Active Backend**: The active API service is FastAPI under `backend/app/`. The legacy Flask app under `backend/legacy/flask_app/` is strictly for reference.
+- **Frontend Architecture**: Standalone React + TypeScript + Vite SPA under `frontend/` using TanStack Router, Tailwind CSS, and Radix UI components.
+- **Security & Hygiene**: Keep local virtual environments, `.env` files, build caches, and datasets out of Git.

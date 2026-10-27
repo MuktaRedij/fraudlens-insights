@@ -1,0 +1,4 @@
+decision,risk_score_threshold,test_precision,test_recall,test_f1,test_f2,flagged_transactions,flag_rate_percent,false_positive_rate_percent
+REVIEW,54,0.419355,0.75,0.537931,0.647841,93,0.217686,0.126553
+HIGH_RISK,88,0.764706,0.75,0.757282,0.752896,51,0.119376,0.028123
+CRITICAL,94,0.847826,0.75,0.795918,0.767717,46,0.107673,0.016405

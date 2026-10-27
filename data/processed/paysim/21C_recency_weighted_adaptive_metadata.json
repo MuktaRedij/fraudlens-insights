@@ -1,0 +1,16 @@
+{
+  "step": "21C",
+  "title": "Recency-Weighted Adaptive Fraud Detection",
+  "dataset": "PaySim",
+  "adaptation_strategy": "Historical training data retained with Phase 1 observations given a fixed weight of 3.0",
+  "historical_weight": 1.0,
+  "recent_phase_weight": 3.0,
+  "adaptation_phase": "Phase 1",
+  "future_evaluation_phases": [
+    "Phase 2",
+    "Phase 3"
+  ],
+  "test_isolation": "Final PaySim test set was not used.",
+  "parameter_selection": "Weight 3.0 was pre-specified for this experiment and was not optimized using Phase 2 or Phase 3.",
+  "created_at": "2026-09-12T07:22:24.796308+00:00"
+}

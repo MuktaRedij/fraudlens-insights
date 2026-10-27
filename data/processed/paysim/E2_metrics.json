@@ -1,0 +1,10 @@
+{
+  "validation_ap": 0.6805677941262355,
+  "validation_roc_auc": 0.9748492968475104,
+  "validation_brier": 0.008330970474082577,
+  "test_ap": 0.6936978081193467,
+  "test_roc_auc": 0.9747561009449038,
+  "test_brier": 0.006155493157462632,
+  "best_iteration": 182,
+  "class_weighting": "none"
+}

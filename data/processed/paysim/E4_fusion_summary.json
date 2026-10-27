@@ -1,0 +1,13 @@
+{
+  "best_lightgbm_weight": 1.0,
+  "best_iforest_weight": 0.0,
+  "validation_ap": 0.6805677941262355,
+  "validation_roc_auc": 0.9748492968475104,
+  "test_lightgbm_ap": 0.6936978081193467,
+  "test_lightgbm_roc_auc": 0.9747561009449038,
+  "test_iforest_ap": 0.020523163955270395,
+  "test_iforest_roc_auc": 0.5626190477417188,
+  "test_fusion_ap": 0.6936978081193467,
+  "test_fusion_roc_auc": 0.9747561009449038,
+  "test_ap_change_vs_lightgbm": 0.0
+}

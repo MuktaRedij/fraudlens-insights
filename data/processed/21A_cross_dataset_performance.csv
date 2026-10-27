@@ -1,0 +1,4 @@
+dataset,model,test_AP,test_ROC_AUC,test_Brier
+PaySim,LightGBM,0.693698,0.974756,0.006155
+IEEE-CIS,LightGBM Transaction-Only,0.59944,0.896436,0.024092
+Credit Card Fraud,SMOTE LightGBM + Platt,0.758784,0.976314,0.000413

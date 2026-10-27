@@ -1,0 +1,26 @@
+{
+  "model_version": "fraud_model_v1",
+  "created_at_utc": "2026-09-24T14:05:38.184759+00:00",
+  "base_experiment": "E3",
+  "calibration_experiment": "E7",
+  "model": "LightGBM",
+  "calibration": "Platt scaling",
+  "feature_count": 22,
+  "deployment_status": "candidate_deployment_artifact",
+  "training_rows": 472432,
+  "validation_rows": 118108,
+  "raw_e3_metrics": {
+    "pr_auc": 0.1643833631305546,
+    "roc_auc": 0.7628028272414267,
+    "brier_score": 0.11217969272170868
+  },
+  "calibrated_e3_metrics": {
+    "pr_auc": 0.1643833631305546,
+    "roc_auc": 0.7628028272414267,
+    "brier_score": 0.030996558543551225,
+    "log_loss": 0.1313866173057246,
+    "ece_10_bins": 0.006222077919956914
+  },
+  "leakage_status": "PASS",
+  "final_validation_used_for_calibration": false
+}

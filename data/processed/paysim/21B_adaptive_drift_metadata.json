@@ -1,0 +1,18 @@
+{
+  "step": "21B",
+  "title": "Adaptive Fraud Detection / Concept Drift Experiment",
+  "dataset": "PaySim",
+  "adaptation_strategy": "Retrain LightGBM after observing labeled Phase 1 validation data",
+  "initial_training": "Original PaySim training partition",
+  "adaptation_data": "Phase 1 of validation partition",
+  "future_evaluation": [
+    "Phase 2",
+    "Phase 3"
+  ],
+  "test_isolation": "PaySim test set was not used",
+  "feature_count": 17,
+  "static_model": "Frozen E2 LightGBM",
+  "adaptive_model": "LightGBM with same core hyperparameters",
+  "interpretation_rule": "Adaptive improvement is assessed only on future phases that occur after adaptation data.",
+  "created_at": "2026-09-12T07:13:17.200417+00:00"
+}

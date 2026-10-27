@@ -1,0 +1,327 @@
+[
+  {
+    "validation_index": 13152,
+    "actual_class": "Fraud",
+    "actual_label": 1,
+    "raw_probability": 0.9828433885978126,
+    "calibrated_probability": 0.7840561849407522,
+    "risk_score": 78,
+    "risk_band": "High",
+    "decision": "REVIEW",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -3.82826828956604,
+        "shap_value": 3.698039728535654
+      },
+      {
+        "feature": "V17",
+        "value": -7.550968170166016,
+        "shap_value": 1.4723514688619634
+      },
+      {
+        "feature": "V10",
+        "value": -4.501314640045166,
+        "shap_value": 0.7974574075926634
+      },
+      {
+        "feature": "V4",
+        "value": 1.30580472946167,
+        "shap_value": 0.4629741499437071
+      },
+      {
+        "feature": "V12",
+        "value": -5.418889045715332,
+        "shap_value": 0.43659331542432783
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "value": 1.2835451364517212,
+        "shap_value": -0.054396273217313426
+      },
+      {
+        "feature": "Amount",
+        "value": 0.009999999776482582,
+        "shap_value": -0.03967308437426628
+      },
+      {
+        "feature": "V19",
+        "value": 0.15289203822612762,
+        "shap_value": -0.00887970263460912
+      },
+      {
+        "feature": "V2",
+        "value": 1.9481004476547241,
+        "shap_value": -0.008554311110769541
+      },
+      {
+        "feature": "Time",
+        "value": 138894.0,
+        "shap_value": -0.00608300778368869
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of model features to the LightGBM prediction for this transaction. They indicate model influence, not causality. PCA/anonymized variables such as V1\u2013V28 are not assigned semantic meanings."
+  },
+  {
+    "validation_index": 42081,
+    "actual_class": "Fraud",
+    "actual_label": 1,
+    "raw_probability": 0.9827859810011642,
+    "calibrated_probability": 0.7833434145064788,
+    "risk_score": 78,
+    "risk_band": "High",
+    "decision": "REVIEW",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -7.624316215515137,
+        "shap_value": 3.593560407460687
+      },
+      {
+        "feature": "V17",
+        "value": -6.71717643737793,
+        "shap_value": 1.3351036805921304
+      },
+      {
+        "feature": "V10",
+        "value": -4.759931564331055,
+        "shap_value": 0.7861798383734264
+      },
+      {
+        "feature": "V4",
+        "value": 1.6369669437408447,
+        "shap_value": 0.6653834159694911
+      },
+      {
+        "feature": "V12",
+        "value": -4.1652021408081055,
+        "shap_value": 0.5107908741817002
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "value": 1.245105504989624,
+        "shap_value": -0.04273367976180425
+      },
+      {
+        "feature": "Amount",
+        "value": 10.699999809265137,
+        "shap_value": -0.011400086235753561
+      },
+      {
+        "feature": "V6",
+        "value": -1.6784133911132812,
+        "shap_value": -0.009556486743411474
+      },
+      {
+        "feature": "V2",
+        "value": 2.551337718963623,
+        "shap_value": -0.008886496989621184
+      },
+      {
+        "feature": "V19",
+        "value": 1.356748342514038,
+        "shap_value": -0.005191996998789438
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of model features to the LightGBM prediction for this transaction. They indicate model influence, not causality. PCA/anonymized variables such as V1\u2013V28 are not assigned semantic meanings."
+  },
+  {
+    "validation_index": 39002,
+    "actual_class": "Fraud",
+    "actual_label": 1,
+    "raw_probability": 0.9827859810011642,
+    "calibrated_probability": 0.7833434145064788,
+    "risk_score": 78,
+    "risk_band": "High",
+    "decision": "REVIEW",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -6.281093597412109,
+        "shap_value": 4.625941760213274
+      },
+      {
+        "feature": "V10",
+        "value": -3.2630066871643066,
+        "shap_value": 0.8557135687150279
+      },
+      {
+        "feature": "V4",
+        "value": 3.818391799926758,
+        "shap_value": 0.826131396973964
+      },
+      {
+        "feature": "V12",
+        "value": -2.7723488807678223,
+        "shap_value": 0.47601026585405337
+      },
+      {
+        "feature": "V17",
+        "value": -1.3855565786361694,
+        "shap_value": 0.2647459332127677
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "value": 0.7567106485366821,
+        "shap_value": -0.06255664542802711
+      },
+      {
+        "feature": "V18",
+        "value": 0.24905674159526825,
+        "shap_value": -0.04438015904121751
+      },
+      {
+        "feature": "Amount",
+        "value": 2.0,
+        "shap_value": -0.029130524439966752
+      },
+      {
+        "feature": "V28",
+        "value": -0.04436227306723595,
+        "shap_value": -0.011317228492284307
+      },
+      {
+        "feature": "V2",
+        "value": 2.37982177734375,
+        "shap_value": -0.010678123941814196
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of model features to the LightGBM prediction for this transaction. They indicate model influence, not causality. PCA/anonymized variables such as V1\u2013V28 are not assigned semantic meanings."
+  },
+  {
+    "validation_index": 5237,
+    "actual_class": "Legitimate",
+    "actual_label": 0,
+    "raw_probability": 0.9743821407429595,
+    "calibrated_probability": 0.6862849124661213,
+    "risk_score": 69,
+    "risk_band": "High",
+    "decision": "REVIEW",
+    "top_positive_contributors": [
+      {
+        "feature": "V17",
+        "value": -4.210567474365234,
+        "shap_value": 2.6049401790262157
+      },
+      {
+        "feature": "V4",
+        "value": 2.0849480628967285,
+        "shap_value": 1.633527813894381
+      },
+      {
+        "feature": "V12",
+        "value": -1.970995306968689,
+        "shap_value": 0.865223597665109
+      },
+      {
+        "feature": "V3",
+        "value": -3.597306251525879,
+        "shap_value": 0.35324563681047605
+      },
+      {
+        "feature": "V16",
+        "value": -2.0604982376098633,
+        "shap_value": 0.33868433570604073
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "Time",
+        "value": 135352.0,
+        "shap_value": -0.038954419466924926
+      },
+      {
+        "feature": "log_amount",
+        "value": 6.150752067565918,
+        "shap_value": -0.03230321823203194
+      },
+      {
+        "feature": "hour",
+        "value": 13.597777366638184,
+        "shap_value": -0.008597664747346898
+      },
+      {
+        "feature": "hour_cos",
+        "value": -0.9137819409370422,
+        "shap_value": -0.007273179285043836
+      },
+      {
+        "feature": "V24",
+        "value": 0.7296185493469238,
+        "shap_value": -0.004201961506222884
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of model features to the LightGBM prediction for this transaction. They indicate model influence, not causality. PCA/anonymized variables such as V1\u2013V28 are not assigned semantic meanings."
+  },
+  {
+    "validation_index": 29141,
+    "actual_class": "Legitimate",
+    "actual_label": 0,
+    "raw_probability": 0.9573052035518789,
+    "calibrated_probability": 0.5322158768301877,
+    "risk_score": 53,
+    "risk_band": "Medium",
+    "decision": "ALLOW_MONITOR",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -7.5372490882873535,
+        "shap_value": 4.977954624247264
+      },
+      {
+        "feature": "V10",
+        "value": -2.8530709743499756,
+        "shap_value": 0.9375173401755857
+      },
+      {
+        "feature": "V4",
+        "value": 3.5862114429473877,
+        "shap_value": 0.6936854156390815
+      },
+      {
+        "feature": "V12",
+        "value": -2.0373001098632812,
+        "shap_value": 0.25132641621449486
+      },
+      {
+        "feature": "V3",
+        "value": -3.3663341999053955,
+        "shap_value": 0.10103003739350801
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V7",
+        "value": 1.7589138746261597,
+        "shap_value": -0.39876056958659195
+      },
+      {
+        "feature": "V16",
+        "value": 3.4018478393554688,
+        "shap_value": -0.273577197186854
+      },
+      {
+        "feature": "V25",
+        "value": 0.6997031569480896,
+        "shap_value": -0.05272347083677507
+      },
+      {
+        "feature": "V17",
+        "value": 5.6094889640808105,
+        "shap_value": -0.048006709763040126
+      },
+      {
+        "feature": "Amount",
+        "value": 0.7699999809265137,
+        "shap_value": -0.04204642675385232
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of model features to the LightGBM prediction for this transaction. They indicate model influence, not causality. PCA/anonymized variables such as V1\u2013V28 are not assigned semantic meanings."
+  }
+]

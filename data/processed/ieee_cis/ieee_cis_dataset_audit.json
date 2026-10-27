@@ -1,0 +1,4202 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "files": [
+    {
+      "filename": "train_transaction.csv",
+      "path": "/content/drive/MyDrive/fraud-detection-system/data/raw/ieee_cis/train_transaction.csv",
+      "size_mb": 216.0
+    },
+    {
+      "filename": "train_identity.csv",
+      "path": "/content/drive/MyDrive/fraud-detection-system/data/raw/ieee_cis/train_identity.csv",
+      "size_mb": 25.300674438476562
+    },
+    {
+      "filename": "test_transaction.csv",
+      "path": "/content/drive/MyDrive/fraud-detection-system/data/raw/ieee_cis/test_transaction.csv",
+      "size_mb": 220.0
+    },
+    {
+      "filename": "test_identity.csv",
+      "path": "/content/drive/MyDrive/fraud-detection-system/data/raw/ieee_cis/test_identity.csv",
+      "size_mb": 24.602089881896973
+    },
+    {
+      "filename": "sample_submission.csv",
+      "path": "/content/drive/MyDrive/fraud-detection-system/data/raw/ieee_cis/sample_submission.csv",
+      "size_mb": 5.798639297485352
+    }
+  ],
+  "tables": {
+    "train_transaction": {
+      "rows": 193540,
+      "columns": 394,
+      "column_names": [
+        "TransactionID",
+        "isFraud",
+        "TransactionDT",
+        "TransactionAmt",
+        "ProductCD",
+        "card1",
+        "card2",
+        "card3",
+        "card4",
+        "card5",
+        "card6",
+        "addr1",
+        "addr2",
+        "dist1",
+        "dist2",
+        "P_emaildomain",
+        "R_emaildomain",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "V31",
+        "V32",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V37",
+        "V38",
+        "V39",
+        "V40",
+        "V41",
+        "V42",
+        "V43",
+        "V44",
+        "V45",
+        "V46",
+        "V47",
+        "V48",
+        "V49",
+        "V50",
+        "V51",
+        "V52",
+        "V53",
+        "V54",
+        "V55",
+        "V56",
+        "V57",
+        "V58",
+        "V59",
+        "V60",
+        "V61",
+        "V62",
+        "V63",
+        "V64",
+        "V65",
+        "V66",
+        "V67",
+        "V68",
+        "V69",
+        "V70",
+        "V71",
+        "V72",
+        "V73",
+        "V74",
+        "V75",
+        "V76",
+        "V77",
+        "V78",
+        "V79",
+        "V80",
+        "V81",
+        "V82",
+        "V83",
+        "V84",
+        "V85",
+        "V86",
+        "V87",
+        "V88",
+        "V89",
+        "V90",
+        "V91",
+        "V92",
+        "V93",
+        "V94",
+        "V95",
+        "V96",
+        "V97",
+        "V98",
+        "V99",
+        "V100",
+        "V101",
+        "V102",
+        "V103",
+        "V104",
+        "V105",
+        "V106",
+        "V107",
+        "V108",
+        "V109",
+        "V110",
+        "V111",
+        "V112",
+        "V113",
+        "V114",
+        "V115",
+        "V116",
+        "V117",
+        "V118",
+        "V119",
+        "V120",
+        "V121",
+        "V122",
+        "V123",
+        "V124",
+        "V125",
+        "V126",
+        "V127",
+        "V128",
+        "V129",
+        "V130",
+        "V131",
+        "V132",
+        "V133",
+        "V134",
+        "V135",
+        "V136",
+        "V137",
+        "V138",
+        "V139",
+        "V140",
+        "V141",
+        "V142",
+        "V143",
+        "V144",
+        "V145",
+        "V146",
+        "V147",
+        "V148",
+        "V149",
+        "V150",
+        "V151",
+        "V152",
+        "V153",
+        "V154",
+        "V155",
+        "V156",
+        "V157",
+        "V158",
+        "V159",
+        "V160",
+        "V161",
+        "V162",
+        "V163",
+        "V164",
+        "V165",
+        "V166",
+        "V167",
+        "V168",
+        "V169",
+        "V170",
+        "V171",
+        "V172",
+        "V173",
+        "V174",
+        "V175",
+        "V176",
+        "V177",
+        "V178",
+        "V179",
+        "V180",
+        "V181",
+        "V182",
+        "V183",
+        "V184",
+        "V185",
+        "V186",
+        "V187",
+        "V188",
+        "V189",
+        "V190",
+        "V191",
+        "V192",
+        "V193",
+        "V194",
+        "V195",
+        "V196",
+        "V197",
+        "V198",
+        "V199",
+        "V200",
+        "V201",
+        "V202",
+        "V203",
+        "V204",
+        "V205",
+        "V206",
+        "V207",
+        "V208",
+        "V209",
+        "V210",
+        "V211",
+        "V212",
+        "V213",
+        "V214",
+        "V215",
+        "V216",
+        "V217",
+        "V218",
+        "V219",
+        "V220",
+        "V221",
+        "V222",
+        "V223",
+        "V224",
+        "V225",
+        "V226",
+        "V227",
+        "V228",
+        "V229",
+        "V230",
+        "V231",
+        "V232",
+        "V233",
+        "V234",
+        "V235",
+        "V236",
+        "V237",
+        "V238",
+        "V239",
+        "V240",
+        "V241",
+        "V242",
+        "V243",
+        "V244",
+        "V245",
+        "V246",
+        "V247",
+        "V248",
+        "V249",
+        "V250",
+        "V251",
+        "V252",
+        "V253",
+        "V254",
+        "V255",
+        "V256",
+        "V257",
+        "V258",
+        "V259",
+        "V260",
+        "V261",
+        "V262",
+        "V263",
+        "V264",
+        "V265",
+        "V266",
+        "V267",
+        "V268",
+        "V269",
+        "V270",
+        "V271",
+        "V272",
+        "V273",
+        "V274",
+        "V275",
+        "V276",
+        "V277",
+        "V278",
+        "V279",
+        "V280",
+        "V281",
+        "V282",
+        "V283",
+        "V284",
+        "V285",
+        "V286",
+        "V287",
+        "V288",
+        "V289",
+        "V290",
+        "V291",
+        "V292",
+        "V293",
+        "V294",
+        "V295",
+        "V296",
+        "V297",
+        "V298",
+        "V299",
+        "V300",
+        "V301",
+        "V302",
+        "V303",
+        "V304",
+        "V305",
+        "V306",
+        "V307",
+        "V308",
+        "V309",
+        "V310",
+        "V311",
+        "V312",
+        "V313",
+        "V314",
+        "V315",
+        "V316",
+        "V317",
+        "V318",
+        "V319",
+        "V320",
+        "V321",
+        "V322",
+        "V323",
+        "V324",
+        "V325",
+        "V326",
+        "V327",
+        "V328",
+        "V329",
+        "V330",
+        "V331",
+        "V332",
+        "V333",
+        "V334",
+        "V335",
+        "V336",
+        "V337",
+        "V338",
+        "V339"
+      ],
+      "dtypes": {
+        "TransactionID": "int64",
+        "isFraud": "int64",
+        "TransactionDT": "int64",
+        "TransactionAmt": "float64",
+        "ProductCD": "object",
+        "card1": "int64",
+        "card2": "float64",
+        "card3": "float64",
+        "card4": "object",
+        "card5": "float64",
+        "card6": "object",
+        "addr1": "float64",
+        "addr2": "float64",
+        "dist1": "float64",
+        "dist2": "float64",
+        "P_emaildomain": "object",
+        "R_emaildomain": "object",
+        "C1": "float64",
+        "C2": "float64",
+        "C3": "float64",
+        "C4": "float64",
+        "C5": "float64",
+        "C6": "float64",
+        "C7": "float64",
+        "C8": "float64",
+        "C9": "float64",
+        "C10": "float64",
+        "C11": "float64",
+        "C12": "float64",
+        "C13": "float64",
+        "C14": "float64",
+        "D1": "float64",
+        "D2": "float64",
+        "D3": "float64",
+        "D4": "float64",
+        "D5": "float64",
+        "D6": "float64",
+        "D7": "float64",
+        "D8": "float64",
+        "D9": "float64",
+        "D10": "float64",
+        "D11": "float64",
+        "D12": "float64",
+        "D13": "float64",
+        "D14": "float64",
+        "D15": "float64",
+        "M1": "object",
+        "M2": "object",
+        "M3": "object",
+        "M4": "object",
+        "M5": "object",
+        "M6": "object",
+        "M7": "object",
+        "M8": "object",
+        "M9": "object",
+        "V1": "float64",
+        "V2": "float64",
+        "V3": "float64",
+        "V4": "float64",
+        "V5": "float64",
+        "V6": "float64",
+        "V7": "float64",
+        "V8": "float64",
+        "V9": "float64",
+        "V10": "float64",
+        "V11": "float64",
+        "V12": "float64",
+        "V13": "float64",
+        "V14": "float64",
+        "V15": "float64",
+        "V16": "float64",
+        "V17": "float64",
+        "V18": "float64",
+        "V19": "float64",
+        "V20": "float64",
+        "V21": "float64",
+        "V22": "float64",
+        "V23": "float64",
+        "V24": "float64",
+        "V25": "float64",
+        "V26": "float64",
+        "V27": "float64",
+        "V28": "float64",
+        "V29": "float64",
+        "V30": "float64",
+        "V31": "float64",
+        "V32": "float64",
+        "V33": "float64",
+        "V34": "float64",
+        "V35": "float64",
+        "V36": "float64",
+        "V37": "float64",
+        "V38": "float64",
+        "V39": "float64",
+        "V40": "float64",
+        "V41": "float64",
+        "V42": "float64",
+        "V43": "float64",
+        "V44": "float64",
+        "V45": "float64",
+        "V46": "float64",
+        "V47": "float64",
+        "V48": "float64",
+        "V49": "float64",
+        "V50": "float64",
+        "V51": "float64",
+        "V52": "float64",
+        "V53": "float64",
+        "V54": "float64",
+        "V55": "float64",
+        "V56": "float64",
+        "V57": "float64",
+        "V58": "float64",
+        "V59": "float64",
+        "V60": "float64",
+        "V61": "float64",
+        "V62": "float64",
+        "V63": "float64",
+        "V64": "float64",
+        "V65": "float64",
+        "V66": "float64",
+        "V67": "float64",
+        "V68": "float64",
+        "V69": "float64",
+        "V70": "float64",
+        "V71": "float64",
+        "V72": "float64",
+        "V73": "float64",
+        "V74": "float64",
+        "V75": "float64",
+        "V76": "float64",
+        "V77": "float64",
+        "V78": "float64",
+        "V79": "float64",
+        "V80": "float64",
+        "V81": "float64",
+        "V82": "float64",
+        "V83": "float64",
+        "V84": "float64",
+        "V85": "float64",
+        "V86": "float64",
+        "V87": "float64",
+        "V88": "float64",
+        "V89": "float64",
+        "V90": "float64",
+        "V91": "float64",
+        "V92": "float64",
+        "V93": "float64",
+        "V94": "float64",
+        "V95": "float64",
+        "V96": "float64",
+        "V97": "float64",
+        "V98": "float64",
+        "V99": "float64",
+        "V100": "float64",
+        "V101": "float64",
+        "V102": "float64",
+        "V103": "float64",
+        "V104": "float64",
+        "V105": "float64",
+        "V106": "float64",
+        "V107": "float64",
+        "V108": "float64",
+        "V109": "float64",
+        "V110": "float64",
+        "V111": "float64",
+        "V112": "float64",
+        "V113": "float64",
+        "V114": "float64",
+        "V115": "float64",
+        "V116": "float64",
+        "V117": "float64",
+        "V118": "float64",
+        "V119": "float64",
+        "V120": "float64",
+        "V121": "float64",
+        "V122": "float64",
+        "V123": "float64",
+        "V124": "float64",
+        "V125": "float64",
+        "V126": "float64",
+        "V127": "float64",
+        "V128": "float64",
+        "V129": "float64",
+        "V130": "float64",
+        "V131": "float64",
+        "V132": "float64",
+        "V133": "float64",
+        "V134": "float64",
+        "V135": "float64",
+        "V136": "float64",
+        "V137": "float64",
+        "V138": "float64",
+        "V139": "float64",
+        "V140": "float64",
+        "V141": "float64",
+        "V142": "float64",
+        "V143": "float64",
+        "V144": "float64",
+        "V145": "float64",
+        "V146": "float64",
+        "V147": "float64",
+        "V148": "float64",
+        "V149": "float64",
+        "V150": "float64",
+        "V151": "float64",
+        "V152": "float64",
+        "V153": "float64",
+        "V154": "float64",
+        "V155": "float64",
+        "V156": "float64",
+        "V157": "float64",
+        "V158": "float64",
+        "V159": "float64",
+        "V160": "float64",
+        "V161": "float64",
+        "V162": "float64",
+        "V163": "float64",
+        "V164": "float64",
+        "V165": "float64",
+        "V166": "float64",
+        "V167": "float64",
+        "V168": "float64",
+        "V169": "float64",
+        "V170": "float64",
+        "V171": "float64",
+        "V172": "float64",
+        "V173": "float64",
+        "V174": "float64",
+        "V175": "float64",
+        "V176": "float64",
+        "V177": "float64",
+        "V178": "float64",
+        "V179": "float64",
+        "V180": "float64",
+        "V181": "float64",
+        "V182": "float64",
+        "V183": "float64",
+        "V184": "float64",
+        "V185": "float64",
+        "V186": "float64",
+        "V187": "float64",
+        "V188": "float64",
+        "V189": "float64",
+        "V190": "float64",
+        "V191": "float64",
+        "V192": "float64",
+        "V193": "float64",
+        "V194": "float64",
+        "V195": "float64",
+        "V196": "float64",
+        "V197": "float64",
+        "V198": "float64",
+        "V199": "float64",
+        "V200": "float64",
+        "V201": "float64",
+        "V202": "float64",
+        "V203": "float64",
+        "V204": "float64",
+        "V205": "float64",
+        "V206": "float64",
+        "V207": "float64",
+        "V208": "float64",
+        "V209": "float64",
+        "V210": "float64",
+        "V211": "float64",
+        "V212": "float64",
+        "V213": "float64",
+        "V214": "float64",
+        "V215": "float64",
+        "V216": "float64",
+        "V217": "float64",
+        "V218": "float64",
+        "V219": "float64",
+        "V220": "float64",
+        "V221": "float64",
+        "V222": "float64",
+        "V223": "float64",
+        "V224": "float64",
+        "V225": "float64",
+        "V226": "float64",
+        "V227": "float64",
+        "V228": "float64",
+        "V229": "float64",
+        "V230": "float64",
+        "V231": "float64",
+        "V232": "float64",
+        "V233": "float64",
+        "V234": "float64",
+        "V235": "float64",
+        "V236": "float64",
+        "V237": "float64",
+        "V238": "float64",
+        "V239": "float64",
+        "V240": "float64",
+        "V241": "float64",
+        "V242": "float64",
+        "V243": "float64",
+        "V244": "float64",
+        "V245": "float64",
+        "V246": "float64",
+        "V247": "float64",
+        "V248": "float64",
+        "V249": "float64",
+        "V250": "float64",
+        "V251": "float64",
+        "V252": "float64",
+        "V253": "float64",
+        "V254": "float64",
+        "V255": "float64",
+        "V256": "float64",
+        "V257": "float64",
+        "V258": "float64",
+        "V259": "float64",
+        "V260": "float64",
+        "V261": "float64",
+        "V262": "float64",
+        "V263": "float64",
+        "V264": "float64",
+        "V265": "float64",
+        "V266": "float64",
+        "V267": "float64",
+        "V268": "float64",
+        "V269": "float64",
+        "V270": "float64",
+        "V271": "float64",
+        "V272": "float64",
+        "V273": "float64",
+        "V274": "float64",
+        "V275": "float64",
+        "V276": "float64",
+        "V277": "float64",
+        "V278": "float64",
+        "V279": "float64",
+        "V280": "float64",
+        "V281": "float64",
+        "V282": "float64",
+        "V283": "float64",
+        "V284": "float64",
+        "V285": "float64",
+        "V286": "float64",
+        "V287": "float64",
+        "V288": "float64",
+        "V289": "float64",
+        "V290": "float64",
+        "V291": "float64",
+        "V292": "float64",
+        "V293": "float64",
+        "V294": "float64",
+        "V295": "float64",
+        "V296": "float64",
+        "V297": "float64",
+        "V298": "float64",
+        "V299": "float64",
+        "V300": "float64",
+        "V301": "float64",
+        "V302": "float64",
+        "V303": "float64",
+        "V304": "float64",
+        "V305": "float64",
+        "V306": "float64",
+        "V307": "float64",
+        "V308": "float64",
+        "V309": "float64",
+        "V310": "float64",
+        "V311": "float64",
+        "V312": "float64",
+        "V313": "float64",
+        "V314": "float64",
+        "V315": "float64",
+        "V316": "float64",
+        "V317": "float64",
+        "V318": "float64",
+        "V319": "float64",
+        "V320": "float64",
+        "V321": "float64",
+        "V322": "float64",
+        "V323": "float64",
+        "V324": "float64",
+        "V325": "float64",
+        "V326": "float64",
+        "V327": "float64",
+        "V328": "float64",
+        "V329": "float64",
+        "V330": "float64",
+        "V331": "float64",
+        "V332": "float64",
+        "V333": "float64",
+        "V334": "float64",
+        "V335": "float64",
+        "V336": "float64",
+        "V337": "float64",
+        "V338": "float64",
+        "V339": "float64"
+      }
+    },
+    "test_transaction": {
+      "rows": 198908,
+      "columns": 393,
+      "column_names": [
+        "TransactionID",
+        "TransactionDT",
+        "TransactionAmt",
+        "ProductCD",
+        "card1",
+        "card2",
+        "card3",
+        "card4",
+        "card5",
+        "card6",
+        "addr1",
+        "addr2",
+        "dist1",
+        "dist2",
+        "P_emaildomain",
+        "R_emaildomain",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "V31",
+        "V32",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V37",
+        "V38",
+        "V39",
+        "V40",
+        "V41",
+        "V42",
+        "V43",
+        "V44",
+        "V45",
+        "V46",
+        "V47",
+        "V48",
+        "V49",
+        "V50",
+        "V51",
+        "V52",
+        "V53",
+        "V54",
+        "V55",
+        "V56",
+        "V57",
+        "V58",
+        "V59",
+        "V60",
+        "V61",
+        "V62",
+        "V63",
+        "V64",
+        "V65",
+        "V66",
+        "V67",
+        "V68",
+        "V69",
+        "V70",
+        "V71",
+        "V72",
+        "V73",
+        "V74",
+        "V75",
+        "V76",
+        "V77",
+        "V78",
+        "V79",
+        "V80",
+        "V81",
+        "V82",
+        "V83",
+        "V84",
+        "V85",
+        "V86",
+        "V87",
+        "V88",
+        "V89",
+        "V90",
+        "V91",
+        "V92",
+        "V93",
+        "V94",
+        "V95",
+        "V96",
+        "V97",
+        "V98",
+        "V99",
+        "V100",
+        "V101",
+        "V102",
+        "V103",
+        "V104",
+        "V105",
+        "V106",
+        "V107",
+        "V108",
+        "V109",
+        "V110",
+        "V111",
+        "V112",
+        "V113",
+        "V114",
+        "V115",
+        "V116",
+        "V117",
+        "V118",
+        "V119",
+        "V120",
+        "V121",
+        "V122",
+        "V123",
+        "V124",
+        "V125",
+        "V126",
+        "V127",
+        "V128",
+        "V129",
+        "V130",
+        "V131",
+        "V132",
+        "V133",
+        "V134",
+        "V135",
+        "V136",
+        "V137",
+        "V138",
+        "V139",
+        "V140",
+        "V141",
+        "V142",
+        "V143",
+        "V144",
+        "V145",
+        "V146",
+        "V147",
+        "V148",
+        "V149",
+        "V150",
+        "V151",
+        "V152",
+        "V153",
+        "V154",
+        "V155",
+        "V156",
+        "V157",
+        "V158",
+        "V159",
+        "V160",
+        "V161",
+        "V162",
+        "V163",
+        "V164",
+        "V165",
+        "V166",
+        "V167",
+        "V168",
+        "V169",
+        "V170",
+        "V171",
+        "V172",
+        "V173",
+        "V174",
+        "V175",
+        "V176",
+        "V177",
+        "V178",
+        "V179",
+        "V180",
+        "V181",
+        "V182",
+        "V183",
+        "V184",
+        "V185",
+        "V186",
+        "V187",
+        "V188",
+        "V189",
+        "V190",
+        "V191",
+        "V192",
+        "V193",
+        "V194",
+        "V195",
+        "V196",
+        "V197",
+        "V198",
+        "V199",
+        "V200",
+        "V201",
+        "V202",
+        "V203",
+        "V204",
+        "V205",
+        "V206",
+        "V207",
+        "V208",
+        "V209",
+        "V210",
+        "V211",
+        "V212",
+        "V213",
+        "V214",
+        "V215",
+        "V216",
+        "V217",
+        "V218",
+        "V219",
+        "V220",
+        "V221",
+        "V222",
+        "V223",
+        "V224",
+        "V225",
+        "V226",
+        "V227",
+        "V228",
+        "V229",
+        "V230",
+        "V231",
+        "V232",
+        "V233",
+        "V234",
+        "V235",
+        "V236",
+        "V237",
+        "V238",
+        "V239",
+        "V240",
+        "V241",
+        "V242",
+        "V243",
+        "V244",
+        "V245",
+        "V246",
+        "V247",
+        "V248",
+        "V249",
+        "V250",
+        "V251",
+        "V252",
+        "V253",
+        "V254",
+        "V255",
+        "V256",
+        "V257",
+        "V258",
+        "V259",
+        "V260",
+        "V261",
+        "V262",
+        "V263",
+        "V264",
+        "V265",
+        "V266",
+        "V267",
+        "V268",
+        "V269",
+        "V270",
+        "V271",
+        "V272",
+        "V273",
+        "V274",
+        "V275",
+        "V276",
+        "V277",
+        "V278",
+        "V279",
+        "V280",
+        "V281",
+        "V282",
+        "V283",
+        "V284",
+        "V285",
+        "V286",
+        "V287",
+        "V288",
+        "V289",
+        "V290",
+        "V291",
+        "V292",
+        "V293",
+        "V294",
+        "V295",
+        "V296",
+        "V297",
+        "V298",
+        "V299",
+        "V300",
+        "V301",
+        "V302",
+        "V303",
+        "V304",
+        "V305",
+        "V306",
+        "V307",
+        "V308",
+        "V309",
+        "V310",
+        "V311",
+        "V312",
+        "V313",
+        "V314",
+        "V315",
+        "V316",
+        "V317",
+        "V318",
+        "V319",
+        "V320",
+        "V321",
+        "V322",
+        "V323",
+        "V324",
+        "V325",
+        "V326",
+        "V327",
+        "V328",
+        "V329",
+        "V330",
+        "V331",
+        "V332",
+        "V333",
+        "V334",
+        "V335",
+        "V336",
+        "V337",
+        "V338",
+        "V339"
+      ],
+      "dtypes": {
+        "TransactionID": "int64",
+        "TransactionDT": "int64",
+        "TransactionAmt": "float64",
+        "ProductCD": "object",
+        "card1": "int64",
+        "card2": "float64",
+        "card3": "float64",
+        "card4": "object",
+        "card5": "float64",
+        "card6": "object",
+        "addr1": "float64",
+        "addr2": "float64",
+        "dist1": "float64",
+        "dist2": "float64",
+        "P_emaildomain": "object",
+        "R_emaildomain": "object",
+        "C1": "float64",
+        "C2": "float64",
+        "C3": "float64",
+        "C4": "float64",
+        "C5": "float64",
+        "C6": "float64",
+        "C7": "float64",
+        "C8": "float64",
+        "C9": "float64",
+        "C10": "float64",
+        "C11": "float64",
+        "C12": "float64",
+        "C13": "float64",
+        "C14": "float64",
+        "D1": "float64",
+        "D2": "float64",
+        "D3": "float64",
+        "D4": "float64",
+        "D5": "float64",
+        "D6": "float64",
+        "D7": "float64",
+        "D8": "float64",
+        "D9": "float64",
+        "D10": "float64",
+        "D11": "float64",
+        "D12": "float64",
+        "D13": "float64",
+        "D14": "float64",
+        "D15": "float64",
+        "M1": "object",
+        "M2": "object",
+        "M3": "object",
+        "M4": "object",
+        "M5": "object",
+        "M6": "object",
+        "M7": "object",
+        "M8": "object",
+        "M9": "object",
+        "V1": "float64",
+        "V2": "float64",
+        "V3": "float64",
+        "V4": "float64",
+        "V5": "float64",
+        "V6": "float64",
+        "V7": "float64",
+        "V8": "float64",
+        "V9": "float64",
+        "V10": "float64",
+        "V11": "float64",
+        "V12": "float64",
+        "V13": "float64",
+        "V14": "float64",
+        "V15": "float64",
+        "V16": "float64",
+        "V17": "float64",
+        "V18": "float64",
+        "V19": "float64",
+        "V20": "float64",
+        "V21": "float64",
+        "V22": "float64",
+        "V23": "float64",
+        "V24": "float64",
+        "V25": "float64",
+        "V26": "float64",
+        "V27": "float64",
+        "V28": "float64",
+        "V29": "float64",
+        "V30": "float64",
+        "V31": "float64",
+        "V32": "float64",
+        "V33": "float64",
+        "V34": "float64",
+        "V35": "float64",
+        "V36": "float64",
+        "V37": "float64",
+        "V38": "float64",
+        "V39": "float64",
+        "V40": "float64",
+        "V41": "float64",
+        "V42": "float64",
+        "V43": "float64",
+        "V44": "float64",
+        "V45": "float64",
+        "V46": "float64",
+        "V47": "float64",
+        "V48": "float64",
+        "V49": "float64",
+        "V50": "float64",
+        "V51": "float64",
+        "V52": "float64",
+        "V53": "float64",
+        "V54": "float64",
+        "V55": "float64",
+        "V56": "float64",
+        "V57": "float64",
+        "V58": "float64",
+        "V59": "float64",
+        "V60": "float64",
+        "V61": "float64",
+        "V62": "float64",
+        "V63": "float64",
+        "V64": "float64",
+        "V65": "float64",
+        "V66": "float64",
+        "V67": "float64",
+        "V68": "float64",
+        "V69": "float64",
+        "V70": "float64",
+        "V71": "float64",
+        "V72": "float64",
+        "V73": "float64",
+        "V74": "float64",
+        "V75": "float64",
+        "V76": "float64",
+        "V77": "float64",
+        "V78": "float64",
+        "V79": "float64",
+        "V80": "float64",
+        "V81": "float64",
+        "V82": "float64",
+        "V83": "float64",
+        "V84": "float64",
+        "V85": "float64",
+        "V86": "float64",
+        "V87": "float64",
+        "V88": "float64",
+        "V89": "float64",
+        "V90": "float64",
+        "V91": "float64",
+        "V92": "float64",
+        "V93": "float64",
+        "V94": "float64",
+        "V95": "float64",
+        "V96": "float64",
+        "V97": "float64",
+        "V98": "float64",
+        "V99": "float64",
+        "V100": "float64",
+        "V101": "float64",
+        "V102": "float64",
+        "V103": "float64",
+        "V104": "float64",
+        "V105": "float64",
+        "V106": "float64",
+        "V107": "float64",
+        "V108": "float64",
+        "V109": "float64",
+        "V110": "float64",
+        "V111": "float64",
+        "V112": "float64",
+        "V113": "float64",
+        "V114": "float64",
+        "V115": "float64",
+        "V116": "float64",
+        "V117": "float64",
+        "V118": "float64",
+        "V119": "float64",
+        "V120": "float64",
+        "V121": "float64",
+        "V122": "float64",
+        "V123": "float64",
+        "V124": "float64",
+        "V125": "float64",
+        "V126": "float64",
+        "V127": "float64",
+        "V128": "float64",
+        "V129": "float64",
+        "V130": "float64",
+        "V131": "float64",
+        "V132": "float64",
+        "V133": "float64",
+        "V134": "float64",
+        "V135": "float64",
+        "V136": "float64",
+        "V137": "float64",
+        "V138": "float64",
+        "V139": "float64",
+        "V140": "float64",
+        "V141": "float64",
+        "V142": "float64",
+        "V143": "float64",
+        "V144": "float64",
+        "V145": "float64",
+        "V146": "float64",
+        "V147": "float64",
+        "V148": "float64",
+        "V149": "float64",
+        "V150": "float64",
+        "V151": "float64",
+        "V152": "float64",
+        "V153": "float64",
+        "V154": "float64",
+        "V155": "float64",
+        "V156": "float64",
+        "V157": "float64",
+        "V158": "float64",
+        "V159": "float64",
+        "V160": "float64",
+        "V161": "float64",
+        "V162": "float64",
+        "V163": "float64",
+        "V164": "float64",
+        "V165": "float64",
+        "V166": "float64",
+        "V167": "float64",
+        "V168": "float64",
+        "V169": "float64",
+        "V170": "float64",
+        "V171": "float64",
+        "V172": "float64",
+        "V173": "float64",
+        "V174": "float64",
+        "V175": "float64",
+        "V176": "float64",
+        "V177": "float64",
+        "V178": "float64",
+        "V179": "float64",
+        "V180": "float64",
+        "V181": "float64",
+        "V182": "float64",
+        "V183": "float64",
+        "V184": "float64",
+        "V185": "float64",
+        "V186": "float64",
+        "V187": "float64",
+        "V188": "float64",
+        "V189": "float64",
+        "V190": "float64",
+        "V191": "float64",
+        "V192": "float64",
+        "V193": "float64",
+        "V194": "float64",
+        "V195": "float64",
+        "V196": "float64",
+        "V197": "float64",
+        "V198": "float64",
+        "V199": "float64",
+        "V200": "float64",
+        "V201": "float64",
+        "V202": "float64",
+        "V203": "float64",
+        "V204": "float64",
+        "V205": "float64",
+        "V206": "float64",
+        "V207": "float64",
+        "V208": "float64",
+        "V209": "float64",
+        "V210": "float64",
+        "V211": "float64",
+        "V212": "float64",
+        "V213": "float64",
+        "V214": "float64",
+        "V215": "float64",
+        "V216": "float64",
+        "V217": "float64",
+        "V218": "float64",
+        "V219": "float64",
+        "V220": "float64",
+        "V221": "float64",
+        "V222": "float64",
+        "V223": "float64",
+        "V224": "float64",
+        "V225": "float64",
+        "V226": "float64",
+        "V227": "float64",
+        "V228": "float64",
+        "V229": "float64",
+        "V230": "float64",
+        "V231": "float64",
+        "V232": "float64",
+        "V233": "float64",
+        "V234": "float64",
+        "V235": "float64",
+        "V236": "float64",
+        "V237": "float64",
+        "V238": "float64",
+        "V239": "float64",
+        "V240": "float64",
+        "V241": "float64",
+        "V242": "float64",
+        "V243": "float64",
+        "V244": "float64",
+        "V245": "float64",
+        "V246": "float64",
+        "V247": "float64",
+        "V248": "float64",
+        "V249": "float64",
+        "V250": "float64",
+        "V251": "float64",
+        "V252": "float64",
+        "V253": "float64",
+        "V254": "float64",
+        "V255": "float64",
+        "V256": "float64",
+        "V257": "float64",
+        "V258": "float64",
+        "V259": "float64",
+        "V260": "float64",
+        "V261": "float64",
+        "V262": "float64",
+        "V263": "float64",
+        "V264": "float64",
+        "V265": "float64",
+        "V266": "float64",
+        "V267": "float64",
+        "V268": "float64",
+        "V269": "float64",
+        "V270": "float64",
+        "V271": "float64",
+        "V272": "float64",
+        "V273": "float64",
+        "V274": "float64",
+        "V275": "float64",
+        "V276": "float64",
+        "V277": "float64",
+        "V278": "float64",
+        "V279": "float64",
+        "V280": "float64",
+        "V281": "float64",
+        "V282": "float64",
+        "V283": "float64",
+        "V284": "float64",
+        "V285": "float64",
+        "V286": "float64",
+        "V287": "float64",
+        "V288": "float64",
+        "V289": "float64",
+        "V290": "float64",
+        "V291": "float64",
+        "V292": "float64",
+        "V293": "float64",
+        "V294": "float64",
+        "V295": "float64",
+        "V296": "float64",
+        "V297": "float64",
+        "V298": "float64",
+        "V299": "float64",
+        "V300": "float64",
+        "V301": "float64",
+        "V302": "float64",
+        "V303": "float64",
+        "V304": "float64",
+        "V305": "float64",
+        "V306": "float64",
+        "V307": "float64",
+        "V308": "float64",
+        "V309": "float64",
+        "V310": "float64",
+        "V311": "float64",
+        "V312": "float64",
+        "V313": "float64",
+        "V314": "float64",
+        "V315": "float64",
+        "V316": "float64",
+        "V317": "float64",
+        "V318": "float64",
+        "V319": "float64",
+        "V320": "float64",
+        "V321": "float64",
+        "V322": "float64",
+        "V323": "float64",
+        "V324": "float64",
+        "V325": "float64",
+        "V326": "float64",
+        "V327": "float64",
+        "V328": "float64",
+        "V329": "float64",
+        "V330": "float64",
+        "V331": "float64",
+        "V332": "float64",
+        "V333": "float64",
+        "V334": "float64",
+        "V335": "float64",
+        "V336": "float64",
+        "V337": "float64",
+        "V338": "float64",
+        "V339": "float64"
+      }
+    },
+    "train_identity": {
+      "rows": 144233,
+      "columns": 41,
+      "column_names": [
+        "TransactionID",
+        "id_01",
+        "id_02",
+        "id_03",
+        "id_04",
+        "id_05",
+        "id_06",
+        "id_07",
+        "id_08",
+        "id_09",
+        "id_10",
+        "id_11",
+        "id_12",
+        "id_13",
+        "id_14",
+        "id_15",
+        "id_16",
+        "id_17",
+        "id_18",
+        "id_19",
+        "id_20",
+        "id_21",
+        "id_22",
+        "id_23",
+        "id_24",
+        "id_25",
+        "id_26",
+        "id_27",
+        "id_28",
+        "id_29",
+        "id_30",
+        "id_31",
+        "id_32",
+        "id_33",
+        "id_34",
+        "id_35",
+        "id_36",
+        "id_37",
+        "id_38",
+        "DeviceType",
+        "DeviceInfo"
+      ],
+      "dtypes": {
+        "TransactionID": "int64",
+        "id_01": "float64",
+        "id_02": "float64",
+        "id_03": "float64",
+        "id_04": "float64",
+        "id_05": "float64",
+        "id_06": "float64",
+        "id_07": "float64",
+        "id_08": "float64",
+        "id_09": "float64",
+        "id_10": "float64",
+        "id_11": "float64",
+        "id_12": "object",
+        "id_13": "float64",
+        "id_14": "float64",
+        "id_15": "object",
+        "id_16": "object",
+        "id_17": "float64",
+        "id_18": "float64",
+        "id_19": "float64",
+        "id_20": "float64",
+        "id_21": "float64",
+        "id_22": "float64",
+        "id_23": "object",
+        "id_24": "float64",
+        "id_25": "float64",
+        "id_26": "float64",
+        "id_27": "object",
+        "id_28": "object",
+        "id_29": "object",
+        "id_30": "object",
+        "id_31": "object",
+        "id_32": "float64",
+        "id_33": "object",
+        "id_34": "object",
+        "id_35": "object",
+        "id_36": "object",
+        "id_37": "object",
+        "id_38": "object",
+        "DeviceType": "object",
+        "DeviceInfo": "object"
+      }
+    },
+    "test_identity": {
+      "rows": 141907,
+      "columns": 41,
+      "column_names": [
+        "TransactionID",
+        "id-01",
+        "id-02",
+        "id-03",
+        "id-04",
+        "id-05",
+        "id-06",
+        "id-07",
+        "id-08",
+        "id-09",
+        "id-10",
+        "id-11",
+        "id-12",
+        "id-13",
+        "id-14",
+        "id-15",
+        "id-16",
+        "id-17",
+        "id-18",
+        "id-19",
+        "id-20",
+        "id-21",
+        "id-22",
+        "id-23",
+        "id-24",
+        "id-25",
+        "id-26",
+        "id-27",
+        "id-28",
+        "id-29",
+        "id-30",
+        "id-31",
+        "id-32",
+        "id-33",
+        "id-34",
+        "id-35",
+        "id-36",
+        "id-37",
+        "id-38",
+        "DeviceType",
+        "DeviceInfo"
+      ],
+      "dtypes": {
+        "TransactionID": "int64",
+        "id-01": "float64",
+        "id-02": "float64",
+        "id-03": "float64",
+        "id-04": "float64",
+        "id-05": "float64",
+        "id-06": "float64",
+        "id-07": "float64",
+        "id-08": "float64",
+        "id-09": "float64",
+        "id-10": "float64",
+        "id-11": "float64",
+        "id-12": "object",
+        "id-13": "float64",
+        "id-14": "float64",
+        "id-15": "object",
+        "id-16": "object",
+        "id-17": "float64",
+        "id-18": "float64",
+        "id-19": "float64",
+        "id-20": "float64",
+        "id-21": "float64",
+        "id-22": "float64",
+        "id-23": "object",
+        "id-24": "float64",
+        "id-25": "float64",
+        "id-26": "float64",
+        "id-27": "object",
+        "id-28": "object",
+        "id-29": "object",
+        "id-30": "object",
+        "id-31": "object",
+        "id-32": "float64",
+        "id-33": "object",
+        "id-34": "object",
+        "id-35": "object",
+        "id-36": "object",
+        "id-37": "object",
+        "id-38": "object",
+        "DeviceType": "object",
+        "DeviceInfo": "object"
+      }
+    }
+  },
+  "target": {
+    "column": "isFraud",
+    "fraud_counts": {
+      "0": 187851,
+      "1": 5689
+    },
+    "fraud_rate": 0.029394440425751782
+  },
+  "transaction_id": [
+    "TransactionID"
+  ],
+  "temporal_columns": [
+    "TransactionDT"
+  ],
+  "temporal_summary": {
+    "TransactionDT": {
+      "dtype": "int64",
+      "min": "86400",
+      "max": "4358367",
+      "nunique": 186624
+    }
+  },
+  "data_quality": {
+    "train_transaction_duplicates": 0,
+    "test_transaction_duplicates": 0,
+    "train_identity_duplicates": 0,
+    "test_identity_duplicates": 0,
+    "train_transaction_missing_columns": 330
+  },
+  "identity_coverage": {
+    "train": 0.356133099100961,
+    "test": 0.1814758581856939
+  },
+  "train_test_transaction_id_overlap": 0,
+  "cardinality": [
+    {
+      "column": "TransactionID",
+      "dtype": "int64",
+      "nunique": 193540,
+      "unique_fraction": 1.0
+    },
+    {
+      "column": "TransactionDT",
+      "dtype": "int64",
+      "nunique": 186624,
+      "unique_fraction": 0.9642657848506768
+    },
+    {
+      "column": "V307",
+      "dtype": "float64",
+      "nunique": 15718,
+      "unique_fraction": 0.08121318590472254
+    },
+    {
+      "column": "V127",
+      "dtype": "float64",
+      "nunique": 10943,
+      "unique_fraction": 0.05654128345561641
+    },
+    {
+      "column": "card1",
+      "dtype": "int64",
+      "nunique": 9727,
+      "unique_fraction": 0.05025834452826289
+    },
+    {
+      "column": "TransactionAmt",
+      "dtype": "float64",
+      "nunique": 9514,
+      "unique_fraction": 0.04915779683786298
+    },
+    {
+      "column": "V308",
+      "dtype": "float64",
+      "nunique": 9137,
+      "unique_fraction": 0.04720987909476077
+    },
+    {
+      "column": "D8",
+      "dtype": "float64",
+      "nunique": 8874,
+      "unique_fraction": 0.04585098687609796
+    },
+    {
+      "column": "V310",
+      "dtype": "float64",
+      "nunique": 8742,
+      "unique_fraction": 0.04516895732148393
+    },
+    {
+      "column": "V160",
+      "dtype": "float64",
+      "nunique": 7961,
+      "unique_fraction": 0.04113361579001757
+    },
+    {
+      "column": "V128",
+      "dtype": "float64",
+      "nunique": 6243,
+      "unique_fraction": 0.03225689779890462
+    },
+    {
+      "column": "V317",
+      "dtype": "float64",
+      "nunique": 6136,
+      "unique_fraction": 0.03170404050842203
+    },
+    {
+      "column": "V130",
+      "dtype": "float64",
+      "nunique": 6128,
+      "unique_fraction": 0.03166270538389997
+    },
+    {
+      "column": "V159",
+      "dtype": "float64",
+      "nunique": 6118,
+      "unique_fraction": 0.03161103647824739
+    },
+    {
+      "column": "V306",
+      "dtype": "float64",
+      "nunique": 6003,
+      "unique_fraction": 0.03101684406324274
+    },
+    {
+      "column": "V314",
+      "dtype": "float64",
+      "nunique": 4985,
+      "unique_fraction": 0.02575694946781027
+    },
+    {
+      "column": "V203",
+      "dtype": "float64",
+      "nunique": 4845,
+      "unique_fraction": 0.025033584788674176
+    },
+    {
+      "column": "V318",
+      "dtype": "float64",
+      "nunique": 4803,
+      "unique_fraction": 0.024816575384933346
+    },
+    {
+      "column": "V264",
+      "dtype": "float64",
+      "nunique": 4552,
+      "unique_fraction": 0.023519685853053633
+    },
+    {
+      "column": "V133",
+      "dtype": "float64",
+      "nunique": 4143,
+      "unique_fraction": 0.02140642761186318
+    },
+    {
+      "column": "V204",
+      "dtype": "float64",
+      "nunique": 4115,
+      "unique_fraction": 0.02126175467603596
+    },
+    {
+      "column": "V126",
+      "dtype": "float64",
+      "nunique": 3987,
+      "unique_fraction": 0.02060039268368296
+    },
+    {
+      "column": "V265",
+      "dtype": "float64",
+      "nunique": 3873,
+      "unique_fraction": 0.02001136715924357
+    },
+    {
+      "column": "V316",
+      "dtype": "float64",
+      "nunique": 3524,
+      "unique_fraction": 0.018208122351968586
+    },
+    {
+      "column": "V312",
+      "dtype": "float64",
+      "nunique": 3501,
+      "unique_fraction": 0.018089283868967656
+    },
+    {
+      "column": "V134",
+      "dtype": "float64",
+      "nunique": 3354,
+      "unique_fraction": 0.017329750955874756
+    },
+    {
+      "column": "V202",
+      "dtype": "float64",
+      "nunique": 3345,
+      "unique_fraction": 0.017283248940787435
+    },
+    {
+      "column": "V263",
+      "dtype": "float64",
+      "nunique": 3319,
+      "unique_fraction": 0.01714890978609073
+    },
+    {
+      "column": "V315",
+      "dtype": "float64",
+      "nunique": 3057,
+      "unique_fraction": 0.01579518445799318
+    },
+    {
+      "column": "V274",
+      "dtype": "float64",
+      "nunique": 2554,
+      "unique_fraction": 0.013196238503668493
+    },
+    {
+      "column": "V212",
+      "dtype": "float64",
+      "nunique": 2545,
+      "unique_fraction": 0.013149736488581172
+    },
+    {
+      "column": "V320",
+      "dtype": "float64",
+      "nunique": 2503,
+      "unique_fraction": 0.012932727084840343
+    },
+    {
+      "column": "V313",
+      "dtype": "float64",
+      "nunique": 2425,
+      "unique_fraction": 0.012529709620750232
+    },
+    {
+      "column": "V132",
+      "dtype": "float64",
+      "nunique": 2422,
+      "unique_fraction": 0.012514208949054459
+    },
+    {
+      "column": "V213",
+      "dtype": "float64",
+      "nunique": 2354,
+      "unique_fraction": 0.012162860390616927
+    },
+    {
+      "column": "V275",
+      "dtype": "float64",
+      "nunique": 2335,
+      "unique_fraction": 0.012064689469877028
+    },
+    {
+      "column": "V131",
+      "dtype": "float64",
+      "nunique": 2293,
+      "unique_fraction": 0.0118476800661362
+    },
+    {
+      "column": "dist1",
+      "dtype": "float64",
+      "nunique": 2153,
+      "unique_fraction": 0.011124315387000103
+    },
+    {
+      "column": "V273",
+      "dtype": "float64",
+      "nunique": 2117,
+      "unique_fraction": 0.010938307326650822
+    },
+    {
+      "column": "V211",
+      "dtype": "float64",
+      "nunique": 2061,
+      "unique_fraction": 0.010648961454996383
+    },
+    {
+      "column": "V321",
+      "dtype": "float64",
+      "nunique": 2059,
+      "unique_fraction": 0.010638627673865867
+    },
+    {
+      "column": "V136",
+      "dtype": "float64",
+      "nunique": 1969,
+      "unique_fraction": 0.010173607522992663
+    },
+    {
+      "column": "V150",
+      "dtype": "float64",
+      "nunique": 1945,
+      "unique_fraction": 0.010049602149426476
+    },
+    {
+      "column": "V309",
+      "dtype": "float64",
+      "nunique": 1774,
+      "unique_fraction": 0.009166063862767387
+    },
+    {
+      "column": "V319",
+      "dtype": "float64",
+      "nunique": 1772,
+      "unique_fraction": 0.009155730081636872
+    },
+    {
+      "column": "V137",
+      "dtype": "float64",
+      "nunique": 1668,
+      "unique_fraction": 0.008618373462850057
+    },
+    {
+      "column": "C13",
+      "dtype": "float64",
+      "nunique": 1528,
+      "unique_fraction": 0.00789500878371396
+    },
+    {
+      "column": "C1",
+      "dtype": "float64",
+      "nunique": 1513,
+      "unique_fraction": 0.007817505425235094
+    },
+    {
+      "column": "V135",
+      "dtype": "float64",
+      "nunique": 1459,
+      "unique_fraction": 0.0075384933347111705
+    },
+    {
+      "column": "V267",
+      "dtype": "float64",
+      "nunique": 1448,
+      "unique_fraction": 0.007481657538493335
+    },
+    {
+      "column": "C11",
+      "dtype": "float64",
+      "nunique": 1381,
+      "unique_fraction": 0.00713547587062106
+    },
+    {
+      "column": "V207",
+      "dtype": "float64",
+      "nunique": 1346,
+      "unique_fraction": 0.006954634700837036
+    },
+    {
+      "column": "dist2",
+      "dtype": "float64",
+      "nunique": 1267,
+      "unique_fraction": 0.006546450346181668
+    },
+    {
+      "column": "C6",
+      "dtype": "float64",
+      "nunique": 1266,
+      "unique_fraction": 0.00654128345561641
+    },
+    {
+      "column": "V311",
+      "dtype": "float64",
+      "nunique": 1241,
+      "unique_fraction": 0.006412111191484964
+    },
+    {
+      "column": "V209",
+      "dtype": "float64",
+      "nunique": 1238,
+      "unique_fraction": 0.0063966105197891905
+    },
+    {
+      "column": "C4",
+      "dtype": "float64",
+      "nunique": 1183,
+      "unique_fraction": 0.006112431538700011
+    },
+    {
+      "column": "C8",
+      "dtype": "float64",
+      "nunique": 1180,
+      "unique_fraction": 0.006096930867004237
+    },
+    {
+      "column": "C12",
+      "dtype": "float64",
+      "nunique": 1143,
+      "unique_fraction": 0.0059057559160896975
+    },
+    {
+      "column": "C10",
+      "dtype": "float64",
+      "nunique": 1097,
+      "unique_fraction": 0.005668078950087837
+    },
+    {
+      "column": "C7",
+      "dtype": "float64",
+      "nunique": 1079,
+      "unique_fraction": 0.005575074919913196
+    },
+    {
+      "column": "V271",
+      "dtype": "float64",
+      "nunique": 1078,
+      "unique_fraction": 0.005569908029347938
+    },
+    {
+      "column": "V268",
+      "dtype": "float64",
+      "nunique": 1076,
+      "unique_fraction": 0.005559574248217423
+    },
+    {
+      "column": "C14",
+      "dtype": "float64",
+      "nunique": 1071,
+      "unique_fraction": 0.005533739795391133
+    },
+    {
+      "column": "V210",
+      "dtype": "float64",
+      "nunique": 1046,
+      "unique_fraction": 0.005404567531259688
+    },
+    {
+      "column": "V129",
+      "dtype": "float64",
+      "nunique": 1002,
+      "unique_fraction": 0.005177224346388344
+    },
+    {
+      "column": "V272",
+      "dtype": "float64",
+      "nunique": 978,
+      "unique_fraction": 0.005053218972822155
+    },
+    {
+      "column": "V165",
+      "dtype": "float64",
+      "nunique": 970,
+      "unique_fraction": 0.005011883848300093
+    },
+    {
+      "column": "V208",
+      "dtype": "float64",
+      "nunique": 966,
+      "unique_fraction": 0.004991216286039062
+    },
+    {
+      "column": "C2",
+      "dtype": "float64",
+      "nunique": 964,
+      "unique_fraction": 0.004980882504908546
+    },
+    {
+      "column": "V215",
+      "dtype": "float64",
+      "nunique": 961,
+      "unique_fraction": 0.004965381833212773
+    },
+    {
+      "column": "V277",
+      "dtype": "float64",
+      "nunique": 925,
+      "unique_fraction": 0.004779373772863491
+    },
+    {
+      "column": "V205",
+      "dtype": "float64",
+      "nunique": 919,
+      "unique_fraction": 0.004748372429471944
+    },
+    {
+      "column": "V270",
+      "dtype": "float64",
+      "nunique": 911,
+      "unique_fraction": 0.004707037304949881
+    },
+    {
+      "column": "V216",
+      "dtype": "float64",
+      "nunique": 883,
+      "unique_fraction": 0.004562364369122662
+    },
+    {
+      "column": "V278",
+      "dtype": "float64",
+      "nunique": 863,
+      "unique_fraction": 0.004459026557817505
+    },
+    {
+      "column": "V166",
+      "dtype": "float64",
+      "nunique": 824,
+      "unique_fraction": 0.00425751782577245
+    },
+    {
+      "column": "V266",
+      "dtype": "float64",
+      "nunique": 812,
+      "unique_fraction": 0.004195515138989356
+    },
+    {
+      "column": "V214",
+      "dtype": "float64",
+      "nunique": 788,
+      "unique_fraction": 0.0040715097654231685
+    },
+    {
+      "column": "V276",
+      "dtype": "float64",
+      "nunique": 788,
+      "unique_fraction": 0.0040715097654231685
+    },
+    {
+      "column": "D15",
+      "dtype": "float64",
+      "nunique": 709,
+      "unique_fraction": 0.0036633254107678
+    },
+    {
+      "column": "V206",
+      "dtype": "float64",
+      "nunique": 670,
+      "unique_fraction": 0.0034618166787227446
+    },
+    {
+      "column": "D10",
+      "dtype": "float64",
+      "nunique": 668,
+      "unique_fraction": 0.003451482897592229
+    },
+    {
+      "column": "D4",
+      "dtype": "float64",
+      "nunique": 665,
+      "unique_fraction": 0.0034359822258964554
+    },
+    {
+      "column": "D6",
+      "dtype": "float64",
+      "nunique": 640,
+      "unique_fraction": 0.0033068099617650096
+    },
+    {
+      "column": "V164",
+      "dtype": "float64",
+      "nunique": 635,
+      "unique_fraction": 0.003280975508938721
+    },
+    {
+      "column": "D14",
+      "dtype": "float64",
+      "nunique": 631,
+      "unique_fraction": 0.0032603079466776894
+    },
+    {
+      "column": "D2",
+      "dtype": "float64",
+      "nunique": 626,
+      "unique_fraction": 0.0032344734938514
+    },
+    {
+      "column": "D1",
+      "dtype": "float64",
+      "nunique": 624,
+      "unique_fraction": 0.0032241397127208845
+    },
+    {
+      "column": "V332",
+      "dtype": "float64",
+      "nunique": 622,
+      "unique_fraction": 0.0032138059315903688
+    },
+    {
+      "column": "D5",
+      "dtype": "float64",
+      "nunique": 557,
+      "unique_fraction": 0.00287795804484861
+    },
+    {
+      "column": "D11",
+      "dtype": "float64",
+      "nunique": 539,
+      "unique_fraction": 0.002784954014673969
+    },
+    {
+      "column": "D3",
+      "dtype": "float64",
+      "nunique": 529,
+      "unique_fraction": 0.002733285109021391
+    },
+    {
+      "column": "D12",
+      "dtype": "float64",
+      "nunique": 511,
+      "unique_fraction": 0.00264028107884675
+    },
+    {
+      "column": "card2",
+      "dtype": "float64",
+      "nunique": 500,
+      "unique_fraction": 0.002583445282628914
+    },
+    {
+      "column": "D7",
+      "dtype": "float64",
+      "nunique": 469,
+      "unique_fraction": 0.002423271675105921
+    },
+    {
+      "column": "V333",
+      "dtype": "float64",
+      "nunique": 434,
+      "unique_fraction": 0.0022424305053218973
+    },
+    {
+      "column": "D13",
+      "dtype": "float64",
+      "nunique": 410,
+      "unique_fraction": 0.0021184251317557094
+    },
+    {
+      "column": "V335",
+      "dtype": "float64",
+      "nunique": 344,
+      "unique_fraction": 0.0017774103544486927
+    },
+    {
+      "column": "V331",
+      "dtype": "float64",
+      "nunique": 283,
+      "unique_fraction": 0.0014622300299679653
+    },
+    {
+      "column": "C5",
+      "dtype": "float64",
+      "nunique": 278,
+      "unique_fraction": 0.001436395577141676
+    },
+    {
+      "column": "addr1",
+      "dtype": "float64",
+      "nunique": 274,
+      "unique_fraction": 0.0014157280148806449
+    },
+    {
+      "column": "V145",
+      "dtype": "float64",
+      "nunique": 256,
+      "unique_fraction": 0.0013227239847060038
+    },
+    {
+      "column": "V168",
+      "dtype": "float64",
+      "nunique": 214,
+      "unique_fraction": 0.001105714580965175
+    },
+    {
+      "column": "V187",
+      "dtype": "float64",
+      "nunique": 204,
+      "unique_fraction": 0.0010540456753125968
+    },
+    {
+      "column": "C9",
+      "dtype": "float64",
+      "nunique": 194,
+      "unique_fraction": 0.0010023767696600186
+    },
+    {
+      "column": "V336",
+      "dtype": "float64",
+      "nunique": 189,
+      "unique_fraction": 0.0009765423168337294
+    },
+    {
+      "column": "V294",
+      "dtype": "float64",
+      "nunique": 175,
+      "unique_fraction": 0.0009042058489201199
+    },
+    {
+      "column": "V338",
+      "dtype": "float64",
+      "nunique": 166,
+      "unique_fraction": 0.0008577038338327994
+    },
+    {
+      "column": "V339",
+      "dtype": "float64",
+      "nunique": 141,
+      "unique_fraction": 0.0007285315697013537
+    },
+    {
+      "column": "V96",
+      "dtype": "float64",
+      "nunique": 127,
+      "unique_fraction": 0.0006561951017877442
+    },
+    {
+      "column": "V178",
+      "dtype": "float64",
+      "nunique": 125,
+      "unique_fraction": 0.0006458613206572285
+    },
+    {
+      "column": "V337",
+      "dtype": "float64",
+      "nunique": 123,
+      "unique_fraction": 0.0006355275395267128
+    },
+    {
+      "column": "V102",
+      "dtype": "float64",
+      "nunique": 116,
+      "unique_fraction": 0.0005993593055699081
+    },
+    {
+      "column": "V234",
+      "dtype": "float64",
+      "nunique": 114,
+      "unique_fraction": 0.0005890255244393924
+    },
+    {
+      "column": "V295",
+      "dtype": "float64",
+      "nunique": 105,
+      "unique_fraction": 0.000542523509352072
+    },
+    {
+      "column": "V269",
+      "dtype": "float64",
+      "nunique": 103,
+      "unique_fraction": 0.0005321897282215563
+    },
+    {
+      "column": "V280",
+      "dtype": "float64",
+      "nunique": 102,
+      "unique_fraction": 0.0005270228376562984
+    },
+    {
+      "column": "card5",
+      "dtype": "float64",
+      "nunique": 99,
+      "unique_fraction": 0.000511522165960525
+    },
+    {
+      "column": "V218",
+      "dtype": "float64",
+      "nunique": 97,
+      "unique_fraction": 0.0005011883848300093
+    },
+    {
+      "column": "card3",
+      "dtype": "float64",
+      "nunique": 91,
+      "unique_fraction": 0.0004701870414384623
+    },
+    {
+      "column": "V162",
+      "dtype": "float64",
+      "nunique": 87,
+      "unique_fraction": 0.00044951947917743103
+    },
+    {
+      "column": "V334",
+      "dtype": "float64",
+      "nunique": 86,
+      "unique_fraction": 0.0004443525886121732
+    },
+    {
+      "column": "V291",
+      "dtype": "float64",
+      "nunique": 86,
+      "unique_fraction": 0.0004443525886121732
+    },
+    {
+      "column": "V285",
+      "dtype": "float64",
+      "nunique": 80,
+      "unique_fraction": 0.0004133512452206262
+    },
+    {
+      "column": "V99",
+      "dtype": "float64",
+      "nunique": 79,
+      "unique_fraction": 0.0004081843546553684
+    },
+    {
+      "column": "V224",
+      "dtype": "float64",
+      "nunique": 78,
+      "unique_fraction": 0.00040301746409011056
+    },
+    {
+      "column": "V229",
+      "dtype": "float64",
+      "nunique": 71,
+      "unique_fraction": 0.0003668492301333058
+    },
+    {
+      "column": "V179",
+      "dtype": "float64",
+      "nunique": 68,
+      "unique_fraction": 0.0003513485584375323
+    },
+    {
+      "column": "V144",
+      "dtype": "float64",
+      "nunique": 64,
+      "unique_fraction": 0.00033068099617650096
+    },
+    {
+      "column": "V163",
+      "dtype": "float64",
+      "nunique": 63,
+      "unique_fraction": 0.00032551410561124317
+    },
+    {
+      "column": "R_emaildomain",
+      "dtype": "object",
+      "nunique": 61,
+      "unique_fraction": 0.00031518032448072747
+    },
+    {
+      "column": "V219",
+      "dtype": "float64",
+      "nunique": 61,
+      "unique_fraction": 0.00031518032448072747
+    },
+    {
+      "column": "P_emaildomain",
+      "dtype": "object",
+      "nunique": 60,
+      "unique_fraction": 0.0003100134339154697
+    },
+    {
+      "column": "V180",
+      "dtype": "float64",
+      "nunique": 60,
+      "unique_fraction": 0.0003100134339154697
+    },
+    {
+      "column": "V167",
+      "dtype": "float64",
+      "nunique": 60,
+      "unique_fraction": 0.0003100134339154697
+    },
+    {
+      "column": "V253",
+      "dtype": "float64",
+      "nunique": 59,
+      "unique_fraction": 0.00030484654335021183
+    },
+    {
+      "column": "V222",
+      "dtype": "float64",
+      "nunique": 58,
+      "unique_fraction": 0.00029967965278495404
+    },
+    {
+      "column": "V292",
+      "dtype": "float64",
+      "nunique": 58,
+      "unique_fraction": 0.00029967965278495404
+    },
+    {
+      "column": "V151",
+      "dtype": "float64",
+      "nunique": 57,
+      "unique_fraction": 0.0002945127622196962
+    },
+    {
+      "column": "V296",
+      "dtype": "float64",
+      "nunique": 57,
+      "unique_fraction": 0.0002945127622196962
+    },
+    {
+      "column": "addr2",
+      "dtype": "float64",
+      "nunique": 57,
+      "unique_fraction": 0.0002945127622196962
+    },
+    {
+      "column": "V143",
+      "dtype": "float64",
+      "nunique": 56,
+      "unique_fraction": 0.00028934587165443834
+    },
+    {
+      "column": "V161",
+      "dtype": "float64",
+      "nunique": 55,
+      "unique_fraction": 0.00028417898108918055
+    },
+    {
+      "column": "V221",
+      "dtype": "float64",
+      "nunique": 54,
+      "unique_fraction": 0.0002790120905239227
+    },
+    {
+      "column": "V290",
+      "dtype": "float64",
+      "nunique": 51,
+      "unique_fraction": 0.0002635114188281492
+    },
+    {
+      "column": "V293",
+      "dtype": "float64",
+      "nunique": 51,
+      "unique_fraction": 0.0002635114188281492
+    },
+    {
+      "column": "V182",
+      "dtype": "float64",
+      "nunique": 51,
+      "unique_fraction": 0.0002635114188281492
+    },
+    {
+      "column": "V279",
+      "dtype": "float64",
+      "nunique": 50,
+      "unique_fraction": 0.0002583445282628914
+    },
+    {
+      "column": "V230",
+      "dtype": "float64",
+      "nunique": 49,
+      "unique_fraction": 0.00025317763769763357
+    },
+    {
+      "column": "V176",
+      "dtype": "float64",
+      "nunique": 49,
+      "unique_fraction": 0.00025317763769763357
+    },
+    {
+      "column": "V97",
+      "dtype": "float64",
+      "nunique": 49,
+      "unique_fraction": 0.00025317763769763357
+    },
+    {
+      "column": "V323",
+      "dtype": "float64",
+      "nunique": 47,
+      "unique_fraction": 0.0002428438565671179
+    },
+    {
+      "column": "V103",
+      "dtype": "float64",
+      "nunique": 46,
+      "unique_fraction": 0.00023767696600186008
+    },
+    {
+      "column": "V258",
+      "dtype": "float64",
+      "nunique": 46,
+      "unique_fraction": 0.00023767696600186008
+    },
+    {
+      "column": "V326",
+      "dtype": "float64",
+      "nunique": 46,
+      "unique_fraction": 0.00023767696600186008
+    },
+    {
+      "column": "V259",
+      "dtype": "float64",
+      "nunique": 46,
+      "unique_fraction": 0.00023767696600186008
+    },
+    {
+      "column": "V298",
+      "dtype": "float64",
+      "nunique": 45,
+      "unique_fraction": 0.00023251007543660226
+    },
+    {
+      "column": "V199",
+      "dtype": "float64",
+      "nunique": 44,
+      "unique_fraction": 0.00022734318487134444
+    },
+    {
+      "column": "V192",
+      "dtype": "float64",
+      "nunique": 42,
+      "unique_fraction": 0.00021700940374082877
+    },
+    {
+      "column": "V232",
+      "dtype": "float64",
+      "nunique": 42,
+      "unique_fraction": 0.00021700940374082877
+    },
+    {
+      "column": "V190",
+      "dtype": "float64",
+      "nunique": 41,
+      "unique_fraction": 0.00021184251317557095
+    },
+    {
+      "column": "V261",
+      "dtype": "float64",
+      "nunique": 41,
+      "unique_fraction": 0.00021184251317557095
+    },
+    {
+      "column": "V283",
+      "dtype": "float64",
+      "nunique": 40,
+      "unique_fraction": 0.0002066756226103131
+    },
+    {
+      "column": "V245",
+      "dtype": "float64",
+      "nunique": 40,
+      "unique_fraction": 0.0002066756226103131
+    },
+    {
+      "column": "V196",
+      "dtype": "float64",
+      "nunique": 39,
+      "unique_fraction": 0.00020150873204505528
+    },
+    {
+      "column": "V105",
+      "dtype": "float64",
+      "nunique": 39,
+      "unique_fraction": 0.00020150873204505528
+    },
+    {
+      "column": "V186",
+      "dtype": "float64",
+      "nunique": 39,
+      "unique_fraction": 0.00020150873204505528
+    },
+    {
+      "column": "V227",
+      "dtype": "float64",
+      "nunique": 38,
+      "unique_fraction": 0.00019634184147979746
+    },
+    {
+      "column": "V193",
+      "dtype": "float64",
+      "nunique": 38,
+      "unique_fraction": 0.00019634184147979746
+    },
+    {
+      "column": "V243",
+      "dtype": "float64",
+      "nunique": 37,
+      "unique_fraction": 0.00019117495091453964
+    },
+    {
+      "column": "V256",
+      "dtype": "float64",
+      "nunique": 37,
+      "unique_fraction": 0.00019117495091453964
+    },
+    {
+      "column": "V140",
+      "dtype": "float64",
+      "nunique": 35,
+      "unique_fraction": 0.00018084116978402397
+    },
+    {
+      "column": "V255",
+      "dtype": "float64",
+      "nunique": 35,
+      "unique_fraction": 0.00018084116978402397
+    },
+    {
+      "column": "V324",
+      "dtype": "float64",
+      "nunique": 35,
+      "unique_fraction": 0.00018084116978402397
+    },
+    {
+      "column": "V139",
+      "dtype": "float64",
+      "nunique": 35,
+      "unique_fraction": 0.00018084116978402397
+    },
+    {
+      "column": "V282",
+      "dtype": "float64",
+      "nunique": 34,
+      "unique_fraction": 0.00017567427921876615
+    },
+    {
+      "column": "V254",
+      "dtype": "float64",
+      "nunique": 34,
+      "unique_fraction": 0.00017567427921876615
+    },
+    {
+      "column": "V322",
+      "dtype": "float64",
+      "nunique": 34,
+      "unique_fraction": 0.00017567427921876615
+    },
+    {
+      "column": "V172",
+      "dtype": "float64",
+      "nunique": 33,
+      "unique_fraction": 0.00017050738865350833
+    },
+    {
+      "column": "V171",
+      "dtype": "float64",
+      "nunique": 31,
+      "unique_fraction": 0.00016017360752299266
+    },
+    {
+      "column": "V177",
+      "dtype": "float64",
+      "nunique": 31,
+      "unique_fraction": 0.00016017360752299266
+    },
+    {
+      "column": "V170",
+      "dtype": "float64",
+      "nunique": 31,
+      "unique_fraction": 0.00016017360752299266
+    },
+    {
+      "column": "V183",
+      "dtype": "float64",
+      "nunique": 31,
+      "unique_fraction": 0.00016017360752299266
+    },
+    {
+      "column": "V201",
+      "dtype": "float64",
+      "nunique": 30,
+      "unique_fraction": 0.00015500671695773484
+    },
+    {
+      "column": "V200",
+      "dtype": "float64",
+      "nunique": 30,
+      "unique_fraction": 0.00015500671695773484
+    },
+    {
+      "column": "V236",
+      "dtype": "float64",
+      "nunique": 29,
+      "unique_fraction": 0.00014983982639247702
+    },
+    {
+      "column": "V225",
+      "dtype": "float64",
+      "nunique": 29,
+      "unique_fraction": 0.00014983982639247702
+    },
+    {
+      "column": "V233",
+      "dtype": "float64",
+      "nunique": 29,
+      "unique_fraction": 0.00014983982639247702
+    },
+    {
+      "column": "V38",
+      "dtype": "float64",
+      "nunique": 28,
+      "unique_fraction": 0.00014467293582721917
+    },
+    {
+      "column": "V95",
+      "dtype": "float64",
+      "nunique": 28,
+      "unique_fraction": 0.00014467293582721917
+    },
+    {
+      "column": "V45",
+      "dtype": "float64",
+      "nunique": 27,
+      "unique_fraction": 0.00013950604526196135
+    },
+    {
+      "column": "V329",
+      "dtype": "float64",
+      "nunique": 26,
+      "unique_fraction": 0.00013433915469670353
+    },
+    {
+      "column": "V217",
+      "dtype": "float64",
+      "nunique": 26,
+      "unique_fraction": 0.00013433915469670353
+    },
+    {
+      "column": "V78",
+      "dtype": "float64",
+      "nunique": 26,
+      "unique_fraction": 0.00013433915469670353
+    },
+    {
+      "column": "V226",
+      "dtype": "float64",
+      "nunique": 26,
+      "unique_fraction": 0.00013433915469670353
+    },
+    {
+      "column": "V287",
+      "dtype": "float64",
+      "nunique": 25,
+      "unique_fraction": 0.0001291722641314457
+    },
+    {
+      "column": "V231",
+      "dtype": "float64",
+      "nunique": 25,
+      "unique_fraction": 0.0001291722641314457
+    },
+    {
+      "column": "V220",
+      "dtype": "float64",
+      "nunique": 25,
+      "unique_fraction": 0.0001291722641314457
+    },
+    {
+      "column": "V299",
+      "dtype": "float64",
+      "nunique": 25,
+      "unique_fraction": 0.0001291722641314457
+    },
+    {
+      "column": "D9",
+      "dtype": "float64",
+      "nunique": 25,
+      "unique_fraction": 0.0001291722641314457
+    },
+    {
+      "column": "V138",
+      "dtype": "float64",
+      "nunique": 24,
+      "unique_fraction": 0.00012400537356618786
+    },
+    {
+      "column": "V106",
+      "dtype": "float64",
+      "nunique": 24,
+      "unique_fraction": 0.00012400537356618786
+    },
+    {
+      "column": "V100",
+      "dtype": "float64",
+      "nunique": 24,
+      "unique_fraction": 0.00012400537356618786
+    },
+    {
+      "column": "V228",
+      "dtype": "float64",
+      "nunique": 24,
+      "unique_fraction": 0.00012400537356618786
+    },
+    {
+      "column": "V281",
+      "dtype": "float64",
+      "nunique": 24,
+      "unique_fraction": 0.00012400537356618786
+    },
+    {
+      "column": "V191",
+      "dtype": "float64",
+      "nunique": 22,
+      "unique_fraction": 0.00011367159243567222
+    },
+    {
+      "column": "V262",
+      "dtype": "float64",
+      "nunique": 22,
+      "unique_fraction": 0.00011367159243567222
+    },
+    {
+      "column": "V80",
+      "dtype": "float64",
+      "nunique": 21,
+      "unique_fraction": 0.00010850470187041438
+    },
+    {
+      "column": "V246",
+      "dtype": "float64",
+      "nunique": 21,
+      "unique_fraction": 0.00010850470187041438
+    },
+    {
+      "column": "V101",
+      "dtype": "float64",
+      "nunique": 21,
+      "unique_fraction": 0.00010850470187041438
+    },
+    {
+      "column": "V81",
+      "dtype": "float64",
+      "nunique": 21,
+      "unique_fraction": 0.00010850470187041438
+    },
+    {
+      "column": "V257",
+      "dtype": "float64",
+      "nunique": 21,
+      "unique_fraction": 0.00010850470187041438
+    },
+    {
+      "column": "V169",
+      "dtype": "float64",
+      "nunique": 21,
+      "unique_fraction": 0.00010850470187041438
+    },
+    {
+      "column": "V37",
+      "dtype": "float64",
+      "nunique": 20,
+      "unique_fraction": 0.00010333781130515655
+    },
+    {
+      "column": "V87",
+      "dtype": "float64",
+      "nunique": 20,
+      "unique_fraction": 0.00010333781130515655
+    },
+    {
+      "column": "V238",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V252",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V188",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V239",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V77",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V244",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V242",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V56",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V86",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V189",
+      "dtype": "float64",
+      "nunique": 19,
+      "unique_fraction": 9.817092073989873e-05
+    },
+    {
+      "column": "V237",
+      "dtype": "float64",
+      "nunique": 18,
+      "unique_fraction": 9.30040301746409e-05
+    },
+    {
+      "column": "V152",
+      "dtype": "float64",
+      "nunique": 18,
+      "unique_fraction": 9.30040301746409e-05
+    },
+    {
+      "column": "V44",
+      "dtype": "float64",
+      "nunique": 18,
+      "unique_fraction": 9.30040301746409e-05
+    },
+    {
+      "column": "V223",
+      "dtype": "float64",
+      "nunique": 18,
+      "unique_fraction": 9.30040301746409e-05
+    },
+    {
+      "column": "V330",
+      "dtype": "float64",
+      "nunique": 17,
+      "unique_fraction": 8.783713960938307e-05
+    },
+    {
+      "column": "V18",
+      "dtype": "float64",
+      "nunique": 17,
+      "unique_fraction": 8.783713960938307e-05
+    },
+    {
+      "column": "V328",
+      "dtype": "float64",
+      "nunique": 17,
+      "unique_fraction": 8.783713960938307e-05
+    },
+    {
+      "column": "V181",
+      "dtype": "float64",
+      "nunique": 17,
+      "unique_fraction": 8.783713960938307e-05
+    },
+    {
+      "column": "V17",
+      "dtype": "float64",
+      "nunique": 17,
+      "unique_fraction": 8.783713960938307e-05
+    },
+    {
+      "column": "V235",
+      "dtype": "float64",
+      "nunique": 17,
+      "unique_fraction": 8.783713960938307e-05
+    },
+    {
+      "column": "V55",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V39",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V248",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V156",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "C3",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V158",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V149",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V104",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V249",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V16",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V20",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V40",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V32",
+      "dtype": "float64",
+      "nunique": 16,
+      "unique_fraction": 8.267024904412524e-05
+    },
+    {
+      "column": "V147",
+      "dtype": "float64",
+      "nunique": 15,
+      "unique_fraction": 7.750335847886742e-05
+    },
+    {
+      "column": "V303",
+      "dtype": "float64",
+      "nunique": 15,
+      "unique_fraction": 7.750335847886742e-05
+    },
+    {
+      "column": "V24",
+      "dtype": "float64",
+      "nunique": 15,
+      "unique_fraction": 7.750335847886742e-05
+    },
+    {
+      "column": "V23",
+      "dtype": "float64",
+      "nunique": 15,
+      "unique_fraction": 7.750335847886742e-05
+    },
+    {
+      "column": "V250",
+      "dtype": "float64",
+      "nunique": 15,
+      "unique_fraction": 7.750335847886742e-05
+    },
+    {
+      "column": "V251",
+      "dtype": "float64",
+      "nunique": 15,
+      "unique_fraction": 7.750335847886742e-05
+    },
+    {
+      "column": "V26",
+      "dtype": "float64",
+      "nunique": 14,
+      "unique_fraction": 7.233646791360959e-05
+    },
+    {
+      "column": "V297",
+      "dtype": "float64",
+      "nunique": 14,
+      "unique_fraction": 7.233646791360959e-05
+    },
+    {
+      "column": "V34",
+      "dtype": "float64",
+      "nunique": 14,
+      "unique_fraction": 7.233646791360959e-05
+    },
+    {
+      "column": "V185",
+      "dtype": "float64",
+      "nunique": 14,
+      "unique_fraction": 7.233646791360959e-05
+    },
+    {
+      "column": "V327",
+      "dtype": "float64",
+      "nunique": 14,
+      "unique_fraction": 7.233646791360959e-05
+    },
+    {
+      "column": "V198",
+      "dtype": "float64",
+      "nunique": 14,
+      "unique_fraction": 7.233646791360959e-05
+    },
+    {
+      "column": "V125",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V184",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V146",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V124",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V123",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V247",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V300",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V301",
+      "dtype": "float64",
+      "nunique": 13,
+      "unique_fraction": 6.716957734835176e-05
+    },
+    {
+      "column": "V60",
+      "dtype": "float64",
+      "nunique": 12,
+      "unique_fraction": 6.200268678309393e-05
+    },
+    {
+      "column": "V302",
+      "dtype": "float64",
+      "nunique": 12,
+      "unique_fraction": 6.200268678309393e-05
+    },
+    {
+      "column": "V304",
+      "dtype": "float64",
+      "nunique": 12,
+      "unique_fraction": 6.200268678309393e-05
+    },
+    {
+      "column": "V59",
+      "dtype": "float64",
+      "nunique": 12,
+      "unique_fraction": 6.200268678309393e-05
+    },
+    {
+      "column": "V289",
+      "dtype": "float64",
+      "nunique": 11,
+      "unique_fraction": 5.683579621783611e-05
+    },
+    {
+      "column": "V175",
+      "dtype": "float64",
+      "nunique": 11,
+      "unique_fraction": 5.683579621783611e-05
+    },
+    {
+      "column": "V197",
+      "dtype": "float64",
+      "nunique": 11,
+      "unique_fraction": 5.683579621783611e-05
+    },
+    {
+      "column": "V155",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V195",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V174",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V154",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V157",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V148",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V42",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V288",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V22",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V74",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V43",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V67",
+      "dtype": "float64",
+      "nunique": 10,
+      "unique_fraction": 5.1668905652578275e-05
+    },
+    {
+      "column": "V63",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V31",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V284",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V19",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V15",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V83",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V85",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V173",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V113",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V112",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V84",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V92",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V93",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V325",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V111",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V62",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V30",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V47",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V260",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V72",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V82",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V52",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V64",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V79",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V58",
+      "dtype": "float64",
+      "nunique": 9,
+      "unique_fraction": 4.650201508732045e-05
+    },
+    {
+      "column": "V61",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V91",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V194",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V71",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V57",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V3",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V98",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V142",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V153",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V33",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V2",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V25",
+      "dtype": "float64",
+      "nunique": 8,
+      "unique_fraction": 4.133512452206262e-05
+    },
+    {
+      "column": "V108",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V66",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V110",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V109",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V141",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V70",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V9",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V8",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V13",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V6",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V21",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V49",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V7",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V5",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V54",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V46",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V51",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V50",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V73",
+      "dtype": "float64",
+      "nunique": 7,
+      "unique_fraction": 3.616823395680479e-05
+    },
+    {
+      "column": "V116",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V90",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V69",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V286",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V11",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V29",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V4",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V240",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V36",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V53",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V114",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V115",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "V76",
+      "dtype": "float64",
+      "nunique": 6,
+      "unique_fraction": 3.1001343391546965e-05
+    },
+    {
+      "column": "card4",
+      "dtype": "object",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "ProductCD",
+      "dtype": "object",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V12",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "card6",
+      "dtype": "object",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V35",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V75",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V27",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V10",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V241",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V28",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V48",
+      "dtype": "float64",
+      "nunique": 5,
+      "unique_fraction": 2.5834452826289138e-05
+    },
+    {
+      "column": "V68",
+      "dtype": "float64",
+      "nunique": 4,
+      "unique_fraction": 2.066756226103131e-05
+    },
+    {
+      "column": "M4",
+      "dtype": "object",
+      "nunique": 4,
+      "unique_fraction": 2.066756226103131e-05
+    },
+    {
+      "column": "V89",
+      "dtype": "float64",
+      "nunique": 4,
+      "unique_fraction": 2.066756226103131e-05
+    },
+    {
+      "column": "V120",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V119",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V88",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V121",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V122",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V118",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V117",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M5",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V94",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V41",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V65",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V14",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V305",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M1",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M2",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M9",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M3",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M6",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M7",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "V1",
+      "dtype": "float64",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "M8",
+      "dtype": "object",
+      "nunique": 3,
+      "unique_fraction": 1.5500671695773483e-05
+    },
+    {
+      "column": "isFraud",
+      "dtype": "int64",
+      "nunique": 2,
+      "unique_fraction": 1.0333781130515655e-05
+    },
+    {
+      "column": "V107",
+      "dtype": "float64",
+      "nunique": 1,
+      "unique_fraction": 5.1668905652578275e-06
+    }
+  ]
+}

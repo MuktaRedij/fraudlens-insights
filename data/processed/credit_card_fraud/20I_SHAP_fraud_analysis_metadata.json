@@ -1,0 +1,435 @@
+{
+  "experiment": "20I-B Fraud-Specific SHAP Analysis",
+  "shap_rows": 10056,
+  "fraud_rows": 56,
+  "feature_count": 37,
+  "top_fraud_features": [
+    {
+      "fraud_rank": 1,
+      "feature": "V14",
+      "mean_abs_shap_fraud": 3.474027656510344,
+      "mean_signed_shap_fraud": 3.366885421460782,
+      "positive_contribution_fraction": 0.9285714285714286
+    },
+    {
+      "fraud_rank": 2,
+      "feature": "V17",
+      "mean_abs_shap_fraud": 0.8861297675345204,
+      "mean_signed_shap_fraud": 0.8541846571484693,
+      "positive_contribution_fraction": 0.6964285714285714
+    },
+    {
+      "fraud_rank": 3,
+      "feature": "V4",
+      "mean_abs_shap_fraud": 0.8082504632373771,
+      "mean_signed_shap_fraud": 0.7548357632113474,
+      "positive_contribution_fraction": 0.9107142857142857
+    },
+    {
+      "fraud_rank": 4,
+      "feature": "V10",
+      "mean_abs_shap_fraud": 0.7656252822562605,
+      "mean_signed_shap_fraud": 0.5420707059761638,
+      "positive_contribution_fraction": 0.7678571428571429
+    },
+    {
+      "fraud_rank": 5,
+      "feature": "V12",
+      "mean_abs_shap_fraud": 0.5036124604130566,
+      "mean_signed_shap_fraud": 0.27797804465193143,
+      "positive_contribution_fraction": 0.8392857142857143
+    },
+    {
+      "fraud_rank": 6,
+      "feature": "V3",
+      "mean_abs_shap_fraud": 0.11120567129617694,
+      "mean_signed_shap_fraud": 0.11120567129617694,
+      "positive_contribution_fraction": 1.0
+    },
+    {
+      "fraud_rank": 7,
+      "feature": "V16",
+      "mean_abs_shap_fraud": 0.1055163472470183,
+      "mean_signed_shap_fraud": 0.053977781191689125,
+      "positive_contribution_fraction": 0.75
+    },
+    {
+      "fraud_rank": 8,
+      "feature": "V7",
+      "mean_abs_shap_fraud": 0.08559432412578914,
+      "mean_signed_shap_fraud": -0.018651073099254022,
+      "positive_contribution_fraction": 0.7857142857142857
+    },
+    {
+      "fraud_rank": 9,
+      "feature": "V21",
+      "mean_abs_shap_fraud": 0.06693633742932444,
+      "mean_signed_shap_fraud": 0.03056330898162642,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "fraud_rank": 10,
+      "feature": "V11",
+      "mean_abs_shap_fraud": 0.06411525819456208,
+      "mean_signed_shap_fraud": 0.02082386234755415,
+      "positive_contribution_fraction": 0.9107142857142857
+    },
+    {
+      "fraud_rank": 11,
+      "feature": "V8",
+      "mean_abs_shap_fraud": 0.05447835906621438,
+      "mean_signed_shap_fraud": -0.010865458447189837,
+      "positive_contribution_fraction": 0.4107142857142857
+    },
+    {
+      "fraud_rank": 12,
+      "feature": "log_amount",
+      "mean_abs_shap_fraud": 0.05395099607894354,
+      "mean_signed_shap_fraud": 0.037762667796159284,
+      "positive_contribution_fraction": 0.6428571428571429
+    },
+    {
+      "fraud_rank": 13,
+      "feature": "Amount",
+      "mean_abs_shap_fraud": 0.053095098182141955,
+      "mean_signed_shap_fraud": 0.0043155956876616145,
+      "positive_contribution_fraction": 0.375
+    },
+    {
+      "fraud_rank": 14,
+      "feature": "V18",
+      "mean_abs_shap_fraud": 0.04370551370767626,
+      "mean_signed_shap_fraud": 0.010213274636705776,
+      "positive_contribution_fraction": 0.6607142857142857
+    },
+    {
+      "fraud_rank": 15,
+      "feature": "V5",
+      "mean_abs_shap_fraud": 0.037100851334146645,
+      "mean_signed_shap_fraud": -0.008163708519098636,
+      "positive_contribution_fraction": 0.5892857142857143
+    },
+    {
+      "fraud_rank": 16,
+      "feature": "hour_sin",
+      "mean_abs_shap_fraud": 0.035521568456963575,
+      "mean_signed_shap_fraud": 0.035521568456963575,
+      "positive_contribution_fraction": 1.0
+    },
+    {
+      "fraud_rank": 17,
+      "feature": "V9",
+      "mean_abs_shap_fraud": 0.027321110437148143,
+      "mean_signed_shap_fraud": 0.023226676498090272,
+      "positive_contribution_fraction": 0.9107142857142857
+    },
+    {
+      "fraud_rank": 18,
+      "feature": "V1",
+      "mean_abs_shap_fraud": 0.026054615587853398,
+      "mean_signed_shap_fraud": -0.0038735616575951725,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "fraud_rank": 19,
+      "feature": "V28",
+      "mean_abs_shap_fraud": 0.019135412527412573,
+      "mean_signed_shap_fraud": 0.01469062462418511,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "fraud_rank": 20,
+      "feature": "V25",
+      "mean_abs_shap_fraud": 0.017371000909164845,
+      "mean_signed_shap_fraud": -0.0034009242170124653,
+      "positive_contribution_fraction": 0.5
+    }
+  ],
+  "top_positive_features": [
+    {
+      "positive_rank": 1,
+      "feature": "V3",
+      "mean_abs_shap_fraud": 0.11120567129617694,
+      "mean_signed_shap_fraud": 0.11120567129617694,
+      "positive_contribution_fraction": 1.0
+    },
+    {
+      "positive_rank": 2,
+      "feature": "hour_sin",
+      "mean_abs_shap_fraud": 0.035521568456963575,
+      "mean_signed_shap_fraud": 0.035521568456963575,
+      "positive_contribution_fraction": 1.0
+    },
+    {
+      "positive_rank": 3,
+      "feature": "V14",
+      "mean_abs_shap_fraud": 3.474027656510344,
+      "mean_signed_shap_fraud": 3.366885421460782,
+      "positive_contribution_fraction": 0.9285714285714286
+    },
+    {
+      "positive_rank": 4,
+      "feature": "V4",
+      "mean_abs_shap_fraud": 0.8082504632373771,
+      "mean_signed_shap_fraud": 0.7548357632113474,
+      "positive_contribution_fraction": 0.9107142857142857
+    },
+    {
+      "positive_rank": 5,
+      "feature": "V11",
+      "mean_abs_shap_fraud": 0.06411525819456208,
+      "mean_signed_shap_fraud": 0.02082386234755415,
+      "positive_contribution_fraction": 0.9107142857142857
+    },
+    {
+      "positive_rank": 6,
+      "feature": "V9",
+      "mean_abs_shap_fraud": 0.027321110437148143,
+      "mean_signed_shap_fraud": 0.023226676498090272,
+      "positive_contribution_fraction": 0.9107142857142857
+    },
+    {
+      "positive_rank": 7,
+      "feature": "V12",
+      "mean_abs_shap_fraud": 0.5036124604130566,
+      "mean_signed_shap_fraud": 0.27797804465193143,
+      "positive_contribution_fraction": 0.8392857142857143
+    },
+    {
+      "positive_rank": 8,
+      "feature": "V15",
+      "mean_abs_shap_fraud": 0.010481223256764713,
+      "mean_signed_shap_fraud": 0.0035354576663317477,
+      "positive_contribution_fraction": 0.8392857142857143
+    },
+    {
+      "positive_rank": 9,
+      "feature": "V7",
+      "mean_abs_shap_fraud": 0.08559432412578914,
+      "mean_signed_shap_fraud": -0.018651073099254022,
+      "positive_contribution_fraction": 0.7857142857142857
+    },
+    {
+      "positive_rank": 10,
+      "feature": "V10",
+      "mean_abs_shap_fraud": 0.7656252822562605,
+      "mean_signed_shap_fraud": 0.5420707059761638,
+      "positive_contribution_fraction": 0.7678571428571429
+    },
+    {
+      "positive_rank": 11,
+      "feature": "V27",
+      "mean_abs_shap_fraud": 0.0011112343269752498,
+      "mean_signed_shap_fraud": 0.0003115036265462062,
+      "positive_contribution_fraction": 0.7678571428571429
+    },
+    {
+      "positive_rank": 12,
+      "feature": "V16",
+      "mean_abs_shap_fraud": 0.1055163472470183,
+      "mean_signed_shap_fraud": 0.053977781191689125,
+      "positive_contribution_fraction": 0.75
+    },
+    {
+      "positive_rank": 13,
+      "feature": "hour",
+      "mean_abs_shap_fraud": 0.007508774869996757,
+      "mean_signed_shap_fraud": 0.005804995440383098,
+      "positive_contribution_fraction": 0.75
+    },
+    {
+      "positive_rank": 14,
+      "feature": "V17",
+      "mean_abs_shap_fraud": 0.8861297675345204,
+      "mean_signed_shap_fraud": 0.8541846571484693,
+      "positive_contribution_fraction": 0.6964285714285714
+    },
+    {
+      "positive_rank": 15,
+      "feature": "V26",
+      "mean_abs_shap_fraud": 0.010197366742653563,
+      "mean_signed_shap_fraud": 0.006958384348204021,
+      "positive_contribution_fraction": 0.6964285714285714
+    },
+    {
+      "positive_rank": 16,
+      "feature": "V21",
+      "mean_abs_shap_fraud": 0.06693633742932444,
+      "mean_signed_shap_fraud": 0.03056330898162642,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "positive_rank": 17,
+      "feature": "V1",
+      "mean_abs_shap_fraud": 0.026054615587853398,
+      "mean_signed_shap_fraud": -0.0038735616575951725,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "positive_rank": 18,
+      "feature": "V28",
+      "mean_abs_shap_fraud": 0.019135412527412573,
+      "mean_signed_shap_fraud": 0.01469062462418511,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "positive_rank": 19,
+      "feature": "V18",
+      "mean_abs_shap_fraud": 0.04370551370767626,
+      "mean_signed_shap_fraud": 0.010213274636705776,
+      "positive_contribution_fraction": 0.6607142857142857
+    },
+    {
+      "positive_rank": 20,
+      "feature": "log_amount",
+      "mean_abs_shap_fraud": 0.05395099607894354,
+      "mean_signed_shap_fraud": 0.037762667796159284,
+      "positive_contribution_fraction": 0.6428571428571429
+    }
+  ],
+  "top_negative_features": [
+    {
+      "negative_rank": 1,
+      "feature": "V7",
+      "mean_abs_shap_fraud": 0.08559432412578914,
+      "mean_signed_shap_fraud": -0.018651073099254022,
+      "positive_contribution_fraction": 0.7857142857142857
+    },
+    {
+      "negative_rank": 2,
+      "feature": "V8",
+      "mean_abs_shap_fraud": 0.05447835906621438,
+      "mean_signed_shap_fraud": -0.010865458447189837,
+      "positive_contribution_fraction": 0.4107142857142857
+    },
+    {
+      "negative_rank": 3,
+      "feature": "Time",
+      "mean_abs_shap_fraud": 0.009991419978446752,
+      "mean_signed_shap_fraud": -0.009560650846236526,
+      "positive_contribution_fraction": 0.07142857142857142
+    },
+    {
+      "negative_rank": 4,
+      "feature": "V5",
+      "mean_abs_shap_fraud": 0.037100851334146645,
+      "mean_signed_shap_fraud": -0.008163708519098636,
+      "positive_contribution_fraction": 0.5892857142857143
+    },
+    {
+      "negative_rank": 5,
+      "feature": "V2",
+      "mean_abs_shap_fraud": 0.01385869026077397,
+      "mean_signed_shap_fraud": -0.00542123351258006,
+      "positive_contribution_fraction": 0.4107142857142857
+    },
+    {
+      "negative_rank": 6,
+      "feature": "hour_cos",
+      "mean_abs_shap_fraud": 0.005137935525303413,
+      "mean_signed_shap_fraud": -0.004650648496540723,
+      "positive_contribution_fraction": 0.14285714285714285
+    },
+    {
+      "negative_rank": 7,
+      "feature": "V1",
+      "mean_abs_shap_fraud": 0.026054615587853398,
+      "mean_signed_shap_fraud": -0.0038735616575951725,
+      "positive_contribution_fraction": 0.6785714285714286
+    },
+    {
+      "negative_rank": 8,
+      "feature": "V25",
+      "mean_abs_shap_fraud": 0.017371000909164845,
+      "mean_signed_shap_fraud": -0.0034009242170124653,
+      "positive_contribution_fraction": 0.5
+    },
+    {
+      "negative_rank": 9,
+      "feature": "V6",
+      "mean_abs_shap_fraud": 0.006782887208861111,
+      "mean_signed_shap_fraud": -0.00250495246545655,
+      "positive_contribution_fraction": 0.3392857142857143
+    },
+    {
+      "negative_rank": 10,
+      "feature": "V24",
+      "mean_abs_shap_fraud": 0.0076501602961675935,
+      "mean_signed_shap_fraud": -0.0006942729317797458,
+      "positive_contribution_fraction": 0.6428571428571429
+    },
+    {
+      "negative_rank": 11,
+      "feature": "time_hours",
+      "mean_abs_shap_fraud": 0.001777312063452981,
+      "mean_signed_shap_fraud": -0.000542504470827042,
+      "positive_contribution_fraction": 0.39285714285714285
+    },
+    {
+      "negative_rank": 12,
+      "feature": "time_days",
+      "mean_abs_shap_fraud": 0.0,
+      "mean_signed_shap_fraud": 0.0,
+      "positive_contribution_fraction": 0.0
+    },
+    {
+      "negative_rank": 13,
+      "feature": "day_index",
+      "mean_abs_shap_fraud": 0.0,
+      "mean_signed_shap_fraud": 0.0,
+      "positive_contribution_fraction": 0.0
+    },
+    {
+      "negative_rank": 14,
+      "feature": "V27",
+      "mean_abs_shap_fraud": 0.0011112343269752498,
+      "mean_signed_shap_fraud": 0.0003115036265462062,
+      "positive_contribution_fraction": 0.7678571428571429
+    },
+    {
+      "negative_rank": 15,
+      "feature": "V23",
+      "mean_abs_shap_fraud": 0.008189008128975741,
+      "mean_signed_shap_fraud": 0.0008509281807028284,
+      "positive_contribution_fraction": 0.35714285714285715
+    },
+    {
+      "negative_rank": 16,
+      "feature": "V22",
+      "mean_abs_shap_fraud": 0.0018405597631569036,
+      "mean_signed_shap_fraud": 0.0011424518035321359,
+      "positive_contribution_fraction": 0.5178571428571429
+    },
+    {
+      "negative_rank": 17,
+      "feature": "V13",
+      "mean_abs_shap_fraud": 0.0064347834199045524,
+      "mean_signed_shap_fraud": 0.0023284899641780104,
+      "positive_contribution_fraction": 0.625
+    },
+    {
+      "negative_rank": 18,
+      "feature": "V15",
+      "mean_abs_shap_fraud": 0.010481223256764713,
+      "mean_signed_shap_fraud": 0.0035354576663317477,
+      "positive_contribution_fraction": 0.8392857142857143
+    },
+    {
+      "negative_rank": 19,
+      "feature": "Amount",
+      "mean_abs_shap_fraud": 0.053095098182141955,
+      "mean_signed_shap_fraud": 0.0043155956876616145,
+      "positive_contribution_fraction": 0.375
+    },
+    {
+      "negative_rank": 20,
+      "feature": "V20",
+      "mean_abs_shap_fraud": 0.008378772448356036,
+      "mean_signed_shap_fraud": 0.004710163180392251,
+      "positive_contribution_fraction": 0.32142857142857145
+    }
+  ],
+  "individual_examples": 5,
+  "interpretation_warning": "SHAP values describe model contribution, not causation.",
+  "pca_feature_warning": "V1-V28 are PCA-derived features and are not assigned semantic meanings."
+}

@@ -1,0 +1,7 @@
+test,passed,error
+missing_feature,True,Missing required features: TransactionDT
+unexpected_feature,True,Unexpected features: unknown_feature
+null_feature,True,Feature 'TransactionDT' cannot be None.
+non_numeric_feature,True,Feature 'TransactionDT' must be numeric.
+nan_feature,True,Feature 'TransactionDT' must be finite.
+infinite_feature,True,Feature 'TransactionDT' must be finite.

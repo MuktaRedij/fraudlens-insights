@@ -1,0 +1,5 @@
+model,validation_AP,validation_ROC_AUC,validation_Brier,test_AP,test_ROC_AUC,test_Brier,role
+Logistic Regression,0.84562,0.983936,0.028441,0.723577,0.978814,0.023488,Baseline
+LightGBM Unweighted,0.825828,0.983424,0.000352,0.755212,0.981492,0.000423,Reference detector
+LightGBM Class-Weighted,0.812504,0.972218,0.000397,0.732349,0.957013,0.000692,Imbalance comparison
+LightGBM SMOTE,0.86215,0.982384,0.001471,0.758784,0.976314,0.001858,Final detector

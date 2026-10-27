@@ -1,0 +1,312 @@
+[
+  {
+    "validation_index": 1518,
+    "actual_label": 1,
+    "actual_class": "Fraud",
+    "calibrated_probability": 0.9985865934204671,
+    "risk_score": 100,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "C1",
+        "shap_value": 1.2753777979696599,
+        "feature_value": "34.0"
+      },
+      {
+        "feature": "C12",
+        "shap_value": 1.1981239705699716,
+        "feature_value": "39.0"
+      },
+      {
+        "feature": "V261",
+        "shap_value": 0.9559582917896449,
+        "feature_value": "24.0"
+      },
+      {
+        "feature": "C8",
+        "shap_value": 0.8700505296119326,
+        "feature_value": "35.0"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.727774995019112,
+        "feature_value": "1.0"
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "TransactionAmt",
+        "shap_value": -0.3163038715986685,
+        "feature_value": "7.929"
+      },
+      {
+        "feature": "V265",
+        "shap_value": -0.09833920096492274,
+        "feature_value": "666.2816162109375"
+      },
+      {
+        "feature": "card2",
+        "shap_value": -0.07969882153853074,
+        "feature_value": "545.0"
+      },
+      {
+        "feature": "log_transaction_amt",
+        "shap_value": -0.07343931626886775,
+        "feature_value": "2.1893044065350793"
+      },
+      {
+        "feature": "V218",
+        "shap_value": -0.03841238806821252,
+        "feature_value": "33.0"
+      }
+    ]
+  },
+  {
+    "validation_index": 21908,
+    "actual_label": 1,
+    "actual_class": "Fraud",
+    "calibrated_probability": 0.9984958495189478,
+    "risk_score": 100,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "V149",
+        "shap_value": 1.1972242739027592,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "V197",
+        "shap_value": 1.0164594442314205,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "V156",
+        "shap_value": 0.984253546587847,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "V189",
+        "shap_value": 0.8703754553026963,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.7696306443846151,
+        "feature_value": "5.0"
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "ProductCD",
+        "shap_value": -0.3327457997561969,
+        "feature_value": "R"
+      },
+      {
+        "feature": "card1",
+        "shap_value": -0.14960909181836085,
+        "feature_value": "15063"
+      },
+      {
+        "feature": "hour_sin",
+        "shap_value": -0.1137421557029594,
+        "feature_value": "-0.7071067811865477"
+      },
+      {
+        "feature": "V158",
+        "shap_value": -0.05828648260990062,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "V139",
+        "shap_value": -0.04443448460797046,
+        "feature_value": "3.0"
+      }
+    ]
+  },
+  {
+    "validation_index": 5952,
+    "actual_label": 1,
+    "actual_class": "Fraud",
+    "calibrated_probability": 0.9983896490496865,
+    "risk_score": 100,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "V149",
+        "shap_value": 1.2968572214772505,
+        "feature_value": "5.0"
+      },
+      {
+        "feature": "V197",
+        "shap_value": 1.0229126102557082,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.9268954765611871,
+        "feature_value": "23.0"
+      },
+      {
+        "feature": "V156",
+        "shap_value": 0.9172161683744344,
+        "feature_value": "5.0"
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": 0.757143194001936,
+        "feature_value": "450.0"
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "card3",
+        "shap_value": -0.7283083050347624,
+        "feature_value": "214.0"
+      },
+      {
+        "feature": "V208",
+        "shap_value": -0.23303137577009886,
+        "feature_value": "450.0"
+      },
+      {
+        "feature": "V139",
+        "shap_value": -0.1514098120777394,
+        "feature_value": "5.0"
+      },
+      {
+        "feature": "D8",
+        "shap_value": -0.1503479104490088,
+        "feature_value": "150.7083282470703"
+      },
+      {
+        "feature": "V158",
+        "shap_value": -0.06331728809386872,
+        "feature_value": "5.0"
+      }
+    ]
+  },
+  {
+    "validation_index": 28725,
+    "actual_label": 0,
+    "actual_class": "Legitimate",
+    "calibrated_probability": 0.9285020902618437,
+    "risk_score": 93,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "C12",
+        "shap_value": 0.9983145324562347,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "C1",
+        "shap_value": 0.9017946139287905,
+        "feature_value": "8.0"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.8607468341759652,
+        "feature_value": "1.0"
+      },
+      {
+        "feature": "C8",
+        "shap_value": 0.452229950360111,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "TransactionDT",
+        "shap_value": 0.42014955047452623,
+        "feature_value": "3481995"
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "TransactionAmt",
+        "shap_value": -0.17243078635026093,
+        "feature_value": "45.474"
+      },
+      {
+        "feature": "V87",
+        "shap_value": -0.04968277406925789,
+        "feature_value": "1.0"
+      },
+      {
+        "feature": "D5",
+        "shap_value": -0.044597042994178264,
+        "feature_value": "85.0"
+      },
+      {
+        "feature": "C6",
+        "shap_value": -0.030512139391192728,
+        "feature_value": "2.0"
+      },
+      {
+        "feature": "V258",
+        "shap_value": -0.024360713794516976,
+        "feature_value": "1.0"
+      }
+    ]
+  },
+  {
+    "validation_index": 11681,
+    "actual_label": 0,
+    "actual_class": "Legitimate",
+    "calibrated_probability": 0.914352773477068,
+    "risk_score": 91,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "C1",
+        "shap_value": 0.9423721334756412,
+        "feature_value": "9.0"
+      },
+      {
+        "feature": "C12",
+        "shap_value": 0.92080706876894,
+        "feature_value": "7.0"
+      },
+      {
+        "feature": "C13",
+        "shap_value": 0.5440407113971027,
+        "feature_value": "2.0"
+      },
+      {
+        "feature": "C8",
+        "shap_value": 0.5158603906478543,
+        "feature_value": "5.0"
+      },
+      {
+        "feature": "C7",
+        "shap_value": 0.36835676814247437,
+        "feature_value": "4.0"
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "D13",
+        "shap_value": -0.612853631711354,
+        "feature_value": "21.0"
+      },
+      {
+        "feature": "TransactionAmt",
+        "shap_value": -0.15771346135730033,
+        "feature_value": "48.855"
+      },
+      {
+        "feature": "V115",
+        "shap_value": -0.14289992797715148,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "V116",
+        "shap_value": -0.10377269812731149,
+        "feature_value": "3.0"
+      },
+      {
+        "feature": "V270",
+        "shap_value": -0.09494521195903541,
+        "feature_value": "40.810001373291016"
+      }
+    ]
+  }
+]

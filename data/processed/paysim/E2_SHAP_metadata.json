@@ -1,0 +1,29 @@
+{
+  "model": "E2_official_LightGBM",
+  "trees": 182,
+  "shap_version": "0.52.0",
+  "explanation_rows": 10816,
+  "fraud_rows": 816,
+  "legitimate_rows": 10000,
+  "features": [
+    "amount",
+    "log_amount",
+    "type",
+    "step",
+    "step_normalized",
+    "hour_sin",
+    "hour_cos",
+    "dest_prior_tx_count",
+    "dest_prior_total_amount",
+    "dest_prior_avg_amount",
+    "dest_prior_max_amount",
+    "dest_time_since_previous_tx",
+    "is_new_destination",
+    "dest_is_cold_start",
+    "amount_vs_dest_avg",
+    "amount_vs_dest_max",
+    "amount_log_deviation"
+  ],
+  "explanation_source": "validation",
+  "test_set_used": false
+}

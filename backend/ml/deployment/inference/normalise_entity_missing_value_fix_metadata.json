@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-09-25T06:42:17.872592+00:00",
+  "production_module": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/inference/production_feature_engineering.py",
+  "backup": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/inference/production_feature_engineering.before_normalise_entity_fix_20260925_064217.py",
+  "fix": "_normalise_entity now treats scalar NaN/NA-style values as missing identifiers",
+  "normalization_tests": {
+    "None": true,
+    "np.nan": true,
+    "float_nan": true,
+    "string_nan": true,
+    "string_none": true,
+    "string_null": true,
+    "empty_string": true,
+    "whitespace": true,
+    "normal_email": true,
+    "normal_card": true,
+    "normal_addr_float": true
+  },
+  "runtime_missing_identifier_test": true,
+  "temporal_staticmethod_preserved": true,
+  "get_history_staticmethod_preserved": true,
+  "schema_preserved": true
+}

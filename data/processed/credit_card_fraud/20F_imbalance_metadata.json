@@ -1,0 +1,37 @@
+{
+  "dataset": "Credit Card Fraud Detection",
+  "experiment": "20F Imbalance Strategy Comparison",
+  "training_fraud": 384,
+  "training_legitimate": 198980,
+  "scale_pos_weight": 518.1770833333334,
+  "strategies": [
+    "LightGBM Unweighted",
+    "LightGBM Class Weighted",
+    "LightGBM SMOTE"
+  ],
+  "smote": {
+    "available": true,
+    "sampling_strategy": 0.25,
+    "k_neighbors": 5,
+    "applied_to": "Training data only",
+    "validation_untouched": true,
+    "test_untouched": true
+  },
+  "best_iterations": {
+    "unweighted": 146,
+    "class_weighted": 570,
+    "smote": 131
+  },
+  "validation_average_precision": {
+    "Unweighted": 0.8258279777010435,
+    "Class Weighted": 0.8125038960504608,
+    "SMOTE": 0.8621501007679522
+  },
+  "test_average_precision": {
+    "Unweighted": 0.7552122108120967,
+    "Class Weighted": 0.7323485129430714,
+    "SMOTE": 0.7587843728598457
+  },
+  "provisional_strategy": "SMOTE",
+  "selection_policy": "Validation evidence is used for provisional strategy selection; test results are frozen confirmation and are not used for tuning."
+}

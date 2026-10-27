@@ -1,0 +1,7 @@
+{
+  "version": "1.0",
+  "status": "not_finalized",
+  "default_threshold": null,
+  "reason": "Operational threshold has not yet been selected. Threshold selection belongs to the decisioning/operating-point stage.",
+  "available_output": "calibrated_fraud_probability"
+}

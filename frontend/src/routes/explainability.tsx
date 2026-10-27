@@ -1,0 +1,21 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ExplainabilityPage } from "@/components/pages/intelligence-pages";
+export const Route = createFileRoute("/explainability")({
+  head: () => ({
+    meta: [
+      { title: "Explainability — FraudLens" },
+      {
+        name: "description",
+        content: "Global, fraud-specific, and transaction SHAP explanations.",
+      },
+      { property: "og:title", content: "Explainability — FraudLens" },
+      {
+        property: "og:description",
+        content: "Global, fraud-specific, and transaction SHAP explanations.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: ExplainabilityPage,
+});

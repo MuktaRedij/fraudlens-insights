@@ -1,4 +1,131 @@
-# FraudLens Insights
+# FraudLens Insights — AI Financial Fraud Detection System
+
+**FraudLens** is an AI-based adaptive and explainable financial fraud detection system designed as a final-year AI/ML engineering project. It pairs a modern standalone React & Vite frontend with an active, high-performance FastAPI service delegating to a frozen 22-feature LightGBM inference and Platt calibration pipeline.
+
+---
+
+## Repository Architecture
+
+```text
+fraudlens-insights/
+├── frontend/                     # Standalone React + TypeScript + Vite + Tailwind frontend
+│   ├── public/                   # Static web assets
+│   ├── src/                      # Source components, routes, hooks, lib, services
+│   │   ├── components/           # UI and domain components
+│   │   ├── routes/               # TanStack Router route definitions
+│   │   ├── hooks/                # Custom React hooks
+│   │   ├── lib/                  # Utilities and formatting
+│   │   ├── services/             # Frontend API and chat service adapters
+│   │   └── data/                 # Demo/mock transaction datasets
+│   ├── package.json              # Frontend dependencies and scripts
+│   ├── vite.config.ts            # Vite build configuration
+│   └── tsconfig.json             # TypeScript compiler settings
+│
+├── backend/                      # Python backend services and ML deployments
+│   ├── app/                      # Active FastAPI production service
+│   │   ├── main.py               # FastAPI application entrypoint & lifespan
+│   │   ├── core/                 # Core configuration and settings
+│   │   ├── api/routes/           # Health and prediction routes
+│   │   ├── schemas/              # Pydantic validation schemas
+│   │   └── services/             # InferenceService adapter
+│   ├── ml/                       # Machine Learning packages
+│   │   └── deployment/
+│   │       ├── fraud_model_v1/   # Frozen 22-feature LightGBM + Platt calibration package
+│   │       ├── inference/        # Production feature engineering and inference pipeline
+│   │       └── tests/            # ML inference regression tests
+│   ├── legacy/                   # Preserved legacy implementations
+│   │   └── flask_app/            # Historical Flask backend (reference only)
+│   ├── tests/                    # Integration and API test suites
+│   │   └── api/                  # FastAPI integration test suite
+│   ├── requirements.txt          # Backend Python dependencies
+│   ├── .env.example              # Environment variables template
+│   └── README.md                 # Backend documentation
+│
+├── docs/                         # Technical documentation
+│   ├── architecture/             # System architecture & roadmap
+│   │   └── system-overview.md    # Active vs. legacy system overview
+│   ├── ml/                       # Machine learning documentation
+│   │   └── frozen-model.md       # Frozen fraud_model_v1 specification & contract
+│   ├── api/                      # API contracts & endpoint specifications
+│   └── research/                 # Dataset audits & experimental research notes
+│
+├── scripts/                      # Verification and automation utilities
+│   └── verify_deployment.py      # Frozen deployment SHA-256 integrity validator
+│
+├── .github/                      # GitHub configurations
+│   └── copilot-instructions.md   # Repository architectural rules & constraints
+├── .gitignore                    # Git ignore specifications
+└── README.md                     # Root project documentation
+```
+
+---
+
+## Development & Quick Start
+
+### 1. Run the Active FastAPI Backend
+
+From the repository root:
+
+```powershell
+Set-Location backend
+.\.venv\Scripts\Activate.ps1
+python -m uvicorn app.main:app --reload --port 8000
+```
+
+Active API endpoints:
+- `GET  /health` - System health, engine initialization status, and artifact verification
+- `GET  /api/v1/model` - Frozen model metadata (LightGBM, 22 features, Platt calibration)
+- `GET  /api/v1/system/status` - Runtime state and integrity status
+- `POST /api/v1/predict` - Real-time fraud scoring for raw transactions
+
+### 2. Verify Frozen Model Integrity
+
+From the repository root, run the cryptographic checksum validator:
+
+```powershell
+backend\.venv\Scripts\python.exe scripts/verify_deployment.py
+```
+
+### 3. Run Backend API Tests
+
+From the `backend` directory:
+
+```powershell
+Set-Location backend
+.\.venv\Scripts\python.exe -m pytest tests/api -v
+```
+
+### 4. Run the Frontend Application
+
+From the repository root:
+
+```powershell
+Set-Location frontend
+npm install
+npm run dev
+```
+
+To build the frontend for production:
+
+```powershell
+Set-Location frontend
+npm run build
+```
+
+### 5. Legacy Flask Backend (Reference Only)
+
+The legacy Flask backend is preserved under `backend/legacy/flask_app/`. It uses an earlier 37-feature Credit Card Fraud contract whose model files are not part of the active frozen deployment:
+
+```powershell
+Set-Location backend
+python run.py
+```
+
+---
+
+## Original frontend and product specification
+
+The following original specification is preserved for product context; its `src/` and `public/` paths are relative to `frontend/` after reorganization.
 
 Build a full-fledged, production-quality AI financial fraud detection web application called:
 
@@ -1734,7 +1861,7 @@ Make this component reusable everywhere.
 
 Create:
 
-src/services/api.js
+frontend/src/services/api.ts
 
 The frontend must call service functions rather than directly accessing mock objects.
 
@@ -2276,7 +2403,7 @@ Use reusable components.
 
 Suggested component structure:
 
-src/
+frontend/src/
 
 ├── components/
 
@@ -2704,7 +2831,7 @@ The entire application should support this flow naturally.
 
 ============================================================
 
-43. FINAL INSTRUCTION TO LOVABLE
+43. FINAL IMPLEMENTATION SPECIFICATION
 
 ============================================================
 
@@ -2756,23 +2883,12 @@ Keep all ML/backend integration points clean and replaceable so the FastAPI back
 
 Start by building the application shell, navigation, design system, dashboard, and mock data architecture, then implement all remaining pages and interactions.
 
-This project was built with [Lovable](https://lovable.dev).
+## Local Frontend Development
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e7823d8e-5320-4c23-b835-feb8ddaf218e).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Prefer working locally? You need Node.js (v18+) and npm:
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+cd frontend
+npm install
 npm run dev
 ```

@@ -1,0 +1,19 @@
+{
+  "step": "20I-C",
+  "name": "Transaction-Level Explanation Engine",
+  "model": "SMOTE LightGBM",
+  "model_path": "/content/drive/MyDrive/fraud-detection-system/data/processed/credit_card_fraud/20F_smote_lightgbm.txt",
+  "calibration": "Platt scaling",
+  "risk_score_definition": "round(calibrated_probability * 100)",
+  "shap_version": "0.52.0",
+  "lightgbm_version": "4.6.0",
+  "explanation_sample_size": 10056,
+  "fraud_explanation_count": 56,
+  "legitimate_explanation_count": 10000,
+  "positive_contributors_per_transaction": 5,
+  "negative_contributors_per_transaction": 3,
+  "selected_example_count": 5,
+  "semantic_warning": "V1-V28 are PCA-derived/anonymized features. The explanation engine reports model attribution without assigning real-world semantic meaning.",
+  "causal_warning": "SHAP values describe model contribution, not causal effects.",
+  "created_at": "2026-09-12T07:04:31.080622Z"
+}

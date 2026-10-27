@@ -1,0 +1,16 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "purpose": "Out-of-fold predictions for probability calibration",
+  "fold_method": "TimeSeriesSplit",
+  "n_splits": 5,
+  "model": "LightGBM transaction-only E1 configuration",
+  "feature_count": 399,
+  "categorical_feature_count": 14,
+  "class_weighting": "none",
+  "oof_rows": 112895,
+  "oof_fraud": 2855,
+  "oof_average_precision": 0.4936563402843118,
+  "oof_roc_auc": 0.9027122218254021,
+  "oof_brier": 0.01727636766100212,
+  "oof_logloss": 0.07266053427609995
+}

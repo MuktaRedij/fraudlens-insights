@@ -1,0 +1,29 @@
+{
+  "calibration_version": "platt_v1",
+  "method": "Platt scaling",
+  "input": {
+    "source": "E3 LightGBM raw probability",
+    "range": [
+      0.0,
+      1.0
+    ]
+  },
+  "output": {
+    "name": "calibrated_fraud_probability",
+    "range": [
+      0.0,
+      1.0
+    ]
+  },
+  "coefficient": 0.8501956283863521,
+  "intercept": -2.587345250190834,
+  "fitted_without_final_validation_labels": true,
+  "validation_metrics": {
+    "raw_brier": 0.11217969272170868,
+    "calibrated_brier": 0.030996558543551225,
+    "raw_log_loss": 0.37451974237626934,
+    "calibrated_log_loss": 0.1313866173057246,
+    "raw_ece": 0.23725816885327095,
+    "calibrated_ece": 0.006222077919956914
+  }
+}

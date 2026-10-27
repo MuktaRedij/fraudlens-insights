@@ -1,0 +1,18 @@
+{
+  "dataset": "PaySim",
+  "rows": 6362620,
+  "columns": 17,
+  "fraud_count": 8213,
+  "fraud_rate_pct": 0.12908204481801522,
+  "min_step": 1,
+  "max_step": 743,
+  "duplicate_rows": 0,
+  "missing_cells": 0,
+  "flagged_fraud_rows": 16,
+  "flagged_fraud_precision": 1.0,
+  "fraud_not_flagged": 8197,
+  "unique_origin_accounts": 6353307,
+  "unique_destination_accounts": 2722362,
+  "origin_cold_start_pct": 100.0,
+  "destination_cold_start_pct": 65.54122358399526
+}

@@ -1,0 +1,65 @@
+{
+  "model_version": "fraud_model_v1",
+  "status": "candidate_deployment_artifact",
+  "base_experiment": "E3",
+  "calibration_experiment": "E7",
+  "model_type": "LightGBM",
+  "calibration_type": "Platt scaling",
+  "feature_count": 22,
+  "features": [
+    "TransactionDT",
+    "TransactionAmt",
+    "transaction_hour",
+    "transaction_day",
+    "transaction_week",
+    "transaction_day_of_week",
+    "hour_sin",
+    "hour_cos",
+    "amount_log1p",
+    "time_since_previous_transaction",
+    "has_previous_transaction",
+    "card1_prev_count",
+    "card1_prev_amount_mean",
+    "card1_prev_amount_std",
+    "card1_prev_amount_deviation",
+    "card1_time_since_previous",
+    "addr1_prev_count",
+    "email_prev_count",
+    "card1_addr1_prev_count",
+    "card1_has_history",
+    "card1_amount_history_available",
+    "card1_time_history_available"
+  ],
+  "target": "isFraud",
+  "output": {
+    "raw_model_output": "LightGBM fraud probability before calibration",
+    "calibrated_output": "Calibrated fraud probability after Platt scaling",
+    "range": [
+      0.0,
+      1.0
+    ]
+  },
+  "model_artifact": "model/lightgbm_behavioral.txt",
+  "calibration_artifact": "calibration/platt_calibrator.joblib",
+  "training": {
+    "rows": 472432,
+    "fraud_count": 16599,
+    "fraud_rate": 0.03513521522674162,
+    "class_weight": "balanced"
+  },
+  "temporal_evaluation": {
+    "validation_rows": 118108,
+    "validation_fraud_count": 4064
+  },
+  "calibration": {
+    "method": "Platt scaling",
+    "coefficient": 0.8501956283863521,
+    "intercept": -2.587345250190834
+  },
+  "inference_requirements": {
+    "feature_order_must_match": true,
+    "input_validation_required": true,
+    "behavioral_features_must_use_prior_transactions": true,
+    "training_preprocessing_must_not_be_refit_at_inference": true
+  }
+}

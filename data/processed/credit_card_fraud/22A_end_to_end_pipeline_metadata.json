@@ -1,0 +1,25 @@
+{
+  "step": "22A",
+  "title": "End-to-End Fraud Risk Inference Pipeline",
+  "detector": "SMOTE LightGBM",
+  "calibration": "Platt scaling",
+  "risk_score": "round(calibrated_probability * 100)",
+  "risk_bands": {
+    "Low": "0-19",
+    "Moderate": "20-39",
+    "Medium": "40-59",
+    "High": "60-79",
+    "Critical": "80-100"
+  },
+  "operational_decisions": {
+    "ALLOW_MONITOR": "0-53",
+    "REVIEW": "54-87",
+    "HIGH_RISK": "88-93",
+    "CRITICAL": "94-100"
+  },
+  "explainability": "SHAP TreeExplainer",
+  "semantic_warning": "V1-V28 are PCA-derived/anonymized variables. The pipeline reports model attribution without assigning real-world meanings.",
+  "causal_warning": "SHAP explanations represent model contribution, not causal effects.",
+  "test_isolation": "No test-set information was used in this pipeline.",
+  "created_at": "2026-09-12T07:27:13.913981+00:00"
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "validation_index": 2237,
+    "actual_label": 1,
+    "actual_class": "Fraud",
+    "raw_probability": 0.9999992847442627,
+    "calibrated_probability": 1.0,
+    "risk_score": 100,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -4.683806419372559,
+        "shap_value": 5.720073223114014
+      },
+      {
+        "feature": "V10",
+        "value": -2.6494057178497314,
+        "shap_value": 1.9080514907836914
+      },
+      {
+        "feature": "V4",
+        "value": 3.5846147537231445,
+        "shap_value": 1.4579440355300903
+      },
+      {
+        "feature": "V16",
+        "value": -2.6957898139953613,
+        "shap_value": 1.3128975629806519
+      },
+      {
+        "feature": "V3",
+        "value": -4.176390171051025,
+        "shap_value": 1.1923635005950928
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "value": 0.8784168362617493,
+        "shap_value": -1.499226689338684
+      },
+      {
+        "feature": "Time",
+        "value": 133958.0,
+        "shap_value": -1.1635113954544067
+      },
+      {
+        "feature": "V20",
+        "value": 0.6218038201332092,
+        "shap_value": -0.5207459926605225
+      },
+      {
+        "feature": "V24",
+        "value": 0.48521119356155396,
+        "shap_value": -0.42470183968544006
+      },
+      {
+        "feature": "V2",
+        "value": 1.5317078828811646,
+        "shap_value": -0.12907053530216217
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of each feature to the frozen XGBoost model output. They describe model behavior and are not causal explanations of the transaction."
+  },
+  {
+    "validation_index": 4700,
+    "actual_label": 1,
+    "actual_class": "Fraud",
+    "raw_probability": 0.9999997615814209,
+    "calibrated_probability": 1.0,
+    "risk_score": 100,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -5.387831211090088,
+        "shap_value": 5.518379211425781
+      },
+      {
+        "feature": "V10",
+        "value": -3.520127773284912,
+        "shap_value": 2.2224552631378174
+      },
+      {
+        "feature": "V4",
+        "value": 3.079843759536743,
+        "shap_value": 1.5513250827789307
+      },
+      {
+        "feature": "V12",
+        "value": -3.0107717514038086,
+        "shap_value": 1.3471983671188354
+      },
+      {
+        "feature": "V16",
+        "value": -2.9358043670654297,
+        "shap_value": 1.2278536558151245
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "Time",
+        "value": 135095.0,
+        "shap_value": -1.219985842704773
+      },
+      {
+        "feature": "V8",
+        "value": 0.5470685958862305,
+        "shap_value": -1.000749111175537
+      },
+      {
+        "feature": "V15",
+        "value": 1.778669834136963,
+        "shap_value": -0.4153517484664917
+      },
+      {
+        "feature": "V24",
+        "value": 0.9012604355812073,
+        "shap_value": -0.41090133786201477
+      },
+      {
+        "feature": "V5",
+        "value": -1.9026553630828857,
+        "shap_value": -0.30157122015953064
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of each feature to the frozen XGBoost model output. They describe model behavior and are not causal explanations of the transaction."
+  },
+  {
+    "validation_index": 24254,
+    "actual_label": 1,
+    "actual_class": "Fraud",
+    "raw_probability": 0.9999996423721313,
+    "calibrated_probability": 1.0,
+    "risk_score": 100,
+    "risk_band": "Critical",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -8.893726348876953,
+        "shap_value": 6.019850730895996
+      },
+      {
+        "feature": "V10",
+        "value": -4.400929927825928,
+        "shap_value": 2.0724430084228516
+      },
+      {
+        "feature": "V4",
+        "value": 7.232058048248291,
+        "shap_value": 1.9218250513076782
+      },
+      {
+        "feature": "V7",
+        "value": -4.299832820892334,
+        "shap_value": 1.5099960565567017
+      },
+      {
+        "feature": "V12",
+        "value": -5.7378153800964355,
+        "shap_value": 1.4382504224777222
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "Time",
+        "value": 143456.0,
+        "shap_value": -1.225611686706543
+      },
+      {
+        "feature": "V8",
+        "value": 2.268866777420044,
+        "shap_value": -1.138108730316162
+      },
+      {
+        "feature": "Amount",
+        "value": 1.0,
+        "shap_value": -0.5255573391914368
+      },
+      {
+        "feature": "V2",
+        "value": 3.67657732963562,
+        "shap_value": -0.4163452088832855
+      },
+      {
+        "feature": "V19",
+        "value": 1.6092928647994995,
+        "shap_value": -0.39015427231788635
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of each feature to the frozen XGBoost model output. They describe model behavior and are not causal explanations of the transaction."
+  },
+  {
+    "validation_index": 29141,
+    "actual_label": 0,
+    "actual_class": "Legitimate",
+    "raw_probability": 0.9914243221282959,
+    "calibrated_probability": 0.7018825291938307,
+    "risk_score": 70,
+    "risk_band": "High",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "value": -7.5372490882873535,
+        "shap_value": 5.254790306091309
+      },
+      {
+        "feature": "V10",
+        "value": -2.8530709743499756,
+        "shap_value": 1.8178941011428833
+      },
+      {
+        "feature": "V4",
+        "value": 3.5862114429473877,
+        "shap_value": 1.3568799495697021
+      },
+      {
+        "feature": "V19",
+        "value": -2.6087005138397217,
+        "shap_value": 0.6237358450889587
+      },
+      {
+        "feature": "V8",
+        "value": -0.744803786277771,
+        "shap_value": 0.6037617325782776
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V7",
+        "value": 1.7589138746261597,
+        "shap_value": -1.0822607278823853
+      },
+      {
+        "feature": "Time",
+        "value": 145538.0,
+        "shap_value": -1.0325514078140259
+      },
+      {
+        "feature": "V16",
+        "value": 3.4018478393554688,
+        "shap_value": -0.8050524592399597
+      },
+      {
+        "feature": "V2",
+        "value": 4.0169172286987305,
+        "shap_value": -0.7985906004905701
+      },
+      {
+        "feature": "V18",
+        "value": 3.3691117763519287,
+        "shap_value": -0.7462138533592224
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of each feature to the frozen XGBoost model output. They describe model behavior and are not causal explanations of the transaction."
+  },
+  {
+    "validation_index": 3032,
+    "actual_label": 0,
+    "actual_class": "Legitimate",
+    "raw_probability": 0.14225883781909943,
+    "calibrated_probability": 0.07142857142857142,
+    "risk_score": 7,
+    "risk_band": "Low",
+    "top_positive_contributors": [
+      {
+        "feature": "V4",
+        "value": 4.58091926574707,
+        "shap_value": 1.8749834299087524
+      },
+      {
+        "feature": "V22",
+        "value": 1.0475366115570068,
+        "shap_value": 1.015546202659607
+      },
+      {
+        "feature": "V8",
+        "value": -0.4306820034980774,
+        "shap_value": 0.5608198642730713
+      },
+      {
+        "feature": "Amount",
+        "value": 590.1699829101562,
+        "shap_value": 0.5469456315040588
+      },
+      {
+        "feature": "V1",
+        "value": -0.682635486125946,
+        "shap_value": 0.43761900067329407
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V14",
+        "value": 0.3509076237678528,
+        "shap_value": -1.7851686477661133
+      },
+      {
+        "feature": "V10",
+        "value": 1.2789925336837769,
+        "shap_value": -1.5865707397460938
+      },
+      {
+        "feature": "V11",
+        "value": -1.0470584630966187,
+        "shap_value": -1.0113023519515991
+      },
+      {
+        "feature": "V6",
+        "value": 1.6077462434768677,
+        "shap_value": -0.9273668527603149
+      },
+      {
+        "feature": "V3",
+        "value": -0.020744578912854195,
+        "shap_value": -0.7774637341499329
+      }
+    ],
+    "interpretation_note": "SHAP values describe the contribution of each feature to the frozen XGBoost model output. They describe model behavior and are not causal explanations of the transaction."
+  }
+]

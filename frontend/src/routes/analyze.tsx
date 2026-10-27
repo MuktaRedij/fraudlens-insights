@@ -1,0 +1,21 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AnalyzePage } from "@/components/pages/analyze-page";
+export const Route = createFileRoute("/analyze")({
+  head: () => ({
+    meta: [
+      { title: "Analyze Transaction — FraudLens" },
+      {
+        name: "description",
+        content: "Generate a synthetic AI fraud-risk assessment and explanation.",
+      },
+      { property: "og:title", content: "Analyze Transaction — FraudLens" },
+      {
+        property: "og:description",
+        content: "Generate a synthetic AI fraud-risk assessment and explanation.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: AnalyzePage,
+});

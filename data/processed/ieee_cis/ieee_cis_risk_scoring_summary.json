@@ -1,0 +1,86 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "calibration": "Platt scaling",
+  "calibration_fit": "5-fold chronological OOF predictions",
+  "internal_test_used_for_selection": false,
+  "risk_score_definition": "round(100 * calibrated_probability)",
+  "risk_bands": {
+    "Low": "0-19",
+    "Moderate": "20-39",
+    "Medium": "40-59",
+    "High": "60-79",
+    "Critical": "80-100"
+  },
+  "selected_validation_thresholds": {
+    "precision_50": 11,
+    "precision_80": 31,
+    "precision_90": 49,
+    "precision_95": 80
+  },
+  "internal_test_results": [
+    {
+      "threshold_label": "precision_50",
+      "risk_threshold": 11,
+      "precision": 0.6122448979591837,
+      "recall": 0.5203816131830009,
+      "f1": 0.5625879043600562,
+      "f2": 0.5364806866952789,
+      "flagged_transactions": 980,
+      "flag_rate": 0.033757018359684476,
+      "tp": 600,
+      "fp": 380,
+      "tn": 27498,
+      "fn": 553,
+      "false_positive_rate": 0.013630820001434823,
+      "fraud_capture_rate": 0.5203816131830009
+    },
+    {
+      "threshold_label": "precision_80",
+      "risk_threshold": 31,
+      "precision": 0.8945233265720081,
+      "recall": 0.38248048568950566,
+      "f1": 0.5358444714459295,
+      "f2": 0.43192948090107736,
+      "flagged_transactions": 493,
+      "flag_rate": 0.016981846991147395,
+      "tp": 441,
+      "fp": 52,
+      "tn": 27826,
+      "fn": 712,
+      "false_positive_rate": 0.001865270105459502,
+      "fraud_capture_rate": 0.38248048568950566
+    },
+    {
+      "threshold_label": "precision_90",
+      "risk_threshold": 49,
+      "precision": 0.9487179487179487,
+      "recall": 0.32090199479618386,
+      "f1": 0.4795852235904083,
+      "f2": 0.36985205917632946,
+      "flagged_transactions": 390,
+      "flag_rate": 0.013433915469670352,
+      "tp": 370,
+      "fp": 20,
+      "tn": 27858,
+      "fn": 783,
+      "false_positive_rate": 0.0007174115790228855,
+      "fraud_capture_rate": 0.32090199479618386
+    },
+    {
+      "threshold_label": "precision_95",
+      "risk_threshold": 80,
+      "precision": 0.975609756097561,
+      "recall": 0.20815264527320035,
+      "f1": 0.3431022158684775,
+      "f2": 0.24701523260601072,
+      "flagged_transactions": 246,
+      "flag_rate": 0.008473700527022838,
+      "tp": 240,
+      "fp": 6,
+      "tn": 27872,
+      "fn": 913,
+      "false_positive_rate": 0.00021522347370686563,
+      "fraud_capture_rate": 0.20815264527320035
+    }
+  ]
+}

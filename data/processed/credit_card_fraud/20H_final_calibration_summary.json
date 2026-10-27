@@ -1,0 +1,75 @@
+{
+  "experiment": "20H-C Frozen Platt Calibration",
+  "calibrator": "Platt scaling",
+  "calibrator_fitted_on": "Chronological OOF predictions only",
+  "test_labels_used_for_calibration": false,
+  "validation_rows": 42721,
+  "validation_fraud": 56,
+  "test_rows": 42722,
+  "test_fraud": 52,
+  "platt_coefficient": 1.2370940280329268,
+  "platt_intercept": -3.718376077182659,
+  "evaluation": [
+    {
+      "split": "validation_raw",
+      "brier_score": 0.001471312164925708,
+      "log_loss": 0.013340758823238137,
+      "average_precision": 0.8621501007679522,
+      "roc_auc": 0.9823843565317841,
+      "mean_probability": 0.012614452508486645,
+      "median_probability": 0.005211066853609183,
+      "p95_probability": 0.02836764348109058,
+      "p99_probability": 0.11981762532976309,
+      "max_probability": 0.9828433885978126
+    },
+    {
+      "split": "validation_platt",
+      "brier_score": 0.00035405791065445307,
+      "log_loss": 0.002090890681588198,
+      "average_precision": 0.8621501007679522,
+      "roc_auc": 0.9823843565317841,
+      "mean_probability": 0.0010657695347316126,
+      "median_probability": 3.660534557457646e-05,
+      "p95_probability": 0.0003065171532260621,
+      "p99_probability": 0.002055174404352605,
+      "max_probability": 0.7840561849407522
+    },
+    {
+      "split": "test_raw",
+      "brier_score": 0.0018579646975125936,
+      "log_loss": 0.015841651621579907,
+      "average_precision": 0.7587843728598457,
+      "roc_auc": 0.9763142002127237,
+      "mean_probability": 0.014217076311022396,
+      "median_probability": 0.005610220715598028,
+      "p95_probability": 0.03972812430785517,
+      "p99_probability": 0.15590966271705445,
+      "max_probability": 0.9827859810011642
+    },
+    {
+      "split": "test_platt",
+      "brier_score": 0.0004130065221294957,
+      "log_loss": 0.0029479188901295477,
+      "average_precision": 0.7587843728598457,
+      "roc_auc": 0.9763142002127237,
+      "mean_probability": 0.0010486098223166079,
+      "median_probability": 4.0124676999331606e-05,
+      "p95_probability": 0.0004716908852901186,
+      "p99_probability": 0.0029950150492223547,
+      "max_probability": 0.7833434145064788
+    }
+  ],
+  "risk_bands": {
+    "Low": "0-19",
+    "Moderate": "20-39",
+    "Medium": "40-59",
+    "High": "60-79",
+    "Critical": "80-100"
+  },
+  "risk_band_monotonicity": {
+    "validation": false,
+    "test": false
+  },
+  "test_risk_score_definition": "round(calibrated_probability * 100)",
+  "thresholds": "To be finalized after calibration; no test tuning."
+}

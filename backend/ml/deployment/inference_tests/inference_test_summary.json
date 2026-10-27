@@ -1,0 +1,12 @@
+{
+  "model_version": "fraud_model_v1",
+  "feature_count": 22,
+  "transactions_tested": 20,
+  "prediction_tests_passed": 20,
+  "maximum_raw_difference": 8.326672684688674e-17,
+  "maximum_calibrated_difference": 9.71445146547012e-17,
+  "invalid_input_tests": 6,
+  "invalid_input_tests_passed": 6,
+  "output_contract_passed": true,
+  "overall_status": "PASS"
+}

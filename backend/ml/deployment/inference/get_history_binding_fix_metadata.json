@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-09-25T06:29:45.038643+00:00",
+  "production_module": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/inference/production_feature_engineering.py",
+  "backup": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/inference/production_feature_engineering.before_get_history_targeted_fix_20260925_062944.py",
+  "fix": "_get_history normalized to staticmethod",
+  "final_get_history_signature": "(history_map, key)",
+  "transform_signature": "(self, transaction: 'Mapping[str, Any]', update_state: 'bool' = True)",
+  "feature_schema": [
+    "TransactionDT",
+    "TransactionAmt",
+    "transaction_hour",
+    "transaction_day",
+    "transaction_week",
+    "transaction_day_of_week",
+    "hour_sin",
+    "hour_cos",
+    "amount_log1p",
+    "time_since_previous_transaction",
+    "has_previous_transaction",
+    "card1_prev_count",
+    "card1_prev_amount_mean",
+    "card1_prev_amount_std",
+    "card1_prev_amount_deviation",
+    "card1_time_since_previous",
+    "addr1_prev_count",
+    "email_prev_count",
+    "card1_addr1_prev_count",
+    "card1_has_history",
+    "card1_amount_history_available",
+    "card1_time_history_available"
+  ]
+}

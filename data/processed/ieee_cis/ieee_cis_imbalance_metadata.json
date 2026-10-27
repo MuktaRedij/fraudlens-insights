@@ -1,0 +1,73 @@
+{
+  "step": "19D",
+  "dataset": "IEEE-CIS Fraud Detection",
+  "feature_group": "Transaction-only",
+  "class_weight_strategy": "scale_pos_weight = negatives / positives",
+  "scale_pos_weight": 37.8189111747851,
+  "selected_model": "IEEE-E1 Unweighted",
+  "selection_metric": "validation average precision",
+  "internal_test_used": false,
+  "threshold_selection_dataset": "validation",
+  "precision_targets": [
+    0.5,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "selected_thresholds": {
+    "precision_50": {
+      "probability_threshold": 0.09999999999999999,
+      "precision": 0.5121776504297995,
+      "recall": 0.6835564053537285,
+      "f1": 0.5855855855855856,
+      "f2": 0.6406810035842294,
+      "flagged_transactions": 1396,
+      "flagged_fraction": 0.04808652819399952
+    },
+    "precision_80": {
+      "probability_threshold": 0.31,
+      "precision": 0.800275482093664,
+      "recall": 0.5554493307839388,
+      "f1": 0.6557562076749436,
+      "f2": 0.5916496945010183,
+      "flagged_transactions": 726,
+      "flagged_fraction": 0.025007750335847886
+    },
+    "precision_90": {
+      "probability_threshold": 0.51,
+      "precision": 0.9010791366906474,
+      "recall": 0.4789674952198853,
+      "f1": 0.6254681647940075,
+      "f2": 0.5284810126582279,
+      "flagged_transactions": 556,
+      "flagged_fraction": 0.01915194102855568
+    },
+    "precision_95": {
+      "probability_threshold": 0.8300000000000001,
+      "precision": 0.95,
+      "recall": 0.3451242829827916,
+      "f1": 0.5063113604488079,
+      "f2": 0.39548641542506574,
+      "flagged_transactions": 380,
+      "flagged_fraction": 0.013089456098653163
+    }
+  },
+  "results": [
+    {
+      "experiment": "IEEE-E1 Unweighted",
+      "average_precision": 0.6793779893166341,
+      "roc_auc": 0.9219421357590161,
+      "brier_score": 0.017766774971312325,
+      "best_iteration": NaN,
+      "scale_pos_weight": NaN
+    },
+    {
+      "experiment": "IEEE-E1B Class Weighted",
+      "average_precision": 0.3651428372327512,
+      "roc_auc": 0.8513003244363018,
+      "brier_score": 0.03285459237913611,
+      "best_iteration": 2.0,
+      "scale_pos_weight": 37.8189111747851
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "experiment": "20H Probability Calibration",
+  "calibration_training_source": "Chronological SMOTE OOF predictions",
+  "oof_rows": 166135,
+  "oof_fraud": 282,
+  "validation_rows": 42721,
+  "validation_fraud": 56,
+  "methods_compared": [
+    "Uncalibrated SMOTE",
+    "Platt",
+    "Isotonic"
+  ],
+  "selected_method": "Platt",
+  "selection_criteria": [
+    "Lowest validation Brier score",
+    "Lowest validation LogLoss as secondary criterion"
+  ],
+  "test_used_for_calibration": false,
+  "platt_coefficient": 1.2370940280329268,
+  "platt_intercept": -3.718376077182659,
+  "results": [
+    {
+      "method": "Uncalibrated SMOTE",
+      "brier_score": 0.001471312164925708,
+      "log_loss": 0.013340758823238137,
+      "average_precision": 0.8621501007679522,
+      "roc_auc": 0.9823843565317841,
+      "mean_probability": 0.012614452508486645,
+      "median_probability": 0.005211066853609183,
+      "p95_probability": 0.02836764348109058,
+      "p99_probability": 0.11981762532976309,
+      "max_probability": 0.9828433885978126
+    },
+    {
+      "method": "Platt",
+      "brier_score": 0.00035405791065445307,
+      "log_loss": 0.002090890681588198,
+      "average_precision": 0.8621501007679522,
+      "roc_auc": 0.9823843565317841,
+      "mean_probability": 0.0010657695347316126,
+      "median_probability": 3.660534557457646e-05,
+      "p95_probability": 0.0003065171532260621,
+      "p99_probability": 0.002055174404352605,
+      "max_probability": 0.7840561849407522
+    },
+    {
+      "method": "Isotonic",
+      "brier_score": 0.0006038068422392364,
+      "log_loss": 0.0031036233396016123,
+      "average_precision": 0.8328286528683749,
+      "roc_auc": 0.97213381661114,
+      "mean_probability": 0.0021211296889461586,
+      "median_probability": 0.00015789058182679404,
+      "p95_probability": 0.00047484508179206536,
+      "p99_probability": 0.00047484508179206536,
+      "max_probability": 0.7096774193548387
+    }
+  ],
+  "risk_score_definition": "round(calibrated_probability * 100)",
+  "risk_bands": {
+    "Low": "0-19",
+    "Moderate": "20-39",
+    "Medium": "40-59",
+    "High": "60-79",
+    "Critical": "80-100"
+  }
+}

@@ -1,0 +1,18 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { TransactionsPage } from "@/components/pages/operations-pages";
+export const Route = createFileRoute("/transactions/")({
+  head: () => ({
+    meta: [
+      { title: "Transactions — FraudLens" },
+      { name: "description", content: "Search and investigate synthetic financial transactions." },
+      { property: "og:title", content: "Transactions — FraudLens" },
+      {
+        property: "og:description",
+        content: "Search and investigate synthetic financial transactions.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: TransactionsPage,
+});

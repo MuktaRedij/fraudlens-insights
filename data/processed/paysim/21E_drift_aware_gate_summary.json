@@ -1,0 +1,58 @@
+{
+  "step": "21E",
+  "title": "Drift-Aware Adaptation Gate Simulation",
+  "decision_logic": {
+    "drift_monitoring": {
+      "method": "Population Stability Index",
+      "primary_trigger": "At least two high-drift features excluding step and step_normalized",
+      "purpose": "Detect meaningful distribution change rather than simply detecting passage of time."
+    },
+    "adaptation": {
+      "action": "Generate candidate model",
+      "requirement": "Candidate must be evaluated on temporally subsequent data."
+    },
+    "deployment_gate": {
+      "accept": "Candidate AP must exceed current production detector.",
+      "reject": "Candidate is rejected when forward performance deteriorates.",
+      "fallback": "Retain current validated detector."
+    },
+    "observed_result": {
+      "Phase 1": "Drift detected; no future adaptation evaluation in this experiment.",
+      "Phase 2": "Adaptation rejected.",
+      "Phase 3": "Adaptation rejected."
+    },
+    "final_policy": "Drift detection triggers evaluation, not automatic deployment."
+  },
+  "observed_decisions": [
+    {
+      "phase": "Phase 1",
+      "drift_detected": true,
+      "static_AP": NaN,
+      "naive_adaptive_AP": NaN,
+      "recency_adaptive_AP": NaN,
+      "decision": "REJECT_ADAPTATION",
+      "reason": "Drift detected, but adaptation candidates performed worse than the static detector on forward validation."
+    },
+    {
+      "phase": "Phase 2",
+      "drift_detected": true,
+      "static_AP": 0.774646,
+      "naive_adaptive_AP": 0.4203,
+      "recency_adaptive_AP": 0.415491,
+      "decision": "REJECT_ADAPTATION",
+      "reason": "Drift detected, but adaptation candidates performed worse than the static detector on forward validation."
+    },
+    {
+      "phase": "Phase 3",
+      "drift_detected": true,
+      "static_AP": 0.686327,
+      "naive_adaptive_AP": 0.345132,
+      "recency_adaptive_AP": 0.181747,
+      "decision": "REJECT_ADAPTATION",
+      "reason": "Drift detected, but adaptation candidates performed worse than the static detector on forward validation."
+    }
+  ],
+  "research_conclusion": "Temporal drift is substantial in PaySim, but naive and recency-weighted adaptation degraded forward fraud-detection performance. Therefore, adaptation should be conditional and protected by forward-validation gates.",
+  "final_test_isolation": "The PaySim test set was not used.",
+  "created_at": "2026-09-12T07:25:57.887584+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "experiment": "E3_behavioral_ablation",
+  "features": [
+    "amount",
+    "log_amount",
+    "type",
+    "step",
+    "step_normalized",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "removed_behavioral_features": [
+    "dest_prior_tx_count",
+    "dest_prior_total_amount",
+    "dest_prior_avg_amount",
+    "dest_prior_max_amount",
+    "dest_time_since_previous_tx",
+    "is_new_destination",
+    "dest_is_cold_start",
+    "amount_vs_dest_avg",
+    "amount_vs_dest_max",
+    "amount_log_deviation"
+  ],
+  "best_iteration": 182,
+  "validation_ap": 0.4261994062219466,
+  "validation_roc_auc": 0.9263465288008321,
+  "validation_brier": 0.0168518980460393,
+  "test_ap": 0.47410458094522484,
+  "test_roc_auc": 0.9319925825422821,
+  "test_brier": 0.012877048069128278,
+  "e2_test_ap": 0.6936978081193467,
+  "e2_test_roc_auc": 0.9747561009449038,
+  "e2_test_brier": 0.006155,
+  "behavioral_ap_contribution": -0.21959322717412183,
+  "behavioral_ap_relative_percent": -31.65545927980532
+}

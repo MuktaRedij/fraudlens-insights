@@ -1,0 +1,46 @@
+{
+  "step": "18A",
+  "dataset": "PaySim",
+  "base_model": "Official E2 LightGBM",
+  "base_model_frozen": true,
+  "validation_rows": 51526,
+  "validation_fraud": 816,
+  "test_rows": 66620,
+  "test_fraud": 826,
+  "selected_calibration": "Isotonic",
+  "selection_metric": "Brier score",
+  "validation_results": [
+    {
+      "method": "Uncalibrated E2",
+      "brier_score": 0.008330970474082577,
+      "log_loss": 0.03367370521533536,
+      "average_precision": 0.6805677941262355,
+      "roc_auc": 0.9748492968475104
+    },
+    {
+      "method": "Platt Sigmoid",
+      "brier_score": 0.00816027862398896,
+      "log_loss": 0.03232036309809914,
+      "average_precision": 0.6805677941262355,
+      "roc_auc": 0.9748492968475104
+    },
+    {
+      "method": "Isotonic",
+      "brier_score": 0.007915615332242578,
+      "log_loss": 0.031138709332790712,
+      "average_precision": 0.665158637214329,
+      "roc_auc": 0.9761375115516528
+    }
+  ],
+  "test_results": {
+    "method": "Isotonic",
+    "brier_score": 0.006275167534195993,
+    "log_loss": 0.02631832329450731,
+    "average_precision": 0.6696230126420127,
+    "roc_auc": 0.9736541031546037
+  },
+  "calibration_curve": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/E2_calibration_curves.png",
+  "validation_calibrated_predictions": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/E2_calibrated_validation_predictions.parquet",
+  "test_calibrated_predictions": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/E2_calibrated_test_predictions.parquet",
+  "methodology_note": "Calibration was fitted using validation predictions only. The test set was not used for calibration selection or fitting."
+}

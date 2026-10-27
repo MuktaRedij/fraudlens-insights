@@ -30,3 +30,37 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Local backend/runtime output
+backend/instance/
+backend/legacy/flask_app/instance/
+backend/.tmp/
+backend/*.sqlite3
+
+# Datasets and generated large files
+data/raw/
+backend/data/raw/
+*.parquet
+*.parquet.gzip
+*.tmp
+*.temp

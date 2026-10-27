@@ -1,0 +1,4 @@
+phase,drift_detected,static_AP,naive_adaptive_AP,recency_adaptive_AP,decision,reason
+Phase 1,True,,,,REJECT_ADAPTATION,"Drift detected, but adaptation candidates performed worse than the static detector on forward validation."
+Phase 2,True,0.774646,0.4203,0.415491,REJECT_ADAPTATION,"Drift detected, but adaptation candidates performed worse than the static detector on forward validation."
+Phase 3,True,0.686327,0.345132,0.181747,REJECT_ADAPTATION,"Drift detected, but adaptation candidates performed worse than the static detector on forward validation."

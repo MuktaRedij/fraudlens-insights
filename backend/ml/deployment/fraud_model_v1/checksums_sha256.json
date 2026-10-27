@@ -1,0 +1,32 @@
+{
+  "calibration_config.json": "9d5e5be24124958eee443b7a5dfa5d7b093ad24d3a9fd4e162de39f4d993d252",
+  "deployment_files": {
+    "E7_raw_vs_calibrated_comparison.csv": "8f6e8239e079f6e29ff26596a57b3a9fb693138d865b0c1292c273c02adb1a0c",
+    "README.md": "6754cf52e25bce9bdd5ec37f801a30ae54af3fdccc710bae5f770508ea1c0660",
+    "calibration/platt_calibrator.joblib": "9f31578f37386509b72534c2522145f71ed6f3b0360a2151993c1b395ac932a9",
+    "calibration_config.json": "9d5e5be24124958eee443b7a5dfa5d7b093ad24d3a9fd4e162de39f4d993d252",
+    "feature_schema.json": "a8337f8dcd2f4497e592d4f84670e9624341bb5ea215a9f339ef783ce7a04a17",
+    "feature_schema_normalized.json": "697e31ff0ded520d139b6de2dc7b57b999ebb55bd98574593d7c56a544cfe64f",
+    "model/lightgbm_behavioral.txt": "8db27d6c1b2c35a9ac2ad5f66b66ef88078ff8dfa33f639e874bdceb5ba78009",
+    "model_config.json": "a61383c9de5f6c3da40a1b14f8bc7f1d07f79232cefc210c857853c4325350b6",
+    "model_metadata.json": "da964424f1120f2e02d640b73957598bddf44291495bdd2302668bc3a4670185",
+    "model_metadata.json.pre_freeze_backup": "5cd3dbddf9ee021d478fc8fb5e813ee4694fed54c4cb6bd05683269571cfe064",
+    "threshold_config.json": "c851c64f05931a31d1f38ca3c57a26c4817c4e81e6399f212839c76997b39dc2"
+  },
+  "feature_schema.json": "a8337f8dcd2f4497e592d4f84670e9624341bb5ea215a9f339ef783ce7a04a17",
+  "generated_at_utc": "2026-09-25T15:26:00.107012+00:00",
+  "inference_files": {
+    "integrated_inference.py": "03e9d40007b0ca72f49520567c76fa13f8104008a509ce54e738b7807a3f26c0",
+    "production_feature_engineering.py": "afafa91b4333a9060be04d7ffe7c59459cfeb8cca3ea2e90462195eefe5ae5d9"
+  },
+  "lightgbm_behavioral.txt": "8db27d6c1b2c35a9ac2ad5f66b66ef88078ff8dfa33f639e874bdceb5ba78009",
+  "model_config.json": "a61383c9de5f6c3da40a1b14f8bc7f1d07f79232cefc210c857853c4325350b6",
+  "model_metadata.json": "5cd3dbddf9ee021d478fc8fb5e813ee4694fed54c4cb6bd05683269571cfe064",
+  "model_version": "fraud_model_v1",
+  "platt_calibrator.joblib": "9f31578f37386509b72534c2522145f71ed6f3b0360a2151993c1b395ac932a9",
+  "regression_test": {
+    "path": "artifacts/deployment/tests/test_inference_regression.py",
+    "sha256": "3be8fe40b0923f0029a589ac48bd0d82bb77bcd8ae02e3543c9327c54590a51b"
+  },
+  "threshold_config.json": "c851c64f05931a31d1f38ca3c57a26c4817c4e81e6399f212839c76997b39dc2"
+}

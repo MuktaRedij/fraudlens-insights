@@ -1,0 +1,467 @@
+[
+  {
+    "sample_row": 3172,
+    "validation_row": 15493,
+    "actual_label": 1,
+    "model_probability": 0.9987030863442585,
+    "risk_category_provisional": "critical",
+    "summary": "The model assigned a fraud probability of 0.9987. transaction type (CASH_OUT) increased the fraud risk log-scaled transaction amount (15.6989) increased the fraud risk transaction amount (6,575,903.00) increased the fraud risk.",
+    "top_contributors": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "CASH_OUT",
+        "shap_value": 6.489453040912143,
+        "absolute_shap": 6.489453040912143,
+        "direction": "increased"
+      },
+      {
+        "feature": "log_amount",
+        "description": "log-scaled transaction amount",
+        "value": "15.6989",
+        "shap_value": 2.6164738403204195,
+        "absolute_shap": 2.6164738403204195,
+        "direction": "increased"
+      },
+      {
+        "feature": "amount",
+        "description": "transaction amount",
+        "value": "6,575,903.00",
+        "shap_value": 2.393507276720714,
+        "absolute_shap": 2.393507276720714,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "1.0000",
+        "shap_value": 2.190800839306176,
+        "absolute_shap": 2.190800839306176,
+        "direction": "increased"
+      },
+      {
+        "feature": "step",
+        "description": "transaction time step",
+        "value": "606",
+        "shap_value": 1.677313058658745,
+        "absolute_shap": 1.677313058658745,
+        "direction": "increased"
+      }
+    ],
+    "fraud_drivers": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "CASH_OUT",
+        "shap_value": 6.489453040912143,
+        "absolute_shap": 6.489453040912143,
+        "direction": "increased"
+      },
+      {
+        "feature": "log_amount",
+        "description": "log-scaled transaction amount",
+        "value": "15.6989",
+        "shap_value": 2.6164738403204195,
+        "absolute_shap": 2.6164738403204195,
+        "direction": "increased"
+      },
+      {
+        "feature": "amount",
+        "description": "transaction amount",
+        "value": "6,575,903.00",
+        "shap_value": 2.393507276720714,
+        "absolute_shap": 2.393507276720714,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "1.0000",
+        "shap_value": 2.190800839306176,
+        "absolute_shap": 2.190800839306176,
+        "direction": "increased"
+      },
+      {
+        "feature": "step",
+        "description": "transaction time step",
+        "value": "606",
+        "shap_value": 1.677313058658745,
+        "absolute_shap": 1.677313058658745,
+        "direction": "increased"
+      }
+    ],
+    "risk_reducers": []
+  },
+  {
+    "sample_row": 7896,
+    "validation_row": 37318,
+    "actual_label": 1,
+    "model_probability": 0.9974982067589493,
+    "risk_category_provisional": "critical",
+    "summary": "The model assigned a fraud probability of 0.9975. transaction type (CASH_OUT) increased the fraud risk log-scaled transaction amount (14.8925) increased the fraud risk cyclical hour-of-day signal (0.7071) increased the fraud risk.",
+    "top_contributors": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "CASH_OUT",
+        "shap_value": 5.4934422791052215,
+        "absolute_shap": 5.4934422791052215,
+        "direction": "increased"
+      },
+      {
+        "feature": "log_amount",
+        "description": "log-scaled transaction amount",
+        "value": "14.8925",
+        "shap_value": 3.6237143581271214,
+        "absolute_shap": 3.6237143581271214,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_cos",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.7071",
+        "shap_value": 2.1136932695580004,
+        "absolute_shap": 2.1136932695580004,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.8869057679050714,
+        "absolute_shap": 1.8869057679050714,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.7071",
+        "shap_value": 1.207666574484789,
+        "absolute_shap": 1.207666574484789,
+        "direction": "increased"
+      }
+    ],
+    "fraud_drivers": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "CASH_OUT",
+        "shap_value": 5.4934422791052215,
+        "absolute_shap": 5.4934422791052215,
+        "direction": "increased"
+      },
+      {
+        "feature": "log_amount",
+        "description": "log-scaled transaction amount",
+        "value": "14.8925",
+        "shap_value": 3.6237143581271214,
+        "absolute_shap": 3.6237143581271214,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_cos",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.7071",
+        "shap_value": 2.1136932695580004,
+        "absolute_shap": 2.1136932695580004,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.8869057679050714,
+        "absolute_shap": 1.8869057679050714,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.7071",
+        "shap_value": 1.207666574484789,
+        "absolute_shap": 1.207666574484789,
+        "direction": "increased"
+      }
+    ],
+    "risk_reducers": []
+  },
+  {
+    "sample_row": 7914,
+    "validation_row": 37336,
+    "actual_label": 1,
+    "model_probability": 0.9974860431347047,
+    "risk_category_provisional": "critical",
+    "summary": "The model assigned a fraud probability of 0.9975. transaction type (CASH_OUT) increased the fraud risk log-scaled transaction amount (14.5356) increased the fraud risk cyclical hour-of-day signal (0.5000) increased the fraud risk.",
+    "top_contributors": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "CASH_OUT",
+        "shap_value": 5.2862437312689154,
+        "absolute_shap": 5.2862437312689154,
+        "direction": "increased"
+      },
+      {
+        "feature": "log_amount",
+        "description": "log-scaled transaction amount",
+        "value": "14.5356",
+        "shap_value": 3.1416095248858062,
+        "absolute_shap": 3.1416095248858062,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_cos",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.5000",
+        "shap_value": 2.0093883387152336,
+        "absolute_shap": 2.0093883387152336,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.8856637418113569,
+        "absolute_shap": 1.8856637418113569,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.8660",
+        "shap_value": 1.408104835825185,
+        "absolute_shap": 1.408104835825185,
+        "direction": "increased"
+      }
+    ],
+    "fraud_drivers": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "CASH_OUT",
+        "shap_value": 5.2862437312689154,
+        "absolute_shap": 5.2862437312689154,
+        "direction": "increased"
+      },
+      {
+        "feature": "log_amount",
+        "description": "log-scaled transaction amount",
+        "value": "14.5356",
+        "shap_value": 3.1416095248858062,
+        "absolute_shap": 3.1416095248858062,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_cos",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.5000",
+        "shap_value": 2.0093883387152336,
+        "absolute_shap": 2.0093883387152336,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.8856637418113569,
+        "absolute_shap": 1.8856637418113569,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.8660",
+        "shap_value": 1.408104835825185,
+        "absolute_shap": 1.408104835825185,
+        "direction": "increased"
+      }
+    ],
+    "risk_reducers": []
+  },
+  {
+    "sample_row": 7995,
+    "validation_row": 37690,
+    "actual_label": 0,
+    "model_probability": 0.896645202890954,
+    "risk_category_provisional": "critical",
+    "summary": "The model assigned a fraud probability of 0.8966. transaction type (TRANSFER) increased the fraud risk number of previous transactions involving the destination (0) increased the fraud risk cyclical hour-of-day signal (0.8660) increased the fraud risk.",
+    "top_contributors": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "TRANSFER",
+        "shap_value": 5.15579645579,
+        "absolute_shap": 5.15579645579,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.9104079236707658,
+        "absolute_shap": 1.9104079236707658,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.8660",
+        "shap_value": 1.783139606945699,
+        "absolute_shap": 1.783139606945699,
+        "direction": "increased"
+      },
+      {
+        "feature": "step",
+        "description": "transaction time step",
+        "value": "656",
+        "shap_value": 1.6013976983835778,
+        "absolute_shap": 1.6013976983835778,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_total_amount",
+        "description": "historical total amount associated with the destination",
+        "value": "0.00",
+        "shap_value": 0.6417226680614129,
+        "absolute_shap": 0.6417226680614129,
+        "direction": "increased"
+      }
+    ],
+    "fraud_drivers": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "TRANSFER",
+        "shap_value": 5.15579645579,
+        "absolute_shap": 5.15579645579,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.9104079236707658,
+        "absolute_shap": 1.9104079236707658,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.8660",
+        "shap_value": 1.783139606945699,
+        "absolute_shap": 1.783139606945699,
+        "direction": "increased"
+      },
+      {
+        "feature": "step",
+        "description": "transaction time step",
+        "value": "656",
+        "shap_value": 1.6013976983835778,
+        "absolute_shap": 1.6013976983835778,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_total_amount",
+        "description": "historical total amount associated with the destination",
+        "value": "0.00",
+        "shap_value": 0.6417226680614129,
+        "absolute_shap": 0.6417226680614129,
+        "direction": "increased"
+      }
+    ],
+    "risk_reducers": []
+  },
+  {
+    "sample_row": 8233,
+    "validation_row": 38903,
+    "actual_label": 0,
+    "model_probability": 0.7762566193881412,
+    "risk_category_provisional": "high",
+    "summary": "The model assigned a fraud probability of 0.7763. transaction type (TRANSFER) increased the fraud risk number of previous transactions involving the destination (0) increased the fraud risk transaction time step (656) increased the fraud risk.",
+    "top_contributors": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "TRANSFER",
+        "shap_value": 4.572914051673548,
+        "absolute_shap": 4.572914051673548,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.8953020429475211,
+        "absolute_shap": 1.8953020429475211,
+        "direction": "increased"
+      },
+      {
+        "feature": "step",
+        "description": "transaction time step",
+        "value": "656",
+        "shap_value": 1.8457708500617147,
+        "absolute_shap": 1.8457708500617147,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.8660",
+        "shap_value": 1.726777373178284,
+        "absolute_shap": 1.726777373178284,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_total_amount",
+        "description": "historical total amount associated with the destination",
+        "value": "0.00",
+        "shap_value": 0.6634806621930187,
+        "absolute_shap": 0.6634806621930187,
+        "direction": "increased"
+      }
+    ],
+    "fraud_drivers": [
+      {
+        "feature": "type",
+        "description": "transaction type",
+        "value": "TRANSFER",
+        "shap_value": 4.572914051673548,
+        "absolute_shap": 4.572914051673548,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_tx_count",
+        "description": "number of previous transactions involving the destination",
+        "value": "0",
+        "shap_value": 1.8953020429475211,
+        "absolute_shap": 1.8953020429475211,
+        "direction": "increased"
+      },
+      {
+        "feature": "step",
+        "description": "transaction time step",
+        "value": "656",
+        "shap_value": 1.8457708500617147,
+        "absolute_shap": 1.8457708500617147,
+        "direction": "increased"
+      },
+      {
+        "feature": "hour_sin",
+        "description": "cyclical hour-of-day signal",
+        "value": "0.8660",
+        "shap_value": 1.726777373178284,
+        "absolute_shap": 1.726777373178284,
+        "direction": "increased"
+      },
+      {
+        "feature": "dest_prior_total_amount",
+        "description": "historical total amount associated with the destination",
+        "value": "0.00",
+        "shap_value": 0.6634806621930187,
+        "absolute_shap": 0.6634806621930187,
+        "direction": "increased"
+      }
+    ],
+    "risk_reducers": []
+  }
+]

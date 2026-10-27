@@ -1,0 +1,46 @@
+{
+  "experiment": "23B_TEST_XGBoost_Isotonic_Calibration",
+  "dataset": "Credit Card Fraud",
+  "test_rows": 42722,
+  "test_fraud": 52,
+  "test_fraud_rate": 0.0012171714807359207,
+  "calibration_method": "Isotonic",
+  "calibrator_source": "23B_FIX_xgboost_isotonic_calibrator.joblib",
+  "calibrator_fit_data": "Strict chronological OOF predictions only",
+  "calibrator_fit_rows": 166137,
+  "test_used_for_calibration_fit": false,
+  "validation_used_for_calibration_fit": false,
+  "raw_test_metrics": {
+    "average_precision": 0.7647776520826938,
+    "roc_auc": 0.971735231021615,
+    "brier": 0.0004781835210462384,
+    "logloss": 0.0033446375592658313,
+    "mean_probability": 0.001262357647395635,
+    "median_probability": 2.3204340777738253e-06,
+    "p90_probability": 4.697780168498868e-05,
+    "p95_probability": 0.0001257028605323281,
+    "p99_probability": 0.0012084009847603805,
+    "max_probability": 0.9999992847442627
+  },
+  "isotonic_test_metrics": {
+    "average_precision": 0.754545899718902,
+    "roc_auc": 0.9673128751960485,
+    "brier": 0.00038217677540372346,
+    "logloss": 0.002686648605837445,
+    "mean_probability": 0.0012454215486152487,
+    "median_probability": 0.00013123015143959475,
+    "p90_probability": 0.0004484707148623195,
+    "p95_probability": 0.0007275372862859222,
+    "p99_probability": 0.0024125452352231603,
+    "max_probability": 1.0
+  },
+  "deltas": {
+    "brier": -9.600674564251495e-05,
+    "logloss": -0.0006579889534283861,
+    "average_precision": -0.010231752363791813,
+    "roc_auc": -0.004422355825566493
+  },
+  "spearman_raw_vs_isotonic": 0.9567063602383039,
+  "methodology_status": "FINAL_TEST_EVALUATION",
+  "note": "The Isotonic calibrator was fitted exclusively on strict chronological OOF predictions generated from the training period. The chronological test set was used only for final evaluation and was never used to fit or select the calibrator."
+}

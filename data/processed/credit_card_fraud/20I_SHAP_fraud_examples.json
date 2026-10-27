@@ -1,0 +1,307 @@
+[
+  {
+    "original_validation_index": 13152,
+    "true_label": 1,
+    "calibrated_probability": 0.7840561849407522,
+    "risk_score": 78,
+    "risk_band": "High",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "shap_value": 3.698039728535654,
+        "feature_value": -3.82826828956604
+      },
+      {
+        "feature": "V17",
+        "shap_value": 1.4723514688619634,
+        "feature_value": -7.550968170166016
+      },
+      {
+        "feature": "V10",
+        "shap_value": 0.7974574075926634,
+        "feature_value": -4.501314640045166
+      },
+      {
+        "feature": "V4",
+        "shap_value": 0.4629741499437071,
+        "feature_value": 1.30580472946167
+      },
+      {
+        "feature": "V12",
+        "shap_value": 0.43659331542432783,
+        "feature_value": -5.418889045715332
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "shap_value": -0.054396273217313426,
+        "feature_value": 1.2835451364517212
+      },
+      {
+        "feature": "Amount",
+        "shap_value": -0.03967308437426628,
+        "feature_value": 0.009999999776482582
+      },
+      {
+        "feature": "V19",
+        "shap_value": -0.00887970263460912,
+        "feature_value": 0.15289203822612762
+      },
+      {
+        "feature": "V2",
+        "shap_value": -0.008554311110769541,
+        "feature_value": 1.9481004476547241
+      },
+      {
+        "feature": "Time",
+        "shap_value": -0.00608300778368869,
+        "feature_value": 138894.0
+      }
+    ]
+  },
+  {
+    "original_validation_index": 2237,
+    "true_label": 1,
+    "calibrated_probability": 0.7833434145064788,
+    "risk_score": 78,
+    "risk_band": "High",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "shap_value": 3.87931770590699,
+        "feature_value": -4.683806419372559
+      },
+      {
+        "feature": "V17",
+        "shap_value": 1.2674297380348558,
+        "feature_value": -3.035165786743164
+      },
+      {
+        "feature": "V10",
+        "shap_value": 0.7722907770911936,
+        "feature_value": -2.6494057178497314
+      },
+      {
+        "feature": "V4",
+        "shap_value": 0.7181756837854465,
+        "feature_value": 3.5846147537231445
+      },
+      {
+        "feature": "V12",
+        "shap_value": 0.37922104588972744,
+        "feature_value": -2.5874993801116943
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V18",
+        "shap_value": -0.07412159081472626,
+        "feature_value": 0.09681487083435059
+      },
+      {
+        "feature": "V8",
+        "shap_value": -0.0533480359016896,
+        "feature_value": 0.8784168362617493
+      },
+      {
+        "feature": "V19",
+        "shap_value": -0.005890384254203217,
+        "feature_value": 2.0656919479370117
+      },
+      {
+        "feature": "V28",
+        "shap_value": -0.005085741400209171,
+        "feature_value": -0.06324546784162521
+      },
+      {
+        "feature": "V24",
+        "shap_value": -0.0024071118174292484,
+        "feature_value": 0.48521119356155396
+      }
+    ]
+  },
+  {
+    "original_validation_index": 3960,
+    "true_label": 1,
+    "calibrated_probability": 0.7833434145064788,
+    "risk_score": 78,
+    "risk_band": "High",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "shap_value": 3.6329230635564835,
+        "feature_value": -4.6927876472473145
+      },
+      {
+        "feature": "V17",
+        "shap_value": 1.243786523277302,
+        "feature_value": -2.286144733428955
+      },
+      {
+        "feature": "V10",
+        "shap_value": 0.887226311922017,
+        "feature_value": -2.2715258598327637
+      },
+      {
+        "feature": "V4",
+        "shap_value": 0.7935128568090494,
+        "feature_value": 6.037344932556152
+      },
+      {
+        "feature": "V12",
+        "shap_value": 0.3690813024387267,
+        "feature_value": -3.68294358253479
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V25",
+        "shap_value": -0.06711342548823376,
+        "feature_value": 0.8088890314102173
+      },
+      {
+        "feature": "Amount",
+        "shap_value": -0.030859392809441732,
+        "feature_value": 1.0
+      },
+      {
+        "feature": "V5",
+        "shap_value": -0.02032141118068446,
+        "feature_value": 0.5833947658538818
+      },
+      {
+        "feature": "V19",
+        "shap_value": -0.017244788102638,
+        "feature_value": 0.9948294758796692
+      },
+      {
+        "feature": "V21",
+        "shap_value": -0.01412173240399383,
+        "feature_value": -0.6646943092346191
+      }
+    ]
+  },
+  {
+    "original_validation_index": 4700,
+    "true_label": 1,
+    "calibrated_probability": 0.7833434145064788,
+    "risk_score": 78,
+    "risk_band": "High",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "shap_value": 3.540575497634268,
+        "feature_value": -5.387831211090088
+      },
+      {
+        "feature": "V17",
+        "shap_value": 1.3179923871864498,
+        "feature_value": -2.2855727672576904
+      },
+      {
+        "feature": "V10",
+        "shap_value": 0.7767790113422959,
+        "feature_value": -3.520127773284912
+      },
+      {
+        "feature": "V4",
+        "shap_value": 0.7252164036901494,
+        "feature_value": 3.079843759536743
+      },
+      {
+        "feature": "V12",
+        "shap_value": 0.45046478098964093,
+        "feature_value": -3.0107717514038086
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "shap_value": -0.050733703506932404,
+        "feature_value": 0.5470685958862305
+      },
+      {
+        "feature": "V15",
+        "shap_value": -0.02202169377064676,
+        "feature_value": 1.778669834136963
+      },
+      {
+        "feature": "log_amount",
+        "shap_value": -0.018074930904663486,
+        "feature_value": 5.846438884735107
+      },
+      {
+        "feature": "V13",
+        "shap_value": -0.00519536685941223,
+        "feature_value": 0.6949777007102966
+      },
+      {
+        "feature": "V28",
+        "shap_value": -0.004922150359465187,
+        "feature_value": -0.029315337538719177
+      }
+    ]
+  },
+  {
+    "original_validation_index": 5139,
+    "true_label": 1,
+    "calibrated_probability": 0.7833434145064788,
+    "risk_score": 78,
+    "risk_band": "High",
+    "top_positive_contributors": [
+      {
+        "feature": "V14",
+        "shap_value": 3.9879034805126605,
+        "feature_value": -4.8981828689575195
+      },
+      {
+        "feature": "V17",
+        "shap_value": 1.4226756078907727,
+        "feature_value": -9.334329605102539
+      },
+      {
+        "feature": "V10",
+        "shap_value": 0.7854824464097413,
+        "feature_value": -3.8410980701446533
+      },
+      {
+        "feature": "V12",
+        "shap_value": 0.39167325907461775,
+        "feature_value": -3.906877040863037
+      },
+      {
+        "feature": "V4",
+        "shap_value": 0.3878170245224368,
+        "feature_value": 0.9874099493026733
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "V8",
+        "shap_value": -0.03831451070532582,
+        "feature_value": 0.7183248400688171
+      },
+      {
+        "feature": "V2",
+        "shap_value": -0.008140877199626697,
+        "feature_value": 1.7654516696929932
+      },
+      {
+        "feature": "V13",
+        "shap_value": -0.007603300237855472,
+        "feature_value": 0.9513676762580872
+      },
+      {
+        "feature": "V19",
+        "shap_value": -0.007138718871934477,
+        "feature_value": 1.5015734434127808
+      },
+      {
+        "feature": "V6",
+        "shap_value": -0.006539061731452075,
+        "feature_value": -1.2809520959854126
+      }
+    ]
+  }
+]

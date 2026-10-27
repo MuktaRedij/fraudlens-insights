@@ -1,0 +1,16 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "model": "IEEE-E1 Transaction-only LightGBM",
+  "model_feature_count": 399,
+  "explanation_method": "SHAP TreeExplainer",
+  "validation_rows": 29031,
+  "shap_rows": 11046,
+  "fraud_explanations": 1046,
+  "legitimate_explanations": 10000,
+  "representative_fraud_examples": 3,
+  "representative_legitimate_examples": 2,
+  "positive_contributor_definition": "SHAP value > 0",
+  "negative_contributor_definition": "SHAP value < 0",
+  "risk_score_source": "IEEE-E1 final validation risk-score artifact",
+  "causal_interpretation": "SHAP contributions describe model behavior and are not causal claims."
+}

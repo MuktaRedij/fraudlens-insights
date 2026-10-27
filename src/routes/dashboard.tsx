@@ -1,3 +1,0 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { DashboardPage } from "@/components/pages/dashboard-page";
-export const Route=createFileRoute("/dashboard")({head:()=>({meta:[{title:"Fraud Intelligence Dashboard — FraudLens"},{name:"description",content:"Demo fraud monitoring, alert analytics, and model intelligence."},{property:"og:title",content:"Fraud Intelligence Dashboard — FraudLens"},{property:"og:description",content:"Demo fraud monitoring, alert analytics, and model intelligence."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:DashboardPage});

@@ -1,0 +1,34 @@
+{
+  "artifact_hashes": {
+    "integrated_inference.py": "03e9d40007b0ca72f49520567c76fa13f8104008a509ce54e738b7807a3f26c0",
+    "model_metadata.json": "da964424f1120f2e02d640b73957598bddf44291495bdd2302668bc3a4670185",
+    "production_feature_engineering.py": "afafa91b4333a9060be04d7ffe7c59459cfeb8cca3ea2e90462195eefe5ae5d9",
+    "test_inference_regression.py": "3be8fe40b0923f0029a589ac48bd0d82bb77bcd8ae02e3543c9327c54590a51b"
+  },
+  "calibration_contract": {
+    "calibrator": "sklearn LogisticRegression Platt calibration",
+    "clip_epsilon": 1e-15,
+    "transform": "logit(raw_probability)"
+  },
+  "deployment_root": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/fraud_model_v1",
+  "excluded_from_package_checksum": [
+    "checksums_sha256.json",
+    "deployment_freeze_manifest.json"
+  ],
+  "freeze_status": "PASS",
+  "frozen_at_utc": "2026-09-25T15:26:00.107012+00:00",
+  "inference_module": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/inference/integrated_inference.py",
+  "model_version": "fraud_model_v1",
+  "production_feature_module": "/content/drive/MyDrive/fraud-detection-platform/artifacts/deployment/inference/production_feature_engineering.py",
+  "verification": {
+    "calibrated_reproducibility_pass": true,
+    "e2e_overall_pass": true,
+    "e2e_report": "/content/drive/MyDrive/fraud-detection-platform/artifacts/evaluation/end_to_end_inference/e2e_inference_integration_report.json",
+    "max_calibrated_absolute_difference": 9.71445146547012e-17,
+    "max_raw_absolute_difference": 5.551115123125783e-17,
+    "processed_rows": 590540,
+    "raw_reproducibility_pass": true,
+    "regression_test_pass": true,
+    "validation_transactions": 20
+  }
+}

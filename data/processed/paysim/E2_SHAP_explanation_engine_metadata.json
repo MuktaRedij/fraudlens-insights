@@ -1,0 +1,28 @@
+{
+  "step": "17D",
+  "status": "complete",
+  "shap_rows": 10816,
+  "validation_rows": 51526,
+  "matched_rows": 10816,
+  "features": 17,
+  "top_fraud_examples": [
+    3172,
+    7896,
+    7914
+  ],
+  "top_legitimate_examples": [
+    7995,
+    8233
+  ],
+  "prediction_source": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/E2_lightgbm_official_validation_predictions.parquet",
+  "shap_source": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/E2_SHAP_validation_values.npy",
+  "shap_sample_source": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/E2_SHAP_validation_sample.parquet",
+  "validation_source": "/content/drive/MyDrive/fraud-detection-system/data/processed/paysim/paysim_validation_features.parquet",
+  "risk_categories": {
+    "critical": "probability >= 0.80",
+    "high": "0.60 <= probability < 0.80",
+    "medium": "0.30 <= probability < 0.60",
+    "low": "probability < 0.30"
+  },
+  "risk_threshold_status": "PROVISIONAL \u2014 final thresholds determined in Step 18"
+}

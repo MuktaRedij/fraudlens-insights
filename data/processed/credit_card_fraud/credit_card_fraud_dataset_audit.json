@@ -1,0 +1,120 @@
+{
+  "dataset": "Credit Card Fraud Detection",
+  "file": "/content/drive/MyDrive/fraud-detection-system/data/raw/credit_card_fraud/creditcard.csv",
+  "shape": {
+    "rows": 284807,
+    "columns": 31
+  },
+  "columns": [
+    "Time",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15",
+    "V16",
+    "V17",
+    "V18",
+    "V19",
+    "V20",
+    "V21",
+    "V22",
+    "V23",
+    "V24",
+    "V25",
+    "V26",
+    "V27",
+    "V28",
+    "Amount",
+    "Class"
+  ],
+  "target": "Class",
+  "target_values": [
+    0,
+    1
+  ],
+  "class_distribution": {
+    "legitimate": 284315,
+    "fraud": 492,
+    "total": 284807,
+    "fraud_rate": 0.001727485630620034
+  },
+  "missing_values": {
+    "total_cells": 0,
+    "columns_with_missing": 0
+  },
+  "duplicates": {
+    "exact_duplicate_rows": 1081,
+    "rows_in_duplicate_groups": 1854,
+    "fraud_rows_in_duplicate_groups": 32
+  },
+  "temporal": {
+    "column": "Time",
+    "min": 0.0,
+    "max": 172792.0,
+    "unique_values": 124592,
+    "duplicated_rows": 160215,
+    "already_sorted": true,
+    "backward_transitions": 0
+  },
+  "amount": {
+    "zero_count": 1825,
+    "negative_count": 0,
+    "min": 0.0,
+    "max": 25691.16,
+    "mean": 88.34961925093133,
+    "median": 22.0
+  },
+  "split_strategy": "Chronological positional split: 70% train / 15% validation / 15% test",
+  "split_summary": {
+    "train": {
+      "rows": 199364,
+      "start_time": 0.0,
+      "end_time": 132928.0,
+      "fraud_count": 384,
+      "fraud_rate": 0.0019261250777472363
+    },
+    "validation": {
+      "rows": 42721,
+      "start_time": 132929.0,
+      "end_time": 151328.0,
+      "fraud_count": 56,
+      "fraud_rate": 0.001310830738980829
+    },
+    "test": {
+      "rows": 42722,
+      "start_time": 151328.0,
+      "end_time": 172792.0,
+      "fraud_count": 52,
+      "fraud_rate": 0.0012171714807359207
+    }
+  },
+  "evaluation_policy": {
+    "primary_metric": "Average Precision / PR-AUC",
+    "secondary_metrics": [
+      "ROC-AUC",
+      "Recall at fixed precision",
+      "Precision",
+      "F1",
+      "F2",
+      "Brier score",
+      "Calibration"
+    ],
+    "accuracy_as_headline_metric": false
+  },
+  "leakage_policy": {
+    "future_information": "Prohibited",
+    "target": "Class excluded from model features",
+    "random_split": "Not used as primary evaluation strategy"
+  }
+}
